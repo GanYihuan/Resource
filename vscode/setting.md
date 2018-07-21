@@ -2,55 +2,31 @@
 
 ```json
 {
-    "gitlens.advanced.messages": {
-      "suppressShowKeyBindingsNotice": true
-    },
     "gitlens.historyExplorer.enabled": true,
     "explorer.confirmDelete": false,
     "workbench.statusBar.visible": true,
     // "editor.fontFamily": "Monaco",
     "terminal.integrated.fontFamily": "Hack",
     "terminal.integrated.fontSize": 12,
-    "terminal.integrated.lineHeight": 1,
-    "editor.tabSize": 2,
+    "terminal.integrated.lineHeight":1,
     // 指定在工作台中使用的图标主题
+    // "workbench.iconTheme": "eq-material-theme-icons-darker",
     "workbench.iconTheme": "vscode-icons",
-    // 指定工作台中使用的颜色主题。
-    "workbench.colorTheme": "Dracula",
-    // "editor.codeLens": true,
-    // "editor.snippetSuggestions": "inline",
-    // "editor.quickSuggestionsDelay": 1,
-    // "editor.autoIndent": false,
-    // "editor.fontLigatures": true,
-    // "editor.wordWrap": "off",
-    // "editor.minimap.enabled": false,
-    // "editor.wordBasedSuggestions": true,
-    // "editor.cursorBlinking": "expand",
-    // "editor.emptySelectionClipboard": false,
-    // "editor.renderLineHighlight": "none",
-    // "editor.accessibilitySupport": "off",
-    // "editor.renderIndentGuides": true,
-    // "editor.smoothScrolling": true,
-    // "editor.scrollBeyondLastLine": true,
-    // "editor.lineHeight": 20,
-    // "editor.suggestLineHeight": 22,
-    // "editor.quickSuggestions": {"other": true, "comments": false, "strings": true},
+
+    // Error warning message: "Experimental support for decorators is a feature that is subject to change in a future release"
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+
     // 控制是否显示 minimap
     "editor.minimap.enabled": false,
-    // "[cpp]": {
-    "editor.quickSuggestions": false,
     // },
-    // "[c]": {
-    // "editor.quickSuggestions": false
-    // },
-    // // 以像素为单位控制字号。
+    // 以像素为单位控制字号。
     "editor.fontSize": 12,
 
-    // // 通过使用鼠标滚轮同时按住 Ctrl 可缩放编辑器的字体
-    "editor.mouseWheelZoom": true,
+    // 通过使用鼠标滚轮同时按住 Ctrl 可缩放编辑器的字体
+    // "editor.mouseWheelZoom": true,
 
     // 窗口失去焦点自动保存
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "afterDelay",
 
     // 调整窗口的缩放级别。原始大小是 0，每次递增(例如 1)或递减(例如 -1)表示放大或缩小 20%。也可以输入小数以便以更精细的粒度调整缩放级别。
     // "window.zoomLevel": 2,
@@ -100,46 +76,102 @@
     // "files.eol": "\r\n",
     // "workbench.colorTheme": "Monokai",
     "workbench.colorCustomizations": {
-      "contrastActiveBorder": "#01f77c",
-      // "contrastBorder": "#aaaaa0",
-      // "focusBorder": "#ffd800",
-      // "widget.shadow": "#f2f3f4",
-      "scrollbarSlider.background": "#414a4c",
-      "scrollbarSlider.activeBackground": "#ecd540",
-      "scrollbarSlider.hoverBackground": "#ffba00",
-      // "foreground": "#f0ead6",
-      // "sideBar.background": "#282a31",
+        // "contrastActiveBorder": "#01f77c",
+        // "contrastBorder": "#aaaaa0",
+        "focusBorder": "#ffd800",
+        // "widget.shadow": "#f2f3f4",
+        "scrollbarSlider.background": "#414a4c",
+        "scrollbarSlider.activeBackground": "#ecd540",
+        "scrollbarSlider.hoverBackground": "#ffba00",
+        "foreground": "#f0ead6",
+        "sideBar.background": "#282a31",
 
-      // "button.background": "#708090",
-      // "button.foreground": "#282a31",
-      // "button.hoverBackground": "#808080",
-      // "input.foreground": "#a7fc00",
+        // "button.background": "#708090",
+        // "button.foreground": "#282a31",
+        // "button.hoverBackground": "#808080",
+        "input.foreground": "#a7fc00",
 
-      // "editorCursor.foreground": "#7fff00",
-      // "editor.findMatchBackground": "#f94d00",
-      // "editor.findMatchHighlightBackground": "#f94d00",
-      // "editor.foreground": "#f0ead6",
-      // "editor.background": "#282a36",
-      // "editor.selectionBackground": "#69359c",
-      // "editor.selectionHighlightBackground": "#282a36",
-      // "editor.inactiveSelectionBackground": "#282a36",
-      // "editor.wordHighlightBackground": "#282a36",
-      // "editor.wordHighlightStrongBackground": "#282a36",
-      // "editor.hoverHighlightBackground": "#0f0f0f",
-      // "editor.lineHighlightBackground": "#282a36",
-      // "editor.lineHighlightBorder": "#414a4c",
-      // "editorLineNumber.foreground": "#40404f",
+        // "editorCursor.foreground": "#7fff00",
+        // "editor.findMatchBackground": "#f94d00",
+        // "editor.findMatchHighlightBackground": "#f94d00",
+        // "editor.foreground": "#f0ead6",
+        // "editor.background": "#282a36",
+        // "editor.selectionBackground": "#69359c",
+        // "editor.selectionHighlightBackground": "#282a36",
+        // "editor.inactiveSelectionBackground": "#282a36",
+        // "editor.wordHighlightBackground": "#282a36",
+        // "editor.wordHighlightStrongBackground": "#282a36",
+        // "editor.hoverHighlightBackground": "#0f0f0f",
+        // "editor.lineHighlightBackground": "#282a36",
+        // "editor.lineHighlightBorder": "#414a4c",
+        // "editorLineNumber.foreground": "#40404f",
 
-      // "tab.activeBackground": "#4f4f50",
-      // "tab.border": "#e0e0e0",
-      // "tab.inactiveForeground": "#e0e0e0",
+        /* file bar */
+        "tab.activeBackground": "#4f4f50",
+        // "tab.border": "#e0e0e0",
+        "tab.inactiveForeground": "#e0e0e0",
 
-      // "activityBar.foreground": "#c0c0c0",
-      // "statusBar.background": "#6f6f6f",
-      // "statusBarItem.activeBackground": "#ff0000",
-      // "statusBarItem.hoverBackground": "#06905f"
+        // left side bar
+        // "activityBar.foreground": "#c0c0c0",
+        // "statusBar.background": "#6f6f6f",
+        // "statusBarItem.activeBackground": "#ff0000",
+        // "statusBarItem.hoverBackground": "#06905f"
     },
-    // "team.showWelcomeMessage": false,
-    "gitlens.mode.active": "zen"
-}
+    // "docthis.includeAuthorTag": true, // 出现@Author
+    // "docthis.includeDescriptionTag": true, // 出现@Description
+    // "format": "compressed", // 压缩
+    // "extensionName": ".min.css", // 编译后缀名
+    // "savePath": "./css",
+    "team.showWelcomeMessage": false, // 编译保存的路径,
+    
+    // format设置
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "prettier.useTabs": true,
+
+    // 这里主要是设置emmet对于vue的支持
+    "emmet.syntaxProfiles": {
+        "vue": "html",
+        "vue-html": "html",
+    },
+    "emmet.includeLanguages": {
+      "vue-html": "html",
+      "vue": "html",
+      "javascript": "javascriptreact",
+      "wxml": "html"
+    },
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true,
+        "suppressWelcomeNotice": true
+    },
+    // 在这里主要做了对vue语言的支持
+    "files.associations": {
+      "*.vue": "vue",
+      "*.js": "javascript",
+      "*.md": "markdown",
+      "*.cjson": "jsonc",
+      "*.wxss": "css",
+      "*.wxs": "javascript"
+    },
+    // 将一些不必要的搜索范围去掉
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/dist": true,
+        "**/.git": true
+    },
+    // Fira Code是我最喜欢的字体，下面会介绍原因
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "html.format.extraLiners": null,
+    // How to set tab-space style?
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "workbench.colorTheme": "Monokai",
+    "search.followSymlinks": false,
+    "minapp-vscode.disableAutoConfig": true,
+    "gitlens.mode.active": "zen",
+    "materialTheme.fixIconsRunning": false
+  }
 ```
