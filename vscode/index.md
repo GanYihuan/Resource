@@ -58,7 +58,7 @@
 ## 快捷键 描述
 
 - ctrl + shift + p 或者 F1 打开控制面板
-- ** ctrl + p ** 快速打开
+- ctrl + p 快速打开
 - ctrl + shift + n 新窗口
 - ctrl + shift + w 关闭窗口
 

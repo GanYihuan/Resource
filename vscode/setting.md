@@ -28,6 +28,9 @@
     // 窗口失去焦点自动保存
     "files.autoSave": "afterDelay",
 
+    // the last line of your file will be at the bottom of the editor pane when you scroll down to the maximum.
+    "editor.scrollBeyondLastLine": false,
+
     // 调整窗口的缩放级别。原始大小是 0，每次递增(例如 1)或递减(例如 -1)表示放大或缩小 20%。也可以输入小数以便以更精细的粒度调整缩放级别。
     // "window.zoomLevel": 2,
 
