@@ -41,7 +41,7 @@
 - ll
 > 想看看目录详细情况
 
-- mkdir 
+- mkdir
 > 创建一个目录
 - rmdir dirname
 
