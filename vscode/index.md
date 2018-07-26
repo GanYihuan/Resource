@@ -2,10 +2,9 @@
 
 ## plugin
 
+- Angular v6 Snippets
 - Auto Close Tag
 - Auto Rename Tag
-- Beautify
-- Bootstrap 4
 - Bracket Pair Colorizer
 - Chinese Language
 - Class autocomplete for HTML
@@ -19,7 +18,7 @@
 - Dracula Official
 - ESLint
 - GitLens
-- HTML Boilerplate
+- HTML Boilerplate(ie7, ie8)
 - HTML CSS Support
 - HTML Snippets
 - HTMLHint
@@ -31,29 +30,27 @@
 - jsx-beautify
 - Language Support for Java
 - markdownlint
-- Material Theme
-- Maven for Java
+- minapp
 - npm
 - npm intellisense
-- One Dark
-- One Dark Pro
-- One Dark (Sublime Babel)
-- One Dark Pro
 - One Monokai Theme
 - Open in Browser
 - Path Intellisense
-- Project Manager
 - React Native Tools
+- React-Native/React/Redux snippets for es6/es7
+- Reactjs code snippets
 - Sass
+- SQL Server (mssql)
 - vscode-stylelint
 - stylus
-- Sublime Text Keymap and Settings Importer
 - SVG Viewer
 - TSLint
 - Vetur
+- vscode wxml
 - vscode-faker
 - vscode-icons
 - Vue 2 Snippets
+- webpack
 
 ## 快捷键 描述
 
