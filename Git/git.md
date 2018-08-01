@@ -146,7 +146,7 @@
 
 ## 创建 SSH Key, 然后一路回车
 
-## iterm:
+## iterm
 
 - ssh-keygen -t rsa -C "583520052@qq.com"
 - .ssh

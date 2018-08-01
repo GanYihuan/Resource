@@ -125,7 +125,7 @@
     // "format": "compressed", // 压缩
     // "extensionName": ".min.css", // 编译后缀名
     // "savePath": "./css",
-    "team.showWelcomeMessage": false, // 编译保存的路径,
+    // "team.showWelcomeMessage": false, // 编译保存的路径,
     
     // format设置
     "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
@@ -166,15 +166,15 @@
     },
     // Fira Code是我最喜欢的字体，下面会介绍原因
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
-    "html.format.extraLiners": null,
     // How to set tab-space style?
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Dracula",
     "search.followSymlinks": false,
     "minapp-vscode.disableAutoConfig": true,
     "gitlens.mode.active": "zen",
-    "materialTheme.fixIconsRunning": false
+    "materialTheme.fixIconsRunning": false,
+    "html.format.extraLiners": " "
   }
 ```
