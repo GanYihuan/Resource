@@ -7,7 +7,7 @@ module.exports = {
     parser: 'babel-eslint'
   },
   env: {
-    browser: true,
+    browser: true
   },
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
@@ -17,9 +17,7 @@ module.exports = {
     'standard'
   ],
   // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // add your custom rules here
   rules: {
     // allow paren-less arrow functions
@@ -28,10 +26,10 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'semi': ['error', 'never'],
+    semi: ['error', 'never'],
     'eol-last': 0,
     'no-tabs': 0,
-    'indent': 0,
+    indent: 0,
     'space-before-function-paren': 0
   }
 }

@@ -117,4 +117,3 @@
 - あねき… MY SWEET ELDER SISTER THE ANIMATION
 
 - 修学旅行
-

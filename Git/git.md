@@ -42,7 +42,7 @@
 
 ## 删除一个文件
 
-- git rm <fileName>
+- git rm fileName
 
 ## 从远程库克隆, cmd+c 内容
 
@@ -384,8 +384,7 @@
 
 ## Project pages
 
-- https://xxx.github.io/responsibility
-
+- <https://xxx.github.io/responsibility>
 - setting
 - launch automatic page generator 自动生成主题
 - 设置
