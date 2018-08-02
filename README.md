@@ -1,2 +1,1 @@
-# software
-# Resource
+# 各种资源的保存
