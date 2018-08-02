@@ -90,17 +90,17 @@
 
 ## HEAD 指向的版本就是当前版本
 
-- git reset --hard <commit_id>
+- git reset --hard commit_id
 
 ## 误删的文件恢复到最新版本
 
 ## 改乱了工作区文件内容，想撤销(没有 git add)
 
-- git checkout -- <file>
+- git checkout -- file
 
 ## 改乱了工作区文件内容，想撤销(已经 git add)
 
-- git checkout HEAD <file>
+- git checkout HEAD file
 
 ## 打一个新标签
 
@@ -161,7 +161,7 @@
 
 ## 关联一个远程库
 
-- git remote add origin https://github.com/GanYihuan/imooc.git
+- git remote add origin <https://github.com/GanYihuan/imooc.git>
 
 ## -u 参数,会把本地的 master 分支内容推送的远程新的 master 分支，
 
@@ -252,10 +252,6 @@
 ## 当你从远程仓库克隆时，实际上 Git 自动把本地的 master 分支和远程的 master 分支对应起来了，
 
 ## 远程 3 仓库的默认名称是 origin。
-
-## 推送分支
-
-- git push origin dev
 
 ## master 分支是主分支，因此要时刻与远程同步；
 
