@@ -76,12 +76,10 @@ ls -la
 ll
 ```
 
-- mkdir
-
-  > 创建一个目录
+> 创建一个目录
 
 ```console
-rmdir dirname
+mkdir dirname
 ```
 
 > 创建一个文件
