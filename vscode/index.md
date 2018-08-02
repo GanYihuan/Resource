@@ -116,7 +116,7 @@
 
 - Alt + Click 插入光标-支持多个
 - Ctrl + Alt + ↑ / ↓ 向上/向下插入光标
-- Ctrl + U  撤销最后一次光标操作
+- Ctrl + U 撤销最后一次光标操作
 - Shift + Alt + I 插入光标到选中范围内所有行结束符 Insert cursor at end of each line selected
 - Ctrl + I 选中当前行
 - Ctrl + Shift + L 选择所有出现在当前选中的行-操作 Select all occurrences of current selection
@@ -160,7 +160,7 @@
 - Ctrl + O Open File...
 - Ctrl + S Save
 - Ctrl + Shift + S Save As...
--  Ctrl + K S  保存所有当前已经打开的文件
+- Ctrl + K S 保存所有当前已经打开的文件
 - Ctrl + F4 Close
 - Ctrl + K Ctrl + W 关闭所有编辑窗口
 - Ctrl + Shift + T 重新打开关闭的编辑器
@@ -168,7 +168,7 @@
 - Ctrl + Tab Open next
 - Ctrl + Shift + Tab 调出最近打开的文件列表，重复按会切换
 - Ctrl + K P 复制当前打开文件的存放路径
-- Ctrl + K R  打开文件所在文件夹
+- Ctrl + K R 打开文件所在文件夹
 - Ctrl + K O 在新窗口打开当前文件
 
 ## 显示
