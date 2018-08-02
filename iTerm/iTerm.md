@@ -1,88 +1,133 @@
 # iTerm 短命令
 
-- lsof | less
+> 查看所有端口情况
 
-  > 查看所有端口情况
+```console
+lsof | less
+```
 
-- lsof -i:8080
+> 查看 8080 端口是否被占用
 
-  > 查看 8080 端口是否被占用
+```console
+lsof -i:8080
+```
 
-- kill PID
+> 杀死对应端口进程
 
-  > 杀死对应端口进程
+```console
+kill PID
+```
 
-- pkill -9 node
+> 杀死所有 node 进程
 
-  > 杀死所有 node 进程
+```console
+pkill -9 node
+```
 
-- npm i nvm
-- nvm ls
-- nvm install 8.9.1
-- nvm use 8.9.1
+> 管理 node 版本
 
-  > 管理 node 版本
+```console
+npm i nvm
+nvm ls
+nvm install 8.9.1
+nvm use 8.9.1
+```
 
-- open .
+> 打开当前目录的文件夹
 
-  > 打开当前目录的文件夹
+```console
+open .
+```
 
-- cd /
+> 进入根目录
 
-  > 进入根目录
+```console
+cd /
+```
 
-- cd ..
+> 回到上级目录
 
-  > 回到上级目录
+```console
+cd ..
+```
 
-- cd
-  > 改变当前目录
-- cd dirname
+> 改变当前目录
 
-- ls
+```console
+cd
+```
 
-  > 想看看 Pictures 目录下有什么
+> 想看看 Pictures 目录下有什么
 
-- ls
-  > 显示当前目录的内容
-- ls -la
+```console
+ls
+```
 
-- ll
+> 显示当前目录的内容
 
-  > 想看看目录详细情况
+```console
+ls
+```
+
+> 想看看目录详细情况
+
+```console
+ls -la
+ll
+```
 
 - mkdir
+
   > 创建一个目录
-- rmdir dirname
 
-- touch
-  > 创建一个文件
-- touch css/style.css
+```console
+rmdir dirname
+```
 
-- rmdir
-  > 删除一个目录
-- rmdir dirname
+> 创建一个文件
 
-- rm
-  > 删除文件或目录
-- rm filename
+```console
+touch css/style.css
+```
 
-- mvdir
-  > 移动或重命名一个目录
-- mvdir dir1 dir2
+> 删除一个目录
 
-- mv
-  > 改变文件名或所在目录
-- mv file1 file2
+```console
+rmdir dirname
+```
 
-- pwd
+> 删除文件或目录
 
-  > 显示当前目录的路径名
+```console
+rm filename
+```
 
-- cat
-  > 显示或连接文件
-- cat filename
+> 移动或重命名一个目录
 
-- cp
-  > 复制文件或目录
-- cp file1 file2
+```console
+mvdir dir1 dir2
+```
+
+> 改变文件名或所在目录
+
+```console
+mv file1 file2
+```
+
+> 显示当前目录的路径名
+
+```console
+pwd
+```
+
+> 显示或连接文件
+
+```console
+cat filename
+```
+
+> 复制文件或目录
+
+```console
+cp file1 file2
+```
