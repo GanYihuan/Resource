@@ -102,13 +102,13 @@
 
 - git checkout HEAD file
 
-## 打一个新标签
-
-- git tag v1.0
-
 ## 查看所有标签
 
-- git tag
+- git tag -a TagName -m 注释文字 SHA-1Code <!-- 打一个新标签 -->
+- git tag v1.0 <!-- 打一个新标签 -->
+- git tag <!-- 查看所有标签 -->
+- git show TagName
+- git tag -d TagName <!-- delete tag -->
 
 ## 查看所有分支
 

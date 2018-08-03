@@ -27,14 +27,8 @@ el {
     z-index: ;                      zi10
 
     /* 3：盒子-内部 */
-    box-sizing: border-box;        /* 改变盒子基础属性:为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。 */
-    width: ;                        w10
-    min-width: ;                    miw10
-    max-width: ;                    maw10
-    height: ;                       h10
-    min-height: ;                   mih10
-    max-height: ;                   mah10
-    overflow: ;                     ovfh
+    /* 改变盒子基础属性: 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制 */
+    box-sizing: border-box;
 
     /* 4：盒子-外部 */
     padding: ;                      p10
@@ -58,9 +52,19 @@ el {
     border-color: ;                 bdc
     border-right-color: ;           bdrc
 
+    width: ;                        w10
+    min-width: ;                    miw10
+    max-width: ;                    maw10
+    height: ;                       h10
+    /* 内容长度会改变 */
+    min-height: ;                   mih10
+    max-height: ;                   mah10
+
     /* 5：盒子-装饰 */
-    outline: ;                      ol /* 是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。 */
-    list-style: ;                   lstyle /* 设置列表项标记的类型 */
+    /* 是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。 */
+    outline: ;                      ol
+    /* 设置列表项标记的类型 */
+    list-style: ;                   lstyle
 
     /* 6: 表格 */
     table-layout: ;                 tlayout   /* 显示表格单元格、行、列的算法规则。*/
@@ -70,19 +74,21 @@ el {
     empty-cells: ;                  ecells    /* 是否显示表格中的空单元格 * /
 
     /* 6：字体 */
+    /* 垂直方向居中, 大小等于 height */
+    line-height: ;                  lh10px
+    /* 行内元素的基线相对于该元素所在行的基线的垂直对齐 */
+    vertical-align: top;            vta
+    /* 水平方向居中 */
+    text-align: center;
+    text-indent: ;
+    text-transform: ;
+    text-decoration: ;
     font: ;                         f
     font-family: ;                  ff
     font-size: ;                    fsize
     font-weight: ;                  fw700
-    text-align: ;
-    text-indent: ;
-    text-transform: ;
-    text-decoration: ;
     letter-spacing: ;
     word-spacing: ;
-    white-space: ;
-    line-height: ;                  lh10px
-    vertical-align: ;               vta        /* 行内元素的基线相对于该元素所在行的基线的垂直对齐 */
     color: ;                        cr
 
     /* 7:背景 */
@@ -91,11 +97,16 @@ el {
     background-repeat: ;
     background-position: ;
 
+    /* 超出显示...(two) */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;               ovfh
+
     opacity: ;                      op
     cursor: ;
     content: ;
     quotes: ;
     transition: ;                   trs
-    transform: ;                    trf
+    transform: ;
 }
 ```
