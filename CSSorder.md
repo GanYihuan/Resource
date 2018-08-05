@@ -19,12 +19,12 @@ el {
     clear: ;                        cle
 
     /* 2：位置 */
+    z-index: ;                      zi10
     position: ;                     po
     top: ;                          t10
     right: ;                        r10
     bottom: ;                       b10
     left: ;                         l10
-    z-index: ;                      zi10
 
     /* 3：盒子-内部 */
     /* 改变盒子基础属性: 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制 */
