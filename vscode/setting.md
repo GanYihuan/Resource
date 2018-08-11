@@ -8,9 +8,10 @@
   // "editor.fontFamily": "Monaco",
   "terminal.integrated.fontFamily": "Hack",
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.lineHeight":1,
   // 指定在工作台中使用的图标主题
   // "workbench.iconTheme": "eq-material-theme-icons-darker",
+  // "workbench.iconTheme": "eq-material-theme-icons-ocean",
   "workbench.iconTheme": "vscode-icons",
 
   // Error warning message: "Experimental support for decorators is a feature that is subject to change in a future release"
@@ -79,46 +80,30 @@
   // "files.eol": "\r\n",
   // "workbench.colorTheme": "Monokai",
   "workbench.colorCustomizations": {
-    // "contrastActiveBorder": "#01f77c",
-    // "contrastBorder": "#aaaaa0",
-    "focusBorder": "#ffd800",
-    // "widget.shadow": "#f2f3f4",
+    "focusBorder": "#a6ff00",
     "scrollbarSlider.background": "#414a4c",
-    "scrollbarSlider.activeBackground": "#ecd540",
     "scrollbarSlider.hoverBackground": "#ffba00",
-    "foreground": "#f0ead6",
-    "sideBar.background": "#282a31",
-
-    // "button.background": "#708090",
-    // "button.foreground": "#282a31",
-    // "button.hoverBackground": "#808080",
+    "foreground": "#f1f0eb",
+    "sideBar.background": "#151516",
     "input.foreground": "#a7fc00",
-
-    // "editorCursor.foreground": "#7fff00",
-    // "editor.findMatchBackground": "#f94d00",
-    // "editor.findMatchHighlightBackground": "#f94d00",
-    // "editor.foreground": "#f0ead6",
-    // "editor.background": "#282a36",
-    // "editor.selectionBackground": "#69359c",
-    // "editor.selectionHighlightBackground": "#282a36",
-    // "editor.inactiveSelectionBackground": "#282a36",
-    // "editor.wordHighlightBackground": "#282a36",
-    // "editor.wordHighlightStrongBackground": "#282a36",
-    // "editor.hoverHighlightBackground": "#0f0f0f",
-    // "editor.lineHighlightBackground": "#282a36",
-    // "editor.lineHighlightBorder": "#414a4c",
-    // "editorLineNumber.foreground": "#40404f",
-
-    /* file bar */
     "tab.activeBackground": "#4f4f50",
-    // "tab.border": "#e0e0e0",
-    "tab.inactiveForeground": "#e0e0e0"
-
-    // left side bar
-    // "activityBar.foreground": "#c0c0c0",
-    // "statusBar.background": "#6f6f6f",
-    // "statusBarItem.activeBackground": "#ff0000",
-    // "statusBarItem.hoverBackground": "#06905f"
+    "tab.inactiveForeground": "#e0e0e0",
+    "activityBarBadge.background": "#FFA000",
+    "list.activeSelectionForeground": "#FFA000",
+    "list.inactiveSelectionForeground": "#FFA000",
+    "list.highlightForeground": "#FFA000",
+    "scrollbarSlider.activeBackground": "#FFA00050",
+    "editorSuggestWidget.highlightForeground": "#FFA000",
+    "textLink.foreground": "#FFA000",
+    "progressBar.background": "#FFA000",
+    "pickerGroup.foreground": "#FFA000",
+    "tab.activeBorder": "#FFA000",
+    "notificationLink.foreground": "#FFA000",
+    "editorWidget.resizeBorder": "#FFA000",
+    "editorWidget.border": "#FFA000",
+    "settings.modifiedItemForeground": "#FFA000",
+    "panelTitle.activeBorder": "#FFA000",
+    "editor.selectionBackground": "#575a5a"
   },
   // "docthis.includeAuthorTag": true, // 出现@Author
   // "docthis.includeDescriptionTag": true, // 出现@Description
@@ -126,6 +111,7 @@
   // "extensionName": ".min.css", // 编译后缀名
   // "savePath": "./css",
   // "team.showWelcomeMessage": false, // 编译保存的路径,
+  
   // format设置
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
   "prettier.singleQuote": true,
@@ -134,8 +120,8 @@
 
   // 这里主要是设置emmet对于vue的支持
   "emmet.syntaxProfiles": {
-    "vue": "html",
-    "vue-html": "html"
+      "vue": "html",
+      "vue-html": "html",
   },
   "emmet.includeLanguages": {
     "vue-html": "html",
@@ -144,8 +130,8 @@
     "wxml": "html"
   },
   "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true,
-    "suppressWelcomeNotice": true
+      "suppressShowKeyBindingsNotice": true,
+      "suppressWelcomeNotice": true
   },
   // 在这里主要做了对vue语言的支持
   "files.associations": {
@@ -158,10 +144,10 @@
   },
   // 将一些不必要的搜索范围去掉
   "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/dist": true,
-    "**/.git": true
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/dist": true,
+      "**/.git": true
   },
   // Fira Code是我最喜欢的字体，下面会介绍原因
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
@@ -169,11 +155,14 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
   "search.followSymlinks": false,
   "minapp-vscode.disableAutoConfig": true,
   "gitlens.mode.active": "zen",
   "materialTheme.fixIconsRunning": false,
-  "html.format.extraLiners": " "
+  "html.format.extraLiners": " ",
+  "materialTheme.autoApplyIcons": false,
+  "materialTheme.accentPrevious": "Acid Lime",
+  "materialTheme.accent": "Yellow"
 }
 ```

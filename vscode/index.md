@@ -206,3 +206,7 @@
 - Ctrl + ↑ / ↓ Scroll up/down
 - Shift + PgUp / PgDown 页面上下翻屏 Scroll page up/down```
 - Ctrl + Home / End 滚动到页面头部或尾部 Scroll to top/bottom
+
+## keybinding
+
+extension.translateReplace    ↑ + cmd + r     修改了默认键位(↑ + cmd + a)
