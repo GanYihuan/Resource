@@ -103,7 +103,8 @@
     "editorWidget.border": "#FFA000",
     "settings.modifiedItemForeground": "#FFA000",
     "panelTitle.activeBorder": "#FFA000",
-    "editor.selectionBackground": "#575a5a"
+    "editor.selectionBackground": "#575a5a",
+    "terminal.background": "#333333"
   },
   // "docthis.includeAuthorTag": true, // 出现@Author
   // "docthis.includeDescriptionTag": true, // 出现@Description
