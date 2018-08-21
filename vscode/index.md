@@ -6,16 +6,12 @@
 - Auto Close Tag
 - Auto Rename Tag
 - Bracket Pair Colorizer
-- Chinese Language
 - Class autocomplete for HTML
 - Code Outline
 - Code Runner
 - Color info
 - CSS Peek
-- Dash
 - Debugger for Chrome
-- Document This
-- Dracula Official
 - ESLint
 - GitLens
 - HTML Boilerplate(ie7, ie8)
@@ -29,21 +25,22 @@
 - jQuery Code Snippets
 - jsx-beautify
 - Language Support for Java
+- language-stylus
+- markdown all in one
 - markdownlint
 - minapp
 - npm
 - npm intellisense
-- One Monokai Theme
 - Open in Browser
 - Path Intellisense
 - React Native Tools
-- React-Native/React/Redux snippets for es6/es7
 - Reactjs code snippets
 - Sass
 - SQL Server (mssql)
 - vscode-stylelint
 - stylus
 - SVG Viewer
+- translate
 - TSLint
 - Vetur
 - vscode wxml
@@ -51,6 +48,7 @@
 - vscode-icons
 - Vue 2 Snippets
 - webpack
+- 翻译
 
 ## 快捷键 描述
 
