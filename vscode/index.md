@@ -50,6 +50,12 @@
 - webpack
 - 翻译
 
+## 编译 scss
+
+```console
+node-sass a b
+```
+
 ## 快捷键 描述
 
 - ctrl + shift + p 或者 F1 打开控制面板
