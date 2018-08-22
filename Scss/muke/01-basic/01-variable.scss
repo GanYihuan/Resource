@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+// variable
+$a: 2;
+
+// 默认变量用来设置默认值，然后根据需求来覆盖
+// 在这里被覆盖为 2
+$a: 1.5 !default;
+
+body {
+  line-height: $a;
+}

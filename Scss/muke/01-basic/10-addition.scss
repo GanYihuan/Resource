@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+$content-width: 720px;
+$sidebar-width: 220px;
+$gutter: 20px;
+
+.content {
+  width: $content-width + $sidebar-width + $gutter;
+  // 运算时碰到不同类型的单位时，编译也会报错
+  height: ((220px + 720px) - 11 * 20 ) / 12;
+  // 计算公式为 01 + 04 = 05、02 + 05 = 07 和 03 + 06 = 09
+  color: #010203 + #040506;
+  // 计算公式为 01 * 2 = 02、02 * 2 = 04 和 03 * 2 = 06，
+  background-color: #010203 * 2;
+}
+
+// 字符运算
+$content: "Hello" + " " + "Sass!";
+.box:before {
+  content: " #{$content} ";
+}
+
+p:before {
+  // 看第一个的模式，结果就是该模式
+  // 有引号的字符串添加一个没有引号的字符串.结果是一个有引号的字符串。
+  content: "Foo " + Bar;
+  // 没有引号的字符串添加一个有引号的字符串,结果是一个没有引号的字符串。
+  font-family: sans- + "serif";
+  cursor: e + -resize;
+}

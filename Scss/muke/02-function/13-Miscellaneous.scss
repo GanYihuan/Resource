@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+// 在这里把 Miscellaneous 函数称为三元条件函数，主要因为他和 JavaScript 中的三元判断非常的相似。
+// 他有两个值，当条件成立返回一种值，当条件不成立时返回另一种值：
+// >> if(true,1px,2px)
+// 1px
+// >> if(false,1px,2px)
+// 2px

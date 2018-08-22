@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// 并没有产生任何代码块,只有通过 @extend 调用才会产生代码：
+%mt5 {
+  margin-top: 5px;
+}
+
+.btn {
+  /* 调用一个占位符 */
+  // 相当于.btn 放入 %mt5 左侧, 启用%mt5样式
+  color: #f00;
+  @extend %mt5;
+}

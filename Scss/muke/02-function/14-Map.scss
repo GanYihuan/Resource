@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+// Sass 的 map 常常被称为数据地图，也有人称其为数组，因为他总是以 key:value 成对的出现，但其更像是一个 JSON 数据。
+$theme-color: (
+        info: (
+                bg-color: #00f,
+                text-color: #444,
+                link-color: #39f
+        ),
+        danger: (
+                bg-color: #f00,
+                text-color:#fff,
+                link-color: #93f
+        ),
+        warning: (
+                bg-color: #ff0,
+                text-color: #fefefe,
+                link-color: #d4e
+        ),
+        facebook: #3b5998,
+        github: #171515
+);
+
+// 由外到里
+.btn-dribble {
+  color: map_get(map_get($theme-color, danger), bg-color);
+}
+
+// map-has-key 返回boolean
+@function colors($color) {
+  @if not map_has_key($theme-color,$color) {
+    @warn "No color found for `#{$color}` in $social-colors map. Property omitted.";
+  }
+  @return map-get($theme-color, $color);
+}
+
+.btn-facebook {
+  color: colors(google);
+}
+
+.btn-github {
+  color: colors(github);
+}
+
+// map-keys($map) 函数将会返回 $map 中的所有 key。
+$list: map-keys($theme-color);
+@debug $list;
+
+// map-values($map) 函数类似于 map-keys($map) 功能，
+// 不同的是 map-values($map)获取的是 $map 的所有 value 值，可以说也将是一个列表。
+// map-merge($map1,$map2)函数是将 $map1 和 $map2 合并，然后得到一个新的 $map。
+$typo: (
+        line-height: 1.6
+);
+$color: (
+        backround: #fff
+);
+$newmap: map-merge($color, $typo);
+.btn {
+  color: map-values($newmap);
+}
+
+// map-remove($map,$key) 函数是用来删除当前 $map 中的某一个 $key，
+// 从而得到一个新的 map。其返回的值还是一个 map。
+$newmap: map-remove($color, text);
+
+// keywords($args) 函数可以说是一个动态创建 map 的函数。
+// 可以通过混合宏或函数的参数变创建 map。参数也是成对出现，
+// 其中 $args 变成 key(会自动去掉$符号)，而 $args 对应的值就是value。
+@mixin map($args...) {
+  @debug keywords($args);
+}
+
+@include map(
+        $dribble: #f00,
+        $twitter: #0f0
+);

@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+nav {
+  a {
+    color: #f00;
+
+    // &: 括号外所有父级集合
+    // &: nav a
+    header & {
+      color: #0f0;
+    }
+  }
+}

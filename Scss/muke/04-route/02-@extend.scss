@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// Sass 中的 @extend 是用来扩展选择器或占位符。
+.error {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+
+.error.intrusion {
+  background-image: url("a.png");
+}
+
+.seriousError {
+  // .error插入.seriousError左侧, 启用.error样式
+  @extend .error;
+  border-width: 3px;
+}
+
+.hoverlink {
+  @extend a:hover;
+}
+
+.comment a.user:hover {
+  font-weight: bold;
+}
+
+// %placeholder 不使用@extend显示调用是不会生成任何样式代码。那么在选择器中使用占位符一样。比如下面的代码：
+#context a%extreme {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+// 这段代码在不调用之前不产生任何代码，只有能过@extend调用之后才生成代码：
+// %extreme插入.notice左侧, 启用%extreme样式
+.notice {
+  @extend %extreme;
+}

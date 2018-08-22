@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+$list: adam john wynn mason kuroir;
+
+@mixin author-images {
+  @each $item in $list {
+    .photo-#{$item} {
+      background: url("/images/avatars/#{$item}.png");
+    }
+  }
+}
+
+.author-bio {
+  @include author-images;
+}

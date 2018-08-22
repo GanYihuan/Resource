@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// @media它会冒泡到最外面起包裹作用, 替换里面相同的样式,
+.sidebar {
+  width: 300px;
+  @media screen and (orientation: landscape) {
+    width: 500px;
+  }
+}
+
+// 里面的@media冒泡到最外面与外面@media融合, 起包裹作用
+@media screen {
+  .sidebar {
+    @media (orientation: landscape) {
+      width: 500px;
+    }
+  }
+}

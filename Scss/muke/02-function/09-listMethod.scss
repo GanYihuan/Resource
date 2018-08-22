@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// 列表函数主要包括一些对列表参数的函数使用，主要包括以下几种：
+// length($list)：返回一个列表的长度值；
+// nth($list, $n)：返回一个列表中指定的某个标签值
+// index($list, $value)：返回一个值在列表中的位置值。
+// join($list1, $list2, [$separator])：将两个列给连接在一起，变成一个列表；
+// append($list1, $val, [$separator])：将某个值放在列表的最后；
+
+// zip($lists…)：将几个列表结合成一个多维的列表；
+// 在使用zip()函数时，每个单一的列表个数值必须是相同的：
+// zip(1px 2px 3px, solid solid solid, green blue red)
+// zip(solid dashed dotted,1px 2px 3px,green blue red)
+
+// join() 函数是将两个列表连接合并成一个列表。
+// >> join((blue,red),(#abc #def))
+// (#0000ff, #ff0000, #aabbcc, #ddeeff)
+
+// 其中 comma 值指定列表中的列表项值之间使用逗号（,）分隔，space 值指定列表中的列表项值之间使用空格（ ）分隔。
+// >> join(blue,(red orange),comma)
+// (#0000ff, #ff0000, #ffa500)
+// >> join(blue,(red orange),space)
+// (#0000ff #ff0000 #ffa500)
+
+$list: a b c 5;
+$list2: 1 2;
+$a: length($list); // 4
+$b: nth($list, 4); // 5 nth非数组下标(start with 1)
+$c: index($list, c); // 3 index非数组下标
+$list3: join($list, $list2);  // a b c 5 1 2
+$list4: append($list2, 3); // 1 2 3
+$d: 1px 2px 3px;
+$e: solid dashed dotted;
+$f: green blue red;
+$list5: zip($d, $e, $f);
+
+.div{
+  width: #{$a} px;
+  height: #{$b} px;
+  z-index: #{$c};
+  @debug $list3;
+  @debug $list4;
+  @debug $list5;
+}
