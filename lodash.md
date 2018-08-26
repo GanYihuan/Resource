@@ -18,7 +18,7 @@ npm i -g npm
 npm i --save lodash
 ```
 
-> var _ = require('lodash');
+> var \_ = require('lodash');
 > 通过使用数组，数字，对象，字符串等方法，Lodash 使 JavaScript 变得更简单。
 
 ## 1、N 次循环
@@ -119,7 +119,7 @@ npm i --save lodash
 </script>
 ```
 
-> _.assign 方法也可以接收多个参数对象进行扩展，都是往后面的对象上合并
+> \_.assign 方法也可以接收多个参数对象进行扩展，都是往后面的对象上合并
 
 ## 6、从列表中随机的选择列表项
 
@@ -140,7 +140,7 @@ npm i --save lodash
 </script>
 ```
 
-> 此外，你也可以指定随机返回元素的个数 _.sampleSize(smartTeam,n)，n 为需要返回的元素个数
+> 此外，你也可以指定随机返回元素的个数 \_.sampleSize(smartTeam,n)，n 为需要返回的元素个数
 
 ## 7、判断对象中是否含有某元素
 
@@ -159,7 +159,7 @@ npm i --save lodash
 </script>
 ```
 
-> _.includes()第一个参数是需要查询的对象，第二个参数是需要查询的元素，第三个参数是开始查询的下标
+> \_.includes()第一个参数是需要查询的对象，第二个参数是需要查询的元素，第三个参数是开始查询的下标
 
 ## 8、遍历循环
 
@@ -178,7 +178,7 @@ npm i --save lodash
 
 ## 9、遍历循环执行某个方法
 
-- _.map()
+- \_.map()
 
 ```js
 <script type="text/javascript">
@@ -205,7 +205,7 @@ npm i --save lodash
 
 ## 10、检验值是否为空
 
-- _.isEmpty()
+- \_.isEmpty()
 
 ```js
 <script type="text/javascript">
@@ -228,7 +228,7 @@ npm i --save lodash
 
 ## 11、查找属性
 
-- _.find() _.filter() _.reject()
+- _.find() _.filter() \_.reject()
 
 ```js
 <script type="text/javascript">
@@ -251,13 +251,13 @@ npm i --save lodash
 </script>
 ```
 
-- _.find()第一个返回真值的第一个元素。
-- _.filter()返回真值的所有元素的数组。
+- \_.find()第一个返回真值的第一个元素。
+- \_.filter()返回真值的所有元素的数组。
 - _.reject()是_.filter 的反向方法，不返回真值的（集合）元素
 
 ## 12、数组去重
 
-- _.uniq(array)创建一个去重后的 array 数组副本。
+- \_.uniq(array)创建一个去重后的 array 数组副本。
 
 > 参数 array (Array): 要检查的数组。返回新的去重后的数组
 
@@ -300,7 +300,7 @@ npm i --save lodash
 
 ## 13、模板插入
 
-- _.template([string=''], [options={}])
+- \_.template([string=''], [options={}])
 
 ```js
 <div id="container"></div>
