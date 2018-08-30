@@ -213,4 +213,4 @@ node-sass a b
 
 ## keybinding
 
-extension.translateReplace    ↑ + cmd + r     修改了默认键位(↑ + cmd + a)
+extension.translateReplace ↑ + cmd + r 修改了默认键位(↑ + cmd + a)

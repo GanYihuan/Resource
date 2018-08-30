@@ -8,7 +8,7 @@
   // "editor.fontFamily": "Monaco",
   "terminal.integrated.fontFamily": "Hack",
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.lineHeight":1,
+  "terminal.integrated.lineHeight": 1,
   // 指定在工作台中使用的图标主题
   // "workbench.iconTheme": "eq-material-theme-icons-darker",
   // "workbench.iconTheme": "eq-material-theme-icons-ocean",
@@ -112,7 +112,7 @@
   // "extensionName": ".min.css", // 编译后缀名
   // "savePath": "./css",
   // "team.showWelcomeMessage": false, // 编译保存的路径,
-  
+
   // format设置
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
   "prettier.singleQuote": true,
@@ -121,8 +121,8 @@
 
   // 这里主要是设置emmet对于vue的支持
   "emmet.syntaxProfiles": {
-      "vue": "html",
-      "vue-html": "html",
+    "vue": "html",
+    "vue-html": "html"
   },
   "emmet.includeLanguages": {
     "vue-html": "html",
@@ -131,8 +131,8 @@
     "wxml": "html"
   },
   "gitlens.advanced.messages": {
-      "suppressShowKeyBindingsNotice": true,
-      "suppressWelcomeNotice": true
+    "suppressShowKeyBindingsNotice": true,
+    "suppressWelcomeNotice": true
   },
   // 在这里主要做了对vue语言的支持
   "files.associations": {
@@ -145,10 +145,10 @@
   },
   // 将一些不必要的搜索范围去掉
   "search.exclude": {
-      "**/node_modules": true,
-      "**/bower_components": true,
-      "**/dist": true,
-      "**/.git": true
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/.git": true
   },
   // Fira Code是我最喜欢的字体，下面会介绍原因
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
