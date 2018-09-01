@@ -93,6 +93,14 @@ h3 {
 /* 非数组下标, 第三个开始 */
 &:nth-child(n + 3) {
 }
+
+/* 带 ￥ 单位 */
+em {
+  &:before {
+    font-size: 28px;
+    content: '￥';
+  }
+}
 ```
 
 ## css 局域化, 命名空间
@@ -193,6 +201,25 @@ data() {
           height: 314px;
         }
       }
+    }
+  }
+}
+```
+
+<!-- 垂直的轮播图 -->
+
+```js
+<swiper :options="options">
+  <swiper-slide>百万白条券免费送，速来领取</swiper-slide>
+  <swiper-slide>签到领流量，1元500M</swiper-slide>
+</swiper>
+
+data() {
+  return {
+    options: {
+      autoplay: true,
+      loop: true,
+      direction: 'vertical'
     }
   }
 }
