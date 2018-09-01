@@ -192,3 +192,114 @@ npm i vue-awesome-swiper -S
   text-overflow: ellipsis;
 }
 ```
+
+## axios
+
+- axios 异步传数据
+
+```node
+npm i axios -S
+```
+
+- 转发访问的路径内容
+- **config/index.js**
+
+```js
+proxyTable: {
+  '/api': {
+    target: 'http://localhost:8080',
+    pathRewrite: {
+      '^/api': '/static/mock'
+    }
+  }
+},
+```
+
+- **Home.vue**
+
+```js
+axios.get('/api/index.json?city=' + this.city).then(this.getHomeInfoSucc)
+axios
+  .get('/api/detail.json', {
+    params: {
+      /* 获取路由参数 */
+      id: this.$route.params.id
+    }
+  })
+  .then(this.handleGetDataSucc)
+```
+
+> 将转发到
+
+```js
+axios.get('/static/mock/index.json?city=' + this.city)
+```
+
+## dom
+
+```js
+// 元素: this.$refs['A'][0]
+/* startY: 'A' 距离父元素顶部距离 */
+this.startY = this.$refs['A'][0].offsetTop
+// 点击位置到窗口顶部距离
+const touchY = e.touches[0].clientY
+```
+
+## keep-alive
+
+```js
+// keep-alive: 在加载路由之后缓存内容，
+// 并且缓存在加载时被读取，以防止连续加载。
+// name = Detail component 不进行缓存处理
+<keep-alive exclude="Detail">
+  <router-view/>
+</keep-alive>
+/*
+activated: 当使用keep-alive时，App.vue将附加组件激活
+当页面重新显示的时候将运行
+deactivated(){}, 与activated相反
+*/
+activated() {
+  if (this.lastCity !== this.city) {
+    /* save preCity */
+    // 城市变化时, 重新调用 getHomeInfo() 发请求
+    this.lastCity = this.city
+    this.getHomeInfo()
+  }
+},
+```
+
+## router
+
+```js
+/* 动态路由: 传递参数 */
+path: '/detail/:id',
+
+/* 路径跳转，页面始终位于顶部 */
+scrollBehavior(to, from, savedPosition) {
+  return {
+    x: 0,
+    y: 0
+  }
+}
+```
+
+## 递归
+
+```html
+<template>
+  <div class="item-chilren" v-if="item.children">
+    <!-- detail-list 名称为了使用递归 -->
+    <detail-list :list="item.children"></detail-list>
+  </div>
+</template>
+<script>
+export default {
+  /*
+  递归: 组件自身调用自身
+  名称为了使用递归
+  */
+  name: 'DetailList'
+}
+</script>
+```
