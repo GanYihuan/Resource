@@ -258,3 +258,193 @@ plugins: [
   new UglifyJsPlugin()
 ]
 ```
+
+## 图片处理
+
+- 1@2x.png retina 屏幕上用的图片
+
+```js
+{
+  /* 将css3属性添加上厂商前缀 */
+  loader: 'postcss-loader',
+  options: {
+    ident: 'postcss',
+    plugins: [
+      /* 雪碧图 图片合并成一张图 */
+      require('postcss-sprites')({
+        /* 指定输出路径 */
+        spritePath: 'dist/assets/imgs/sprites',
+        retina: true
+      })
+    ]
+  }
+{
+  test: /\.(png|jpg|jpeg|gif)$/,
+  use: [
+    // {
+    //   loader: 'file-loader',
+    //   options: {
+    //     limit: 1000,
+    //     /* 图片地址不对, 设置绝对路径 */
+    //     publicPath: '',
+    //     /* 放到 dist 目录 */
+    //     outputPath: 'dist/',
+    //     /* 设置相对路径 */
+    //     useRelativePath: true
+    //   }
+    // },
+    {
+      /* base64 */
+      loader: 'url-loader',
+      options: {
+        name: '[name]-[hash:5].[ext]',
+        /* 超出 1000 处理成 base64 */
+        limit: 1000,
+        /* 图片地址不对, 设置绝对路径 */
+        publicPath: '',
+        /* 放到 dist 目录 */
+        outputPath: 'dist/',
+        /* 设置相对路径 */
+        useRelativePath: true
+      }
+    },
+    {
+      /* 压缩图片 */
+      loader: 'img-loader',
+      options: {
+        pngquant: {
+          /* 压缩 png */
+          quality: 80
+        }
+      }
+    }
+  ]
+},
+{
+  /* 字体文件 */
+  test: /\.(eot|woff2?|ttf|svg)$/,
+  use: [{
+    loader: 'url-loader',
+    options: {
+      name: '[name]-[hash:5].[ext]',
+      /* 超出 5000 处理成 base64 */
+      limit: 5000,
+      /* 图片地址不对, 设置绝对路径 */
+      publicPath: '',
+      /* 放到 dist 目录 */
+      outputPath: 'dist/',
+      /* 设置相对路径 */
+      useRelativePath: true
+    }
+  }]
+}
+```
+
+## 处理第三方 JS 库
+
+```console
+npm i jquery -S
+npm i imports-loader -D
+```
+
+```js
+<!-- install jquery 后, 可以不用引入 jquery -->
+plugins: [
+  /* 第三方 js 库 */
+  new webpack.ProvidePlugin({
+    $: 'jquery'
+  })
+]
+```
+
+```js
+<!-- 找到本地 jquery, src/libs/jquery.js -->
+resolve: {
+  alias: {
+    jquery$: path.resolve(__dirname, 'src/libs/jquery.min.js')
+  }
+},
+```
+
+```js
+<!-- 第三方 js 库 -->
+{
+  test: path.resolve(__dirname, 'src/app.js'),
+  use: [{
+    loader: 'imports-loader',
+    options: {
+      $: 'jquery'
+    }
+  }]
+}
+```
+
+## 自动生成 HTML, js, css 自动插入 html
+
+```console
+npm i html-webpack-plugin -S
+```
+
+```js
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+/* 生成 HTML */
+new HtmlWebpackPlugin(
+  {
+    /* 输出位置文件 */
+    filename: 'index.html',
+    /* 模板文件 */
+    template: './index.html',
+    /* css, js 通过标签形式插入页面中 */
+    // inject: false,
+    /* 指定有哪些要加入到页面来 */
+    chunks: ['app'],
+    /* 压缩 */
+    minify: {
+      collapseWhitespace: true
+    }
+  }
+)
+```
+
+## HTML 中引入图片
+
+```console
+npm i html-loader -S
+```
+
+```js
+{
+  test: /\.html$/,
+  use: [{
+    /* 将 HMTL 模板文件当做一个 string 输出 */
+    loader: 'html-loader',
+    options: {
+      attrs: ['img:src', 'img:data-src']
+    }
+  }]
+}
+```
+
+## 配合优化
+
+- 提前载入 webpack 加载代码
+
+```console
+<!-- webpack 生成的文件插入到 html 中, 潜在 bug -->
+npm i inline-mainifest-webpack-plugin -D
+<!-- 选择各种 chunk 插入 html 中 -->
+npm i html-webpack-inline-chunk-plugin -D
+```
+
+```js
+plugins: [
+  /*
+  它内联您使用HtmlWebpackPlugin编写为链接或脚本的块。
+  它可用于在脚本标记内嵌入清单以保存http请求，如本示例中所述。 
+  它不仅限于清单块，而是可以内联任何其他块。
+  */
+  new HtmlInlinkChunkPlugin({
+    inlineChunks: ['manifest']
+  })
+]
+```
