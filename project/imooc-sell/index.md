@@ -381,7 +381,7 @@ seller: {
 /* immediately run function */
 favorite: (() => {
   return loadFromLocal(this.seller.id, 'favorite', false)
-})()
+})()3e3eew
 
 saveToLocal(this.seller.id, 'favorite', this.favorite)
 ```
