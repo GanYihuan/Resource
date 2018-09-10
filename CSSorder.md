@@ -13,10 +13,10 @@
 ```css
 el {
   /* 1：流相关 */
-  display: ;
   visibility: ;
   float: ;
   clear: ;
+  display: ;
 
   /* 2：位置 */
   z-index: ;

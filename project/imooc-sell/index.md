@@ -1,14 +1,22 @@
 ﻿# imooc-sell
 
-> Vue-高仿饿了么 APP
+> 慕课网 Vue-高仿饿了么 APP
+
+## basic
+
+- `-S` = `--save`, `-D` = `--save-dev`, `i` = `install`, `cnpm` = `npm`
+- vue-loader 合并了小图片; 搞定 css 兼容问题
+- 设计稿两倍标的尺寸(iPhone6: dpi=2), style.css 里面写一半的数值
+- Flex layout
 
 ## install plugin
 
 > env config
 
 ```console
-npm isntall vue-cli -g
-vue init webpack projectName
+npm install vue-cli -g
+vue list
+vue init webpack imooc-sell
 ```
 
 > command node>4 version
@@ -23,49 +31,51 @@ nvm use 8.9.1
 > vue-resource: ajax request
 
 ```console
-npm install vue-resource better-scroll --save
-npm install node-sass sass-loader --save-dev
+npm i vue-resource better-scroll -S
+npm i node-sass sass-loader -D
 ```
 
 > better-scroll
 
 ```console
-npm install better-scroll --save
+npm i better-scroll -D
 ```
 
-## reset.css
+## 图标字体制作
 
-```html
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-<link rel="stylesheet" href="static/css/reset.css">
+- [IconMoon](https://icomoon.io/#icons-icomoon)
+- **common/fonts**
+- **common/scss/icon.scss**
+
+## mock 数据
+
+- [seller data](http://localhost:8088/api/seller)
+- [goods data](http://localhost:8088/api/goods)
+- [ratings data](http://localhost:8088/api/ratings)
+- set data source: **webpack.dev.conf.js**
+- set alias path: **build/webapck.base.conf.js**
+- run port: **config/index.js**
+- modify ESLint rules: **eslintrc.js** [eslint](http://eslint.cn/docs/4.0.0/rules/semi-style)
+
+```console
+<!-- Ajax request, XMLHttpRequest -->
+npm i vue-resource -S
+<!-- Sass -->
+npm i node-sass sass-loader -D
 ```
 
-## 跳过 eslint 检测
+## reset.css, mobile config
+
+- **index.html**
+
+## ignore eslint
+
+- .eslintrc.js
+- .eslintignore
 
 ```js
 // eslint-disable `Name`
 /* eslint-disable no-new */
-```
-
-## 动态路由
-
-```js
-// dynamic route
-const goods = resolve => {
-  import('components/goods/goods.vue').then(module => {
-    resolve(module)
-  })
-}
-const ratings = resolve => {
-  import('components/ratings/ratings.vue').then(module => {
-    resolve(module)
-  })
-}
-const seller = resolve => {
-  import('components/seller/seller.vue').then(module => {
-    resolve(module)
-  })
-}
 ```
 
 ## 手机预览开发的界面
@@ -82,114 +92,49 @@ npm run dev
 - url become `IP:8088/#/goods`
 - [草料](https://cli.im/) edit `IP:8088/#/goods`
 
-## style
+## vue-router, dynamic route
 
-```css
-/* 2x3x image */
-@mixin bg-image($url) {
-  background-image: url($url+'@2x.png');
-  @media (-webkit-min-device-pixel-ratio: 3) {
-    background-image: url($url+'@3x.png');
-  }
-  @media (min-device-pixel-ratio: 3) {
-    background-image: url($url+'@3x.png');
-  }
+```console
+npm i vue-router -S
+<!-- dynamic route -->
+npm i babel-plugin-syntax-dynamic-import -D
+```
+
+- dynamic route, 节省加载时间, 修改 **.babelrc**
+
+```js
+// dynamic route
+const goods = resolve => {
+  import('components/goods/goods.vue').then(module => {
+    resolve(module)
+  })
 }
+```
 
-/* 子级 absolute 定位, 父级应该 relative 定位 */
-.content-wrapper {
-  position: relative;
-  .support-count {
-    position: absolute;
-  }
-}
+## vue-resource
 
-/* span 变成 block, 能设置 width & height */
-display: inline-block;
+```console
+<!-- Ajax request, XMLHttpRequest -->
+npm i vue-resource -S
+```
 
-/* 消除间隙，父元素设置 font-size: 0 */
-font-size: 0;
+```js
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+```
 
-/* 垂直方向居中 */
-height: 24px;
-line-height: 24px;
-/* 水平方向居中 */
-text-align: center;
-
-/* 超出显示...(two) */
-text-overflow: ellipsis;
-white-space: nowrap;
-overflow: hidden;
-/* 超出显示...(two) */
-
-/* 清浮动 */
-.clearfix {
-  display: inline-block;
-  &:after {
-    display: block;
-    height: 0;
-    line-height: 0;
-    visibility: hidden;
-    clear: both;
-    content: '.';
-  }
-}
-
-/* 一像素线 */
-@mixin border-1px($color) {
-  position: relative;
-  &:after {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid $color;
-    content: ' ';
-  }
-}
-/* 不同分辨率下的缩放情况 */
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
-  .border-1px {
-    &::after {
-      -webkit-transform: scaleY(0.7);
-      transform: scaleY(0.7);
+```js
+created() {
+  /* vue-resource ajax request */
+  this.$http.get('/api/seller?id=' + this.seller.id).then(res => {
+    /* get res.body(json object) */
+    res = res.body
+    if (res.errno === ERR_OK) {
+      /* res.data: <http://localhost:8088/api/seller> */
+      /* Object.assign: extend attributes to an object */
+      this.seller = Object.assign({}, this.seller, res.data)
     }
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
-  .border-1px {
-    &::after {
-      -webkit-transform: scaleY(0.5);
-      transform: scaleY(0.5);
-    }
-  }
-}
-
-.menu-item {
-  /* 多行文本, 垂直居中 */
-  display: table;
-  /* 让其突出显示 */
-  &.current {
-    z-index: 10;
-    position: relative;
-    margin-top: -1px;
-  }
-  .text {
-    display: table-cell;
-    /* 多行文字, 垂直居中 */
-    vertical-align: middle;
-  }
-}
-
-/* ie盒模型: 已设定的宽度和高度减去边框和内边距才是内容的宽度和高度 */
-box-sizing: border-box;
-
-/* 高度宽度相等 */
-div {
-  padding-top: 100%;
-  width: 100%;
-  height: 0;
+  })
 }
 ```
 
@@ -197,7 +142,7 @@ div {
 
 ```html
 <div class="detail">
-  <!-- 1: A零件 clearfix -->
+  <!-- 1: A clearfix -->
   <div class="detail-wrapper clearfix"></div>
   <!-- 2: 切分为 A B 两个部分 -->
   <div class="detail-close"></div>
@@ -206,18 +151,17 @@ div {
 
 ```css
 .detail-wrapper {
-  width: 100%;
   /* 3: 内容长度会改变 */
   min-height: 100%;
   .detail-main {
-    /* 4: A part space for B part */
+    /* 4: A 给 B 的放置空间 */
     padding-bottom: 64px;
   }
   .detail-close {
     position: relative;
-    /* 5: B零件边距嵌入A零件的内边距 */
+    /* 5: B 嵌入 A 给 B 的放置空间中 */
     margin: -64px auto 0;
-    /* 6: B零件 clearfix */
+    /* 6: B clearfix */
     clear: both;
   }
 }
@@ -230,26 +174,20 @@ clientWidth: 可视区宽 = 样式宽 + padding
 offsetWidth: 占位宽 = 样式宽 + padding + border
 getBoundingClientRect(): Get the element relative viewport location
 
-## 实时滚动位置
-
-```js
-this.foodsScroll.on('scroll', pos => {
-  // scrollY: foodsScroll 滚动位置(实时滚动位置)
-  this.scrollY = Math.abs(Math.round(pos.y))
-})
-```
-
-## 滚动到指定 dom 元素
-
-```js
-this.foodsScroll.scrollToElement(el, 300)
-```
-
 ## better-scroll
+
+```console
+npm install better-scroll -S
+```
 
 ```js
 this.meunScroll = new BScroll(this.$refs.menuWrapper, {
   click: true,
+  /*
+  probeType: 1，会非实时（屏幕滑动超过一定时间后）派发scroll 事件
+  probeType: 2，会在屏幕滑动的过程中实时的派发 scroll 事件
+  probeType: 3，不仅在屏幕滑动的过程中，而且在 momentum 滚动动画运行过程中实时派发 scroll 事件(实时滚动位置)
+  */
   probeType: 3
 })
 
@@ -258,64 +196,33 @@ selectMenu(index, event) {
   if (!event._constructed) {
     return
   }
+
+  // 获取 dom 元素
+  let foodList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook')
+  let el = foodList[index]
+
+  // better-scroll/scrollToElement(dom, duration)
+  // 滚动到指定 dom 元素 el
+  this.foodsScroll.scrollToElement(el, 300)
 }
+
+/* foodsScroll 实时滚动位置 scrollY */
+this.foodsScroll.on('scroll', pos => {
+  this.scrollY = Math.abs(Math.round(pos.y))
+})
 ```
 
-## 获取 dom 元素
+## 两个 better-scroll 组件对应联动
 
-```js
-let foodList = this.$refs.foodsWrapper.getElementsByClassName('food-list-hook')
-```
+- 点击第一个 better-scroll 组件, 第二个组件 currentIndex 高亮 (链表实现, 遍历 listHeight, 实时位置 scrollY 落入哪个 listHeight 之间)
+- _calculateHeight 获取 listHeight
+- selectMenu/scrollToElement 传入 currentIndex
 
 ## 添加属性
 
 ```js
 /* 添加 food 属性 count=1. */
 Vue.set(this.food, 'count', 1)
-```
-
-## formatDate.js
-
-```js
-let date = new Date(time)
-return formatDate(date, 'yyyy-MM-dd hh:mm')
-```
-
-## 追随滚动
-
-```js
-<li :class="{'current':currentIndex===index}"></li>
-
-currentIndex() {
-  for (let i = 0; i < this.listHeight.length; i++) {
-    /* 当前索引值的高度 */
-    let height1 = this.listHeight[i]
-    /* 下一个的高度 */
-    let height2 = this.listHeight[i + 1]
-    if (!height2 || (this.scrollY >= height1 && this.scrollY < height2)) {
-      return i
-    }
-  }
-  return 0
-}
-
-_calculateHeight() {
-  let foodList = this.$refs.foodsWrapper.getElementsByClassName(
-    'food-list-hook'
-  )
-  let height = 0
-  this.listHeight.push(height)
-  for (let i = 0; i < foodList.length; i++) {
-    let item = foodList[i]
-    /*
-    width: 样式宽
-    clientWidth: 可视区宽 = 样式宽 + padding
-    offsetWidth: 占位宽 = 样式宽 + padding + border
-    */
-    height += item.clientHeight
-    this.listHeight.push(height)
-  }
-},
 ```
 
 ## 小球动画
@@ -328,6 +235,7 @@ _calculateHeight() {
   @after-enter="afterDrop"
 >
   <div class="ball" v-show="ball.show">
+    <!-- 两个方向的改变 -->
     <div class="inner inner-hook"></div>
   </div>
 </transition>
@@ -404,7 +312,22 @@ afterDrop(el) {
 }
 ```
 
-## 一行滚动
+## 过滤
+
+- **formatDate.js**
+
+```js
+<div class="time">{{rating.rateTime | formatDate}}</div>
+filters: {
+  /* copy from food.vue/formatDate() */
+  formatDate(time) {
+    let date = new Date(time)
+    return formatDate(date, 'yyyy-MM-dd hh:mm')
+  }
+}
+```
+
+## 单行轮播图
 
 ```js
 _initPics() {
@@ -435,7 +358,9 @@ _initPics() {
 }
 ```
 
-## util.js, 获取 url
+## 获取 url
+
+- **util.js**
 
 ```js
 seller: {
@@ -448,7 +373,161 @@ seller: {
 }
 ```
 
-## store.js, 保存到 localstorage, 读取数据 loadFromLocal
+## 缓存, 保存到 localstorage, 读取数据 loadFromLocal
+
+- **store.js**
+
+```js
+/* immediately run function */
+favorite: (() => {
+  return loadFromLocal(this.seller.id, 'favorite', false)
+})()
+
+saveToLocal(this.seller.id, 'favorite', this.favorite)
+```
+
+## keep-alive
+
+```html
+<!--
+  keep-alive: 包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们
+  当组件在 <keep-alive> 内被切换，它的 activated 和 deactivated 
+  这两个生命周期钩子函数将会被对应执行
+-->
+<!-- <keep-alive exclude="Detail"> Detail 组件不缓存处理 -->
+<keep-alive>
+  <router-view :seller="seller"></router-view>
+</keep-alive>
+```
 
 ## prodserver.js
 
+## style
+
+```css
+/* 2x3x image */
+@mixin bg-image($url) {
+  background-image: url($url+'@2x.png');
+  @media (-webkit-min-device-pixel-ratio: 3) {
+    background-image: url($url+'@3x.png');
+  }
+  @media (min-device-pixel-ratio: 3) {
+    background-image: url($url+'@3x.png');
+  }
+}
+
+/* 子级 absolute 定位, 父级应该 relative 定位 */
+.content-wrapper {
+  position: relative;
+  .support-count {
+    position: absolute;
+  }
+}
+
+/* span 变成 block, 能设置 width & height */
+display: inline-block;
+
+/* 消除间隙，父元素设置 font-size: 0 */
+font-size: 0;
+
+/* 模糊效果 */
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+
+/* [动画效果](http://cubic-bezier.com/#.17,.67,.83,.67) */
+transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41);
+
+/* 垂直方向居中 */
+height: 24px;
+line-height: 24px;
+/* 水平方向居中 */
+text-align: center;
+
+/* 超出显示...(two) */
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+/* 超出显示...(two) */
+
+/* 清浮动 */
+.clearfix {
+  display: inline-block;
+  &:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    height: 0;
+    line-height: 0;
+    content: '.';
+  }
+}
+
+/* 一像素线 */
+@mixin border-1px($color) {
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid $color;
+    content: ' ';
+  }
+}
+
+/* 不同分辨率下的一像素线缩放情况 */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px {
+    &::after {
+      -webkit-transform: scaleY(0.7);
+      transform: scaleY(0.7);
+    }
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px {
+    &::after {
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+}
+
+.menu-item {
+  /* 多行文本, 垂直居中 */
+  display: table;
+  /* 让其突出显示 */
+  &.current {
+    z-index: 10;
+    position: relative;
+    margin-top: -1px;
+  }
+  .text {
+    display: table-cell;
+    /* 多行文字, 垂直居中 */
+    vertical-align: middle;
+  }
+}
+
+/* ie盒模型: 已设定的宽度和高度减去边框和内边距才是内容的宽度和高度 */
+box-sizing: border-box;
+
+/* 高度9 : 宽度10 */
+div {
+  padding-top: 90%;
+  width: 100%;
+  height: 0;
+}
+
+/* 动画 */
+<transition name='fade' > </transition > &.fade-enter-active,
+&.fade-leave-active {
+  transition: all 0.2s;
+}
+&.fade-enter,
+&.fade-leave-active {
+  opacity: 0;
+  z-index: -1;
+}
+```
