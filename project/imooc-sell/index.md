@@ -17,6 +17,8 @@
 npm install vue-cli -g
 vue list
 vue init webpack imooc-sell
+npm install
+npm run start
 ```
 
 > command node>4 version
@@ -24,8 +26,8 @@ vue init webpack imooc-sell
 ```console
 npm i nvm
 nvm ls
-nvm install 8.9.1
-nvm use 8.9.1
+nvm install 8.11.1
+nvm use 8.11.1
 ```
 
 > vue-resource: ajax request
