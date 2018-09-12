@@ -146,9 +146,9 @@ addClass(child, 'slider-item')
 
 ## 轮播组件, 难度大
 
-- **slider.vue/_setSliderWidth**
-- **slider.vue/_initSlider**
-- **slider.vue/_autoPlay**
+- **slider.vue/\_setSliderWidth**
+- **slider.vue/\_initSlider**
+- **slider.vue/\_autoPlay**
 
 ## 懒加载
 
@@ -172,7 +172,42 @@ Vue.use(VueLazyload, {
 
 ```js
 // class="needsclick" fastclick Don't block the click process
-<img class="needsclick"/>
+<img class="needsclick" />
+```
+
+## 双数组嵌套的数据
+
+- **singer.md**
+
+## 点击或者滑动右侧 '热门', A, B ... 滚动到对应元素
+
+- **listview.md**
+
+## vuex
+
+```console
+npm i vuex -S
+```
+
+> 储存数据
+
+```js
+import { mapMutations } from 'vuex'
+/* invoked vuex/mutations */
+...mapMutations({
+  /* SET_SINGER: vuex/mutation-type */ 
+  setSinger: 'SET_SINGER'
+}),
+```
+
+> 获取数据
+
+```js
+import { mapGetters } from 'vuex'
+...mapGetters(['singer']),
+title() {
+  return this.singer.name
+}
 ```
 
 ## 各个浏览器 css 前缀
@@ -194,14 +229,18 @@ this.$refs.filter.style[backdrop] = `blur(${blur}px)`
 npm i create-keyframe-animation -S
 ```
 
-```js
+```html
 <transition
   name="normal"
   @enter="enter"
   @after-enter="afterEnter"
   @leave="leave"
   @after-leave="afterLeave"
-></transition>
+>
+</transition>
+```
+
+```js
 import animations from 'create-keyframe-animation'
 enter(el, done) {
   let animation = {
@@ -226,7 +265,7 @@ afterEnter() {
 
 ## audio
 
-```js
+```html
 <audio
   ref="audio"
   :src="currentSong.url"
@@ -236,13 +275,16 @@ afterEnter() {
   @ended="end"
 >
 </audio>
+```
+
+```js
 /* <audio>, song jump to begin */
 this.currentLyric.seek(0)
 this.currentLyric.play()
 this.currentLyric.stop()
 ```
 
-## time
+## time 转换为 00:00
 
 ```js
 format(interval) {
@@ -266,12 +308,12 @@ _pad(num, n = 2) {
 
 ## SVG
 
+- **progress-cicle.vue**
+
 ## util.js
 
 > 洗牌函数 shuffle()
 > 节流函数 debounce()
-
-## 歌词数据处理 (不懂)
 
 ## mixin
 
