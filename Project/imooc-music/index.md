@@ -195,7 +195,7 @@ npm i vuex -S
 import { mapMutations } from 'vuex'
 /* invoked vuex/mutations */
 ...mapMutations({
-  /* SET_SINGER: vuex/mutation-type */ 
+  /* SET_SINGER: vuex/mutation-type */
   setSinger: 'SET_SINGER'
 }),
 ```
@@ -208,6 +208,12 @@ import { mapGetters } from 'vuex'
 title() {
   return this.singer.name
 }
+```
+
+- actions.js
+
+```js
+export const insertSong = function({ commit, state }, song) {}
 ```
 
 ## 各个浏览器 css 前缀
@@ -329,3 +335,7 @@ npm install good-storage --save
 ```
 
 - **common/js/cache.js**
+
+## server
+
+- **prod.server.js**
