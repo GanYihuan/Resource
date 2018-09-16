@@ -1,6 +1,40 @@
 ﻿# webpack
 
-## plugins 介绍
+## webpack 核心概念
+
+- entry: 某段代码入口, 打包入口
+- output: 输出
+- loaders: 文件转化为模块
+- plugins: 参与打包过程
+- chunk: 代码块
+- bundle: 打包生成的文件
+- module: 模块
+
+## 使用 webpack
+
+```console
+webpack -h
+webpack -v
+webpack <entry> <output>
+```
+
+> webpack-cli: 交互式初始化项目, 迁移 v1->v2
+
+```console
+npm install webpack-cli -g
+webpack-cli -h
+webpack-cli init webpack-addons-demo
+```
+
+> 打包 JS
+
+```console
+webpack
+<!-- 自定义 webpack 打包 -->
+webpack --config webpack-config.js
+```
+
+## 编译 ES6
 
 - babel-core: babel 编译库的核心包
 - babel-loader: 帮你来使用 babel
@@ -30,6 +64,35 @@ npm i @babel/runtime -S
 npm i babel-runtime -S
 ```
 
+## 编译 typescript
+
+- js 超集
+- lodash: 封装了诸多对字符串、数组、对象等常见数据类型的处理函数
+
+```console
+npm i webpack typescript ts-loader awesome-typescript-loader -D
+
+<!-- 说明文件, 编译出问题能抛出问题 -->
+npm i @types/lodash -S
+<!-- 选上 -->
+npm i loadash -S
+
+<!-- 类型文件管理 -->
+npm i typings -g
+typings i lodash -S
+```
+
+## 打包公共代码
+
+- 分割 Chunk, 减少代码冗余, 加快速度
+- lodash: 封装了诸多对字符串、数组、对象等常见数据类型的处理函数
+- webpack4 删除了 webpack.optimize.CommonsChunkPlugin
+
+```console
+npm i webpack -D
+npm i lodash -S
+```
+
 ## webpack 基础配置
 
 ```js
@@ -43,6 +106,9 @@ output: {
 ```
 
 ## 代码分割和懒加载 require.ensure require.include
+
+- require.ensure: 动态加载模块, callback 才执行
+- require.include: 引入模块(提取引入公共模块))
 
 ```js
 /* 引入模块, 但不执行, 提前加载第三方模块, 减少加载次数 */
@@ -77,62 +143,6 @@ npm i sass-loader console-sass -D
 ```
 
 ```js
-module: {
-  rules: [
-    {
-      test: /\.scss$/,
-      /* 从后往前处理 */
-      use: [
-        {
-          /* 在最后生成的 js 文件中进行处理，动态创建 style 标签，塞到 head 标签里 */
-          loader: 'style-loader',
-          /* 小众功能: style-loader 使其插入 link 标签, 不能处理多个样式 */
-          // loader: 'style-loader/url',
-          /* app.js 额外增加 use(), unuse() 方法, 控制样式是否插入页面中 */
-          // loader: 'style-loader/useable'
-          options: {
-            /* insertAt(插入位置) */
-            /* insertInto(插入到 dom) */
-            /* insertInto: '#app', */
-            /* singleton (是否只使用一个 style 标签) */
-            singleton: true,
-            /* transform 在 style-loader 塞 style 标签时执行, css 加载前提前判断浏览器 */
-            transform: './css.transform.js'
-          }
-        },
-        {
-          /* 打包时把css文件拆出来，css相关模块最终打包到一个指定的css文件中，我们手动用link标签去引入这个css文件就可以了 */
-          loader: 'css-loader',
-          /* 小众功能: style-loader 使其插入 link 标签, 不能处理多个样式 */
-          // loader: 'file-loader'
-          options: {
-            /* 解析的别名 */
-            // alias
-            /* @import */
-            // importLoader
-            /* 是否压缩 */
-            minimize: true,
-            /* 启用 css-modules */
-            modules: true,
-            /* 定义编译出来的名称 */
-            localIdentName: '[path][name]_[local]_[hash:base64:5]'
-          }
-        },
-        {
-          /* 放置 css-loader 下面 */
-          loader: 'sass-loader'
-        },
-        {
-          /* 放置 css-loader 下面 */
-          loader: 'less-loader'
-        }
-      ]
-    }
-  ]
-}
-```
-
-```js
 /* webpack.config.js */
 /* loader: 'style-loader/useable' */
 /* 是否使用 style-loader */
@@ -164,57 +174,6 @@ npm install extract-text-webpack-plugin webpack -D
 npm i extract-text-webpack-plugin@next -D
 ```
 
-```js
-module: {
-  rules: [
-    {
-      test: /\.scss$/,
-      /* 提取 css */
-      use: ExtractTextWebpackPlugin.extract({
-        /* 提取出来的文件用什么处理 */
-        fallback: {
-          /* 在引入css时，在最后生成的js文件中进行处理，动态创建style标签，塞到head标签里 */
-          loader: 'style-loader',
-          options: {
-            /* singleton(是否只使用一个 style 标签) */
-            singleton: true,
-            /* transform(转化, 浏览下, 插入页面前, 根据不同浏览器配置不同样式) */
-            transform: './css.transform.js'
-          }
-        },
-        use: [
-          {
-            /* 打包时把css文件拆出来，css相关模块最终打包到一个指定的css文件中，我们手动用link标签去引入这个css文件就可以了 */
-            loader: 'css-loader',
-            options: {
-              /* 是否压缩 */
-              minimize: true,
-              /* 启用 css-modules */
-              modules: true,
-              /* 定义编译出来的名称 */
-              localIdentName: '[path][name]_[local]_[hash:base64:5]'
-            }
-          },
-          {
-            /* 放置 css-loader 下面 */
-            loader: 'sass-loader'
-          }
-        ]
-      })
-    }
-  ]
-},
-plugins: [
-  /* 提取 css */
-  new ExtractTextWebpackPlugin({
-    /* 提取出来的 css 文件名字 */
-    filename: '[name].min.css',
-    /* 指定提取 css 范围, 提取初始化 */
-    allChunks: false
-  })
-]
-```
-
 ## PostCSS
 
 - postcss(js 转换 css, 打包时期)
@@ -226,119 +185,70 @@ plugins: [
 npm i postcss postcss-loader autoprefixer cssnano postcss-cssnex -D
 ```
 
+```console
+npm i postcss postcss-loader autoprefixer cssnano postcss-cssnext -D
+
+npm install babel-loader@8.0.0-beta.0 @babel/core
+<!-- 选上 -->
+npm i babel-loader babel-core -D
+
+npm i @babel/preset-env -D
+<!-- 选上 -->
+npm i babel-preset-env -D
+```
+
 ## Tree-shaking
 
-```js
-/* 检查打包后的 css 文件 */
-var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
-/* 对 js 文件进行压缩 */
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-/* 去除多余的 css, 进行 CSS Tree Shaking 操作 */
-var PurifyCss = require('purifycss-webpack')
-/* glob-all 的作用就是帮助 PurifyCSS 进行路径处理，定位要做 Tree Shaking 的路径文件 */
-var glob = require('glob-all')
+- Tree-shaking(没使用到的代码删除掉)
+- [webpack.optimize.UglifyJsPlugin 版本没有跟上 webpack4 导致问题](https://github.com/webpack-contrib/uglifyjs-webpack-plugin)
+- glob-all 的作用就是帮助 PurifyCSS 进行路径处理，定位要做 Tree Shaking 的路径文件
 
-plugins: [
-  /* 提取 css, 检查打包后的 css 文件 */
-  new ExtractTextWebpackPlugin({
-    filename: '[name].min.css',
-    /* 指定提取 css 范围, 提取初始化 */
-    allChunks: false
-  }),
-  /* 放 ExtractTextWebpackPlugin 后面 */
-  /* 去除多余的 css, 进行 CSS Tree Shaking 操作 */
-  new PurifyCss({
-    /* glob-all 的作用就是帮助 PurifyCSS 进行路径处理，定位要做 Tree Shaking 的路径文件 */
-    paths: glob.sync([
-      path.join(__dirname, './*.html'),
-      path.join(__dirname, './src/*.js')
-    ])
-  }),
-  /* 对 js 文件进行压缩 */
-  new UglifyJsPlugin()
-]
+```console
+<!-- 第三方引用 -->
+npm i lodash-es -S
+<!-- babel -->
+npm i babel-loader babel-core babel-preset-env babel-plugin-lodash -D
+<!-- 对 js 文件进行压缩 -->
+npm i uglifyjs-webpack-plugin -D
+<!-- glob-all 的作用就是帮助 PurifyCSS 进行路径处理，定位要做 Tree Shaking 的路径文件。 -->
+npm i glob-all -D
+npm i purifycss-webpack -D
+
+<!-- .babelrc 参考 3-3 -->
+npm install babel-loader@8.0.0-beta.0 @babel/core
+<!-- 选上 -->
+npm i babel-loader babel-core -D
+
+npm i @babel/preset-env -D
+<!-- 选上 -->
+npm i babel-preset-env -D
 ```
 
-## 图片处理
+```js
+/* 放 ExtractTextWebpackPlugin 后面 */
+/* 去除多余的 css */
+new PurifyCss(
+  {
+    paths: glob.sync(
+      [
+        path.join(__dirname, './*.html'),
+        path.join(__dirname, './src/*.js')
+      ]
+    )
+  }
+),
+/* 对 js 文件进行压缩 */
+new UglifyJsPlugin()
+```
+
+## 4-1, 4-2, 4-3 文件处理（2）- 图片处理 - 压缩图片、自动合成雪碧图 Base64 编码 sprite、retina 处理 处理字体文件
+
+```console
+npm i file-loader url-loader img-loader postcss-sprites -D
+```
 
 - 1@2x.png retina 屏幕上用的图片
-
-```js
-{
-  /* 将css3属性添加上厂商前缀 */
-  loader: 'postcss-loader',
-  options: {
-    ident: 'postcss',
-    plugins: [
-      /* 雪碧图 图片合并成一张图 */
-      require('postcss-sprites')({
-        /* 指定输出路径 */
-        spritePath: 'dist/assets/imgs/sprites',
-        retina: true
-      })
-    ]
-  }
-{
-  test: /\.(png|jpg|jpeg|gif)$/,
-  use: [
-    // {
-    //   loader: 'file-loader',
-    //   options: {
-    //     limit: 1000,
-    //     /* 图片地址不对, 设置绝对路径 */
-    //     publicPath: '',
-    //     /* 放到 dist 目录 */
-    //     outputPath: 'dist/',
-    //     /* 设置相对路径 */
-    //     useRelativePath: true
-    //   }
-    // },
-    {
-      /* base64 */
-      loader: 'url-loader',
-      options: {
-        name: '[name]-[hash:5].[ext]',
-        /* 超出 1000 处理成 base64 */
-        limit: 1000,
-        /* 图片地址不对, 设置绝对路径 */
-        publicPath: '',
-        /* 放到 dist 目录 */
-        outputPath: 'dist/',
-        /* 设置相对路径 */
-        useRelativePath: true
-      }
-    },
-    {
-      /* 压缩图片 */
-      loader: 'img-loader',
-      options: {
-        pngquant: {
-          /* 压缩 png */
-          quality: 80
-        }
-      }
-    }
-  ]
-},
-{
-  /* 字体文件 */
-  test: /\.(eot|woff2?|ttf|svg)$/,
-  use: [{
-    loader: 'url-loader',
-    options: {
-      name: '[name]-[hash:5].[ext]',
-      /* 超出 5000 处理成 base64 */
-      limit: 5000,
-      /* 图片地址不对, 设置绝对路径 */
-      publicPath: '',
-      /* 放到 dist 目录 */
-      outputPath: 'dist/',
-      /* 设置相对路径 */
-      useRelativePath: true
-    }
-  }]
-}
-```
+- 样式表 1px = retina 2px
 
 ## 处理第三方 JS 库
 
