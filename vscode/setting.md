@@ -81,30 +81,23 @@
   // "workbench.colorTheme": "Monokai",
   "workbench.colorCustomizations": {
     "sideBar.background": "#333",
-
-    "list.hoverBackground": "#f00",
-    "list.focusBackground": "#f00",
-    "list.activeSelectionBackground": "#f00",
-    "list.activeSelectionForeground": "#fff",
-    "list.inactiveSelectionBackground": "#000",
-    "list.inactiveSelectionForeground": "#c002fa",
-    // "list.errorForeground": "#f00",
-    "list.warningForeground": "#f00",
-    // "list.invalidItemForeground": "#ff0",
-    // "list.invalidItemForeground": "#f00",
-    // "list.activeSelectionForeground": "#AB47BC",
-
     "input.foreground": "#a7fc00",
-    "tab.activeBackground": "#f00",
-    "tab.inactiveForeground": "#e0e0e0",
+    "list.hoverBackground": "#db6454",
+    "list.focusBackground": "#db6454",
+    "list.activeSelectionBackground": "#db6454",
+    "list.activeSelectionForeground": "#AB47BC",
+    "list.inactiveSelectionBackground": "#000",
+    "list.inactiveSelectionForeground": "#AB47BC",
+    "list.warningForeground": "#db6454",
+    "tab.activeBackground": "#333",
+    "tab.activeForeground": "#fff",
+    "tab.inactiveForeground": "#ccc",
     "tab.activeBorder": "#AB47BC",
-
+    "tab.hoverBackground": "#db6454",
     "terminal.background": "#333",
-
     "editor.selectionBackground": "#444859",
     "editor.background": "#222",
     "editorWidget.resizeBorder": "#AB47BC",
-
     "foreground": "#f1f0eb",
     "focusBorder": "#a6ff00",
     "scrollbarSlider.background": "#414a4c",
@@ -118,12 +111,13 @@
     "notificationLink.foreground": "#AB47BC",
     "editorWidget.border": "#AB47BC",
     "settings.modifiedItemIndicator": "#AB47BC",
-    // "settings.modifiedItemForeground": "#AB47BC",
     "settings.headerForeground": "#AB47BC",
     "panelTitle.activeBorder": "#AB47BC",
     "breadcrumb.activeSelectionForeground": "#AB47BC",
     "menu.selectionForeground": "#AB47BC",
-    "menubar.selectionForeground": "#AB47BC"
+    "menubar.selectionForeground": "#AB47BC",
+    "list.highlightForeground": "#AB47BC"
+    // "settings.modifiedItemForeground": "#AB47BC"
   },
   // "docthis.includeAuthorTag": true, // 出现@Author
   // "docthis.includeDescriptionTag": true, // 出现@Description
@@ -186,6 +180,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.colorTheme": "Dracula",
   "extensions.autoUpdate": false,
-  "materialTheme.accent": "Purple"
+  "materialTheme.accent": "Purple",
+  "vsicons.dontShowNewVersionMessage": true
 }
 ```
