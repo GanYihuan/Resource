@@ -58,63 +58,35 @@ node-sass a b
 
 ## 快捷键 描述
 
-- ctrl + shift + p 或者 F1 打开控制面板
-- ctrl + p 快速打开
-- ctrl + shift + n 新窗口
-- ctrl + shift + w 关闭窗口
+- command + shift + p & F1 打开控制面板
+- command + n 新窗口
+- command + w 关闭窗口
 
-## 基本编辑快捷键
+## 编辑快捷键
 
-- Ctrl + X 剪切当前行/当前选中内容
-- Ctrl + C 复制当前行/当前选中内容
-- Alt + ↑ / ↓ 上/下移动一行
-- Shift + Alt + ↓ / ↑ 向上/向下复制一行
-- Ctrl + Shift + K 删除一行
-- Ctrl + Enter 向下插入一行
-- Ctrl + Shift + Enter 向上插入一行
-- Ctrl + Shift + \\ 跳转到匹配的括号
-- Ctrl+] / [ 代码行缩进/减少缩进
-- Home 光标跳转到行头
-- End 光标跳转到行尾
-- Ctrl + Home 跳转到文件开头
-- Ctrl + End 跳转到文件结尾
-- Ctrl + ↑ / ↓ 向上/向下滚动一行
-- Ctrl + ← / → 按单词移动光标 word
-- Alt + PgUp / PgDown 向上/向下滚动页面
-- Ctrl + Shif t+ [ 折叠区域代码
-- Ctrl+Shift+] 展开区域代码
-- Ctrl + K Ctrl + [ 折叠所有子区域代码
-- Ctrl + K Ctrl + ] 展开所有折叠的子区域代码
-- Ctrl + K Ctrl + 0 折叠所有区域代码
-- Ctrl + K Ctrl + J 展开所有折叠区域代码
-- Ctrl + K Ctrl + C 添加一行注释
-- Ctrl + K Ctrl + U 取消注释
-- Ctrl + / 切换添加/取消一行注释，等同 ctrl + K ctrl + C 和 Ctrl + K Ctrl + U
-- Shift + Alt + A 切换 添加/取消 大块注释
-- Alt + Z Toggle word wrap
+- command + X 剪切当前行/当前选中内容
+- command + C 复制当前行/当前选中内容
+- option + ↑ / ↓ 上/下移动一行
+- option + shift + ↓ / ↑ 向上/向下复制一行
+- option + shift + ← / → 按单词移动光标 word
+- command + / 添加一行注释
 
 ## 导航
 
-- Ctrl + T 列出所有符号（变量或者函数）
-- Ctrl + G 跳转行
-- Ctrl + P 跳转文件
-- Ctrl + Shift + O 跳转到符号处（搜索变量或者函数）
-- Ctrl + Shift + M 打开问题展示面板
+- control + G 跳转行
+- command + P 跳转文件
+- command + shift + M 打开问题展示面板
+- command + option + ← / → 切换窗口文件
 - F8 下一个错误或警告
 - Shift + F8 上一个错误或警告
-- Ctrl + Shift + Tab 历史编辑窗口导航 Navigate editor group history
-- Alt + ← / → Go back / forward
-- Ctrl + M 进入用 Tab 来移动焦点 Toggle Tab moves focus
+- ctrl + shift + Tab 历史编辑窗口导航 Navigate editor group history
 
 ## 查找和替换
 
-- Ctrl + F Find
-- Ctrl + H Replace
-- F3 / Shift + F3 向下/向上查找
-- Alt + Enter 添加与选中元素匹配的所有元素（等同 atom 中的 Alt+F3）
-- Ctrl + D 添加选中匹配元素中的下一个
-- Ctrl + K Ctrl + D 移动当前选择到下个匹配选择的位置(光标选定) Move last selection to next Find match
-- Alt + C / R / W 切换大小写敏感/正则表达式/整词
+- command + F Find
+- command + option + F Replace
+- command + G 向下查找
+- command + G 向下查找
 
 ## 多行操作
 
