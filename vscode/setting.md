@@ -1,5 +1,7 @@
 ﻿# user setting
 
+> [vscode setting](https://code.visualstudio.com/docs/getstarted/theme-color-reference)
+
 ```json
 {
   "gitlens.historyExplorer.enabled": true,
