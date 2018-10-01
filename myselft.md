@@ -2,7 +2,7 @@
 
 ## Mockjs
 
-[http://rapapi.org/org/index.do](Mockjs)
+[Mockjs](http://rapapi.org/org/index.do)
 user: ganyihuan
 pass: Okyizhixiaoniao123
 
@@ -53,7 +53,7 @@ password：x06j
 
 [](http://www.miitbeian.gov.cn/)
 
-<p>粤ICP备16033525号-1 &nbsp;&nbsp;&nbsp;Copyright © 2016 - 2017</p></a>
+`<p>粤ICP备16033525号-1 &nbsp;&nbsp;&nbsp;Copyright © 2016 - 2017</p></a>`
 
 ## 网易音乐
 
@@ -67,8 +67,8 @@ pass: okyizhixiaoniao123?
 
 ## LightSS
 
-pass:Okyizhixiaoniao123
-user:GanEhank
+pass: Okyizhixiaoniao123
+user: GanEhank
 
 ## Github
 
@@ -119,19 +119,19 @@ pas: Okyizhixiaoniao123
 
 ## W3cJava
 
-(W3cJava)[http://www.w3cjava.com/?s=React+Native]
+[W3cJava](http://www.w3cjava.com/?s=React+Native)
 GanYihuan
 Okyizhixiaoniao123
 
 ## RN 论坛
 
-(RN 论坛)http://www.reactnative.vip/forum.php
+[RN 论坛](http://www.reactnative.vip/forum.php)
 GanYihuan
 QQ 登录
 
 ## 亲亲动漫网
 
-(亲亲动漫网)[http://www.dm930.com/user/login/save]
+[亲亲动漫网](http://www.dm930.com/user/login/save)
 ganfather
 Okyizhixiaoniao123
 
@@ -198,34 +198,27 @@ Okyizhixiaoniao123
 
 abcd svwq bnll bfdj
 
-Windows 10 Product Key
+> Windows 10 Product Key
 
 TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
-
 W269N-WFGWX-YVC9B-4J6C9-T83GX
-
 MH37W-N47XK-V7XM9-C7227-GCQG9
-
 DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4
-
 WNMTR-4C88C-JK8YV-HQ7T2-76DF9
 
-Windows 10 Home Single Language
+> Windows 10 Home Single Language
 
 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH
-
 Windows 10 Home Country Specific (CN)
-
 PVMJN-6DFY6-9CCP6-7BKTT-D3WVR
 
-Windows 10 Professional Product Key
+> Windows 10 Professional Product Key
 
 VK7JG-NPHTM-C97JM-9MPGT-3V66T
-
 W269N-WFGWX-YVC9B-4J6C9-T83GX
 6P99N-YF42M-TPGBG-9VMJP-YKHCF
 
-Windows 10 Enterprise Product Key
+> Windows 10 Enterprise Product Key
 
 NPPR9-FWDCX-D2C8J-H872K-2YT43
 PBHCJ-Q2NYD-2PX34-T2TD6-233PK

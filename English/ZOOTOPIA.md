@@ -197,7 +197,7 @@
 195 - A what? - In your neck. The fold. - 一个什么？ - 在你的脖子缝里。
 196 - The... this... - Oh, there you went, you little dickens! - 额...这... - 噢你这个狡猾的小家伙！
 197 Hehehe, I should get to roll call, so which way do I... 呵呵呵，我应该去报到了，所以哪一边是...
-198 - Oh, ball pen's over there to the left. - Great. Thank you! - 哦，在左手边。 - 很好，谢谢你！
+198 - Oh, bull pen's over there to the left. - Great. Thank you! - 哦，在左手边。 - 很好，谢谢你！
 199 Oh... That poor little bunny's gonna get eaten alive. 哦......那可怜的兔子会被生吞活剥。
 200 Hey! Officer Hopps. You ready to make the world a better place? 嘿!哈波丝警官。准备让这个世界变得更好了吗？
 201 Attention! 注意！
