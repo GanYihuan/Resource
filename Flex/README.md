@@ -46,9 +46,12 @@
 }
 ```
 
-- nowrap（默认）不换行。![nowrap（默认）: 不换行。](img/bg07.png)
-- wrap 换行，第一行在上方。![wrap](img/bg08.png)
-- wrap-reverse 换行，第一行在下方。![wrap-reverse](img/bg09.png)
+- nowrap
+- ![nowrap（默认）: 不换行。](img/bg07.png)
+- wrap
+- ![wrap](img/bg08.png)
+- wrap-reverse
+- ![wrap-reverse](img/bg09.png)
 
 > flex-flow 是 flex-direction 属性和 flex-wrap 属性的简写形式，默认值为 row nowrap。
 
