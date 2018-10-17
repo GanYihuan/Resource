@@ -43,6 +43,18 @@ import fastclick from 'fastclick'
 fastclick.attach(document.body)
 ```
 
+> 支持新语法, ...mapState(), **.babelrc** 配置
+
+```console
+npm i babel-preset-stage-1 -D
+```
+
+```json
+"presets": [
+  "stage-1"
+],
+```
+
 > webpack
 
 - 别名配置 **webpack.base.conf.js**
