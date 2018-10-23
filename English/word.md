@@ -99,3 +99,27 @@
 ## mine 矿/地雷/我的
 
 > one of the largest coal mines in the country
+
+## principle 原理
+
+> He’s got no principles at all
+
+## decorate 装饰
+
+> The bathroom is decorated in green and yellow
+
+## facade 外观
+
+> the facade of the cathedral
+
+## cathedral 教堂
+
+> The rich merchant hired the architect to build a very big and modern cathedral on that place
+
+## merchant 商人
+
+> The merchant offers a bribe to him.
+
+## bribe 贿赂
+
+> He bribe a goverment official

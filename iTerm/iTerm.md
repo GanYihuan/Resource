@@ -129,3 +129,9 @@ cat filename
 ```console
 cp file1 file2
 ```
+
+> 选择带有 .json 的文件
+
+```console
+ls | grep *.json
+```
