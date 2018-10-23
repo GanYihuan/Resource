@@ -1,4 +1,10 @@
-# Vscode
+# vscode
+
+## 发布 vscode-theme
+
+[Azure DevOps](https://dev.azure.com/583520052/?acquisitionId=2305273e-e92b-4660-a523-72689ae1efa9&product=suite)
+GanEhank-vscode-theme
+qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 
 ## plugin
 

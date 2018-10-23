@@ -123,3 +123,23 @@
 ## bribe 贿赂
 
 > He bribe a goverment official
+
+## iterator 迭代器
+
+> Creates an iterator to loop through
+
+## through 通过
+
+> Water will be pumped through a pipe
+
+## pump 抽水
+
+> We were able to pump clean water from several of the wells
+
+## well 很好/井
+
+> She lowered her bucket into the well
+
+## bucket 桶
+
+> It’s been bucketing down all day
