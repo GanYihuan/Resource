@@ -12,7 +12,7 @@
 
 > the government’s long-term economic strategy
 
-## term 期限
+## term 术语
 
 > It’s too early to start talking in terms of casualties
 
@@ -51,3 +51,51 @@
 ## seal 密封/海豹
 
 > The window was sealed shut
+
+## polymorphic 多态
+
+> Factory pattern is a common pattern for creation of polymorphic objects of different concrete types
+
+## pattern 模式
+
+> A general pattern began to emerge
+
+## emerge 出现
+
+> She emerged from the divorce a stronger person
+
+## concrete 具体
+
+> What does that mean in concrete terms ?
+
+## divorce 离婚
+
+> She received the house as part of the divorce settlement
+
+## settlement 解决
+
+> the search for a peaceful settlement of the Northern Ireland conflict
+
+## conflict 冲突
+
+> a lawyer specialize in conflict resolution
+
+## specialize 专门
+
+> And bloggers who specialize in sharing news about trafficking have been threatened in the past
+
+## traffic 交易/交通
+
+> The sound of the traffic kept me awake
+
+## resolution 解决
+
+> They have failed to comply with the resolution
+
+## comply 遵守
+
+> Visitors to the mine must comply with the rules
+
+## mine 矿/地雷/我的
+
+> one of the largest coal mines in the country
