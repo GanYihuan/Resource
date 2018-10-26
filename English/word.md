@@ -143,3 +143,7 @@
 ## bucket 桶
 
 > It’s been bucketing down all day
+
+## execution 执行
+
+> You can proceed to the Target Execution task
