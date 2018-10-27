@@ -6,9 +6,9 @@
 GanEhank-vscode-theme
 qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 
-## plugin
+## plugins
 
-- Angular v6 Snippets
+- Angular 7 Snippets
 - Auto Close Tag
 - Auto Rename Tag
 - Bracket Pair Colorizer
@@ -18,8 +18,11 @@ qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 - Color info
 - CSS Peek
 - Debugger for Chrome
+- Dracual Official
+- EditorConfig for VS Code
 - ESLint
-- GitLens
+- Git Blame
+- GitLens — Git supercharged
 - HTML Boilerplate(ie7, ie8)
 - HTML CSS Support
 - HTML Snippets
@@ -28,20 +31,23 @@ qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 - Image preview
 - JavaScript(ES6) code snippets
 - JavaScript Snippet Pack
+- language-stylus
 - jQuery Code Snippets
+- Live Sass Compiler
 - jsx-beautify
 - Language Support for Java
-- language-stylus
 - markdown all in one
 - markdownlint
 - minapp
 - npm
 - npm intellisense
 - Open in Browser
+- Prettier
 - Path Intellisense
 - React Native Tools
 - Reactjs code snippets
 - Sass
+- stylelint
 - SQL Server (mssql)
 - vscode-stylelint
 - stylus
@@ -55,12 +61,6 @@ qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 - Vue 2 Snippets
 - webpack
 - 翻译
-
-## 编译 scss
-
-```console
-node-sass a b
-```
 
 ## 快捷键 描述
 

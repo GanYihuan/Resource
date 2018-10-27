@@ -155,3 +155,19 @@
 ## entry 入口
 
 > It was dark and their entry into the camp had gone unnoticed.
+
+## pseudo 冒充的
+
+> For added realism, the “pseudo-dead” partner can lay in cold water for a while before the act!
+
+## inherit 成为继承人
+
+> I inherited my mother’s curly hair.
+
+## curly 卷曲的
+
+> ong dark curly hair
+
+## interpolation 插入
+
+> First you use variable interpolation, which you saw a moment ago
