@@ -147,3 +147,11 @@
 ## execution 执行
 
 > You can proceed to the Target Execution task
+
+## range 范围
+
+> Your blood pressure’s well within the normal range
+
+## entry 入口
+
+> It was dark and their entry into the camp had gone unnoticed.
