@@ -171,3 +171,141 @@
 ## interpolation 插入
 
 > First you use variable interpolation, which you saw a moment ago
+
+## optimization 最佳化
+
+> We will include this optimization in our own implementation
+
+## implementation 实现
+
+> Each activity in the diagram has an implementation
+
+## diagram 图表
+
+> Science writers know as well as anyone how much information a diagram can contain
+
+## opt 选择
+
+> If “the U.S. opts for friction, ” Mr. Roach said, “the Chinese can be expected to respond in kind.”
+
+## friction 摩擦
+
+> Oil is put in machinery to reduce the friction
+
+## syntax 语法
+
+> Study the syntax and structure of the document well
+
+## verbose 啰嗦
+
+> For once, his usually verbose wife was content to listen
+
+## content 内容/满足
+
+> Andy was a good husband, and Nicky was clearly very content
+
+## metacharacter 元字符
+
+## process 处理
+
+> Repetition can help the learning process.
+
+## repetition 重复
+
+> The job involved the constant repetition of the same movements
+
+## strategies 战略
+
+> UN forces made a strategic withdrawal
+
+## withdrawal 撤退
+
+> large-scale troop withdrawals
+
+## demand 需求
+
+> As a speaker he was always in demand.
+
+## parallel 平行
+
+> The rise in greenhouse gases parallels the reduction in the ozone layer.
+
+## ozone 臭氧
+
+> Ozone helps life on Earth or hurts it, depending on its location in the atmosphere
+
+## priority 优先
+
+> I have priority over you in my claim
+
+## claim 要求
+
+> The judge disallowed their claim
+
+## disallowed 不承认
+
+> The chairman disallowed the veracity of his report
+
+## veracity 真实性
+
+> We assess all news stories and test their veracity
+
+## assess 评估
+
+> They assess his house at 15000 yuan
+
+## individual 个人
+
+> No individual shall overtop the law
+
+## Conditionally 有条件的
+
+> If you need to conditionally route messages, use mediations
+
+## mediations 中介
+
+> In almost all cases, mediations require access to the message itself so that it can be manipulated, logged, transformed, or whatever the specific use case may be
+
+## manipulated 操作
+
+> So far, we have covered how documents can be created and manipulated
+
+## specific 特定
+
+> The so-called specific was a fraud
+
+## fraud 骗子
+
+> Now all you have to do is see past the fraud and deception and find the right path
+
+## interprets 解释
+
+> One appendix interprets acronyms used in the book
+
+## appendix 附录
+
+> You will find a complete list of targets in the appendix
+
+## acronyms 缩写
+
+> Does your resume need new acronyms?
+
+## resume 简历/恢复
+
+> Always use honesty as some interviewers will be able to detect problems in your resume.
+
+## supply 提供
+
+> We can supply the best service for you
+
+## convention 惯例
+
+> He sets at naught every convention of society.
+
+## naught 无价值
+
+> But so far their efforts have been for naught
+
+## bound 束缚
+
+> He bound the newspapers together
