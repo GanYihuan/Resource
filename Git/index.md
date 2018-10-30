@@ -6,7 +6,14 @@
 
 ## 初始化一个 Git 仓库
 
-- git init
+```console
+echo "# imooc-meituan" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/GanYihuan/imooc-meituan.git
+git push -u origin master
+```
 
 ## 添加文件或者修改文件, 把文件添加到暂存区
 
