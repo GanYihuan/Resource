@@ -20,7 +20,6 @@
 
 - vi filename :打开或新建文件，并将光标置于第一行首
 - vi +n filename ：打开文件，并将光标置于第 n 行首
-- vi + filename ：打开文件，并将光标置于最后一行首
 - vi +/pattern filename：打开文件，并将光标置于第一个与 pattern 匹配的串处
 - vi -r filename ：在上次正用 vi 编辑时发生系统崩溃，恢复 filename
 - vi filename....filename ：打开多个文件，依次进行编辑
@@ -56,7 +55,7 @@
 - Ctrl+u：向文件首翻半屏
 - Ctrl+d：向文件尾翻半屏
 - Ctrl+f：向文件尾翻一屏
-- Ctrl ＋ b；向文件首翻一屏
+- Ctrl+b；向文件首翻一屏
 - nz：将第 n 行滚至屏幕顶部，不指定 n 时将当前行滚至屏幕顶部。
 
 ## 插入文本类命令
@@ -92,20 +91,6 @@
 - ：s/p1/p2/g：将当前行中所有 p1 均用 p2 替代
 - ：n1,n2s/p1/p2/g：将第 n1 至 n2 行中所有 p1 均用 p2 替代
 - ：g/p1/s//p2/g：将文件中所有 p1 均用 p2 替换
-
-## 选项设置
-
-- all：列出所有选项设置情况
-- term：设置终端类型
-- ignorance：在搜索中忽略大小写
-- list：显示制表位(Ctrl+I)和行尾标志（$)
-- number：显示行号
-- report：显示由面向行的命令修改过的数目
-- terse：显示简短的警告信息
-- warn：在转到别的文件时若没保存当前文件则显示 NO write 信息
-- nomagic：允许在搜索模式中，使用前面不带“\”的特殊字符
-- nowrapscan：禁止 vi 在搜索到达文件两端时，又从另一端开始
-- mesg：允许 vi 显示其他用户用 write 写到自己终端上的信息
 
 ## 最后行方式命令
 
