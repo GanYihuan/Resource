@@ -6,167 +6,77 @@
 GanEhank-vscode-theme
 qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 
-## plugins
+## 快捷键
 
-- Angular 7 Snippets
-- Auto Close Tag
-- Auto Rename Tag
-- Bracket Pair Colorizer
-- Class autocomplete for HTML
-- Code Outline
-- Code Runner
-- Color info
-- CSS Peek
-- Debugger for Chrome
-- Dracual Official
-- EditorConfig for VS Code
-- ESLint
-- Git Blame
-- GitLens — Git supercharged
-- HTML Boilerplate(ie7, ie8)
-- HTML CSS Support
-- HTML Snippets
-- HTMLHint
-- Icon Fonts
-- Image preview
-- JavaScript(ES6) code snippets
-- JavaScript Snippet Pack
-- language-stylus
-- jQuery Code Snippets
-- Live Sass Compiler
-- jsx-beautify
-- Language Support for Java
-- markdown all in one
-- markdownlint
-- minapp
-- npm
-- npm intellisense
-- Open in Browser
-- Prettier
-- Path Intellisense
-- React Native Tools
-- Reactjs code snippets
-- Sass
-- stylelint
-- SQL Server (mssql)
-- vscode-stylelint
-- stylus
-- SVG Viewer
-- translate
-- TSLint
-- Vetur
-- vscode wxml
-- vscode-faker
-- vscode-icons
-- Vue 2 Snippets
-- webpack
-- 翻译
+> command = ctrl
+> option = alt
 
-## 快捷键 描述
-
-- command + shift + p & F1 打开控制面板
-- command + n 新窗口
-- command + w 关闭窗口
+- ctrl + shift + p 打开控制面板
+- ctrl + shift + s 另存为
+- ctrl + n 新窗口
+- ctrl + w 关闭窗口
+- ctrl + o 打开文件
+- ctrl + k s 打开快捷键窗口
+- ctrl + k p 复制当前打开文件的路径
+- ctrl + k r 打开文件所在文件夹
+- ctrl + = / - 放大 / 缩小
+- ctrl + shift + e 资源视图和编辑视图的焦点切换
 
 ## 编辑快捷键
 
-- command + X 剪切当前行/当前选中内容
-- command + C 复制当前行/当前选中内容
-- option + ↑ / ↓ 上/下移动一行
-- option + shift + ↓ / ↑ 向上/向下复制一行
-- option + shift + ← / → 按单词移动光标 word
-- command + / 添加一行注释
+- ctrl + c 复制当前行/当前选中内容
+- ctrl + v 粘贴
+- ctrl + x 剪切当前行/当前选中内容
+- ctrl + Z 回退
+- ctrl + / 添加一行注释
+- ctrl + → 移动光标到句尾
+- ctrl + shift + → 光标选中到句尾
+- alt + ↓ 整行下移动一行
+- alt + → 按单词移动光标
+- alt + shif + f 格式化代码
+- alt + shift + → 光标选中到词尾
+- alt + shift + ↓ 向下复制一行
+- ctrl + shift + f 显示搜索
+- ctrl + shift + g 显示 git
+- ctrl + shift + d 显示调试
+- ctrl + shift + x 显示插件
 
 ## 导航
 
-- control + G 跳转行
-- command + P 跳转文件
-- command + shift + M 打开问题展示面板
-- command + option + ← / → 切换窗口文件
+- ctrl + g 光标跳转具体行数
+- ctrl + p 跳转文件
+- ctrl + shift + M 打开问题展示面板
+- ctrl + alt + → 切换窗口文件
 - F8 下一个错误或警告
 - Shift + F8 上一个错误或警告
-- ctrl + shift + Tab 历史编辑窗口导航 Navigate editor group history
+- ctrl + Tab 窗口导航
 
 ## 查找和替换
 
-- command + F Find
-- command + option + F Replace
-- command + G 向下查找
-- command + G 向下查找
+- ctrl + f 查找单词
+- ctrl + alt + F 替换单词
+- ctrl + g 向下查找
 
 ## 多行操作
 
-- Alt + Click 插入光标-支持多个
-- Ctrl + Alt + ↑ / ↓ 向上/向下插入光标
-- Ctrl + U 撤销最后一次光标操作
-- Shift + Alt + I 插入光标到选中范围内所有行结束符 Insert cursor at end of each line selected
-- Ctrl + I 选中当前行
-- Ctrl + Shift + L 选择所有出现在当前选中的行-操作 Select all occurrences of current selection
-- Ctrl + F2 匹配当前选中的词并插入光标 Select all occurrences of current word
-- Shift + Alt + → 从光标处扩展选中全行 Expand selection
-- Shift + Alt + ← 收缩选择区域 Shrink selection
-- Shift + Alt + (drag mouse) 鼠标拖动区域，同时在多个行插入光标 Column (box) selection
-- Ctrl + Shift + Alt + (arrow key) Column (box) selection
-- Ctrl + Shift + Alt + PgUp/PgDown Column (box) selection page up/down
+- ctrl + U 撤销最后一次光标操作
+- alt + click1 插入光标-支持多个
+- alt + shift + click1 选中插入光标范围内容
+- alt + shift + → 从光标处扩展选中全行
+- alt + shift + moveclick1 鼠标拖动区域，同时在多个行插入光标
+- ctrl + alt + shift + (arrow key) Column (box) selection
+- ctrl + alt + shift + PgUp/PgDown Column (box) selection page up/down
 
-## 丰富的语言编辑
+## 编辑器窗口管理
 
-- Ctrl + Space 输入建议[智能提示] Trigger suggestion
-- Ctrl + Shift + Space 输入建议[智能提示]
-- Tab Emmet 指令触发/缩进 Emmet expand abbreviation
-- Shift + Alt + F 格式化代码
-- Ctrl + K Ctrl + F 格式化选中部分的代码
-- F12 Go to Definition
-- Alt + F12 Peek Definition
-- Ctrl + K F12 在侧边打开定义 Open Definition to the side
-- Ctrl + . 快速修复部分可以修复的语法错误 Quick Fix
-- Shift + F12 显示所有引用
-- F2 重命名
-- Ctrl + Shift + . / , 替换下个值 Replace with next/previous value
-- Ctrl + K Ctrl + X 移除空白字符 Trim trailing whitespace
-- Ctrl + K M 更改页面文档格式 Change file language
-
-## 编辑器管理
-
-- Ctrl + F4, Ctrl + W 关闭编辑器
-- Ctrl + K F 关闭当前打开的文件夹
-- Ctrl + \\ 拆分编辑器
-- Ctrl + 1 / 2 / 3 编辑器 tab 页切换 Focus into 1st, 2nd or 3rd editor group
-- Ctrl + K Ctrl + ←/→ 编辑器 tab 页切换 Focus into previous/next editor group
-- Ctrl + Shift + PgUp / PgDown 左/右移动编辑器 Tab 页位置
-- Ctrl + K ← / → Move active editor group
-
-## 文件管理
-
-- Ctrl + N New File
-- Ctrl + O Open File...
-- Ctrl + S Save
-- Ctrl + Shift + S Save As...
-- Ctrl + K S 保存所有当前已经打开的文件
-- Ctrl + F4 Close
-- Ctrl + K Ctrl + W 关闭所有编辑窗口
-- Ctrl + Shift + T 重新打开关闭的编辑器
-- Ctrl + K Enter 保持打开状态 Keep Open
-- Ctrl + Tab Open next
-- Ctrl + Shift + Tab 调出最近打开的文件列表，重复按会切换
-- Ctrl + K P 复制当前打开文件的存放路径
-- Ctrl + K R 打开文件所在文件夹
-- Ctrl + K O 在新窗口打开当前文件
+- ctrl + w 关闭编辑器
+- ctrl + \ / 2 拆分编辑器窗口
+- ctrl + k ctrl + → 编辑器 tab 页切换
+- ctrl + k → 移动当前编辑器窗口到右侧
 
 ## 显示
 
-- F11 切换全屏模式 Toggle full screen
-- Shift + Alt + 1 Toggle editor layout
-- Ctrl + = / - 放大 / 缩小
-- Ctrl + B Toggle Sidebar visibility
-- Ctrl + Shift + E 资源视图和编辑视图的焦点切换 Show Explorer / Toggle focus
-- Ctrl + Shift + F 显示搜索
-- Ctrl + Shift + G Show Git
-- Ctrl + Shift + D Show Debug
-- Ctrl + Shift + X Show Extensions
-- Ctrl + Shift + H 全局替换 Replace in files
-- Ctrl + Shift + J 切换（打开或关闭）搜索面板中的搜索设置 Toggle Search details
-- Ctrl + Shift + C 打开 cmd 命令窗口 Open new command prompt/terminal
+- Ctrl + Shift + C 打开 cmd 命令窗口 Open new ctrl prompt/terminal
 - Ctrl + Shift + U 显示输出面板
 - Ctrl + Shift + V 切换 Markdown 预览
 - Ctrl + K V 在侧边打开 markdown 预览
@@ -182,7 +92,6 @@ qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 
 ## 集成终端
 
-- Ctrl + shift + \ `打开集成终端面板 Show integrated terminal Ctrl + Shift + \` 创建一个新的集成终端终端 Create new terminal
 - Ctrl + Shift + C 复制所选 Copy selection
 - Ctrl + Shif t+ V 复制到当前激活的终端 Paste into active terminal
 - Ctrl + ↑ / ↓ Scroll up/down
