@@ -17,6 +17,11 @@ qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 - ctrl + k p 复制当前打开文件的路径
 - ctrl + k r 打开文件所在文件夹
 - ctrl + = / - 放大 / 缩小
+- ctrl + p 跳转文件
+- ctrl + alt + → 切换窗口文件
+- ctrl + \ / 2 拆分编辑器窗口
+- ctrl + k → 移动当前拆分窗口页到右侧
+- ctrl + k ctrl + → 编辑器拆分窗口页切换
 - ctrl + shift + s 另存为
 
 ## 编辑
@@ -42,15 +47,6 @@ qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 - alt + shift + → 从光标处扩展选中单词
 - alt + shift + moveclick1 鼠标拖动区域，同时在多个行插入光标
 - alt + click1 插入光标-支持多个
-
-## 窗口
-
-- ctrl + p 跳转文件
-- ctrl + alt + → 切换窗口文件
-- ctrl + w 关闭编辑器
-- ctrl + \ / 2 拆分编辑器窗口
-- ctrl + k ctrl + → 编辑器拆分窗口页切换
-- ctrl + k → 移动当前拆分窗口页到右侧
 
 ## 显示
 
