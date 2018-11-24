@@ -232,3 +232,8 @@ CKFK9-QNGF2-D34FM-99QX2-8XC4K
 * user: m15012856094@163.com
 * APPID: wxabcaad13aeed9229 (蜗牛蜗牛图书 小程序)
 * AppSecret(小程序密钥): d48e6e5e5c94c78dcf9d10ec2b23a3e1
+
+## 电信网络
+
+路由
+ganyihuan123
