@@ -11,6 +11,11 @@
 
 ## vscode中添加eslint和vetur插件：
 
+## eslint 规则
+
+- [vue 团队](https://github.com/vuejs/eslint-config-vue)
+- [饿了么团队](https://www.npmjs.com/package/eslint-config-elemefe)
+
 ## 项目中常用的 eslint 规则：
 
 ```js
