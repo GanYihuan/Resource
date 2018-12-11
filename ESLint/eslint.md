@@ -1,4 +1,4 @@
-# vscode保存代码，自动按照eslint规范格式化代码设置
+# vscode 保存代码，自动按照 eslint 规范格式化代码设置
 
 - [ESLint官网](https://eslint.org/docs/user-guide/configuring)
 
@@ -9,7 +9,7 @@
 "eslint-loader": "^2.0.0",
 "eslint-plugin-html": "^4.0.3",
 
-## vscode中添加eslint和vetur插件：
+## vscode 中添加 eslint 和 vetur 插件：
 
 ## eslint 规则
 
