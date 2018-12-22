@@ -53,8 +53,13 @@
   "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
   // 默认行尾字符。
   "workbench.colorCustomizations": {
-    // "gitDecoration.addedResourceForeground": "#00f",
-    // "gitDecoration.modifiedResourceForeground": "#0f0",
+    // "editorCursor.foreground": "#4677c8",
+    "editorGutter.deletedBackground": "#f00",
+    "editorGutter.modifiedBackground": "#f2995f",
+    "editorGutter.addedBackground": "#91d08f",
+    "gitDecoration.addedResourceForeground": "#91d08f",
+    "gitDecoration.modifiedResourceForeground": "#f2995f",
+    "gitDecoration.deletedResourceForeground": "#f00",
     "sideBar.background": "#333",
     "input.foreground": "#33e90a",
     // "input.background": "#fffafa",
@@ -160,5 +165,28 @@
   /* 根据 ESLint的配置 来格式代码 */
   "prettier.eslintIntegration": true,
   "eslint.autoFixOnSave": true,
-  "prettier.semi": true
+  "eslint.options": {
+    "extensions": [".js", ".vue"]
+  },
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    "html",
+    "vue"
+  ],
+  "git.confirmSync": false,
+  // "window.zoomLevel": 0,
+  "editor.renderWhitespace": "boundary",
+  // "editor.cursorBlinking": "smooth",
+  // "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  // "editor.fontFamily": "'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+  "editor.codeLens": true,
+  "editor.snippetSuggestions": "top",
+  "breadcrumbs.enabled": true,
+  // "color-highlight.markerType": "dot-before"
 }
