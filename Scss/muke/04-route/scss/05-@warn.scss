@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// @warn 和 @debug 功能类似，用来帮助我们更好的调试 Sass。如：
+@mixin adjust-location($x) {
+	@if unitless($x) {
+		@warn "Assuming #{$x} to be in pixels";
+		$x: 1px * $x;
+	}
+	left: $x;
+}
+
+.btn {
+	@include adjust-location(1);
+}

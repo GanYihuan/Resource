@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+// comparable() 判断两个数是否可以进行“加，减”以及“合并”。可以返回 true，不可以返回 false：
+// >> comparable(2px,1px)
+// true
+// >> comparable(2px,1%)
+// false

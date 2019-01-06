@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// through 表示包括 end 这个数，
+$grid-prefix: span !default;
+$grid-width: 50px !default;
+
+@for $i from 1 through 5 {
+	.#{$grid-prefix}#{$i} {
+		width: $grid-width + $i;
+	}
+}
+
+// to 则不包括 end 这个数。
+@for $i from 10 to 15 {
+	.#{$grid-prefix}#{$i} {
+		width: $grid-width + $i;
+	}
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// unit() 函数主要是用来获取一个值所使用的单位，碰到复杂的计算时，
+// 其能根据运算得到一个“多单位组合”的值，不过只充许乘、除运算：
+// >> unit(100)
+// ""
+// >> unit(100px)
+// "px"
+// >> unit(10px * 3em)
+// "em*px"
+// >> unit(10px * 2em / 3cm / 1rem)
+// "em/rem"
+// 但加、减碰到不同单位时，unit() 函数将会报错，除 px 与 cm、mm 运算之外：
+
+// unitless() 如果不带单位返回的值为 true，带单位返回的值为 false：
+// >> unitless(100)
+// true
+// >> unitless(100px)
+// false

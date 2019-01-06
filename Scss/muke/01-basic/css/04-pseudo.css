@@ -1,0 +1,8 @@
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: ''; }
+.clearfix:after {
+  overflow: hidden;
+  clear: both; }
+
+/*# sourceMappingURL=04-pseudo.css.map */

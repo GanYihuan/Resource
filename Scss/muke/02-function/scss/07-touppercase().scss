@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+%test {
+	background: to-upper-case(aaaaa);
+	background: to-lower-case(A-AAA);
+}
+
+.btn {
+	@extend %test;
+}

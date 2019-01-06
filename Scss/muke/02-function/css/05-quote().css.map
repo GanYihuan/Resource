@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,MAAO;EACN,OAAO,EAAQ,GAAG;;AAGnB,MAAO;EACN,OAAO,EAAQ,YAAY;;AAG5B,MAAO;EACN,OAAO,EAAE,eAAoB",
+"sources": ["../scss/05-quote().scss"],
+"names": [],
+"file": "05-quote().css"
+}

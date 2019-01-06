@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.btn {
+  margin-top: 5px; }
+
+.btn {
+  /* 调用一个占位符 */
+  color: #f00; }
+
+/*# sourceMappingURL=07-placeholder.css.map */

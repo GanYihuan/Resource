@@ -1,0 +1,24 @@
+.error, .seriousError {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+
+.error.intrusion, .intrusion.seriousError {
+  background-image: url("a.png");
+}
+
+.seriousError {
+  border-width: 3px;
+}
+
+.comment a.user:hover, .comment .user.hoverlink {
+  font-weight: bold;
+}
+
+#context a.notice {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+/*# sourceMappingURL=02-@extend.css.map */

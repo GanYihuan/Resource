@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAoCA,IAAK;EACJ,KAAK,EAAE,IAAQ;EACf,MAAM,EAAE,IAAQ;EAChB,OAAO,EAAE,CAAK",
+"sources": ["../scss/09-listMethod.scss"],
+"names": [],
+"file": "09-listMethod.css"
+}

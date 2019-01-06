@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKC,iCACQ;EACP,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,EAAE;AAGZ,eAAQ;EACP,QAAQ,EAAE,MAAM;EAChB,KAAK,EAAE,IAAI",
+"sources": ["../scss/04-pseudo.scss"],
+"names": [],
+"file": "04-pseudo.css"
+}

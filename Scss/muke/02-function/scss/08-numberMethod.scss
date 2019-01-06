@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// 终端中输入 sass -i
+
+// percentage($value)：将一个不带单位的数转换成百分比值；
+// >> percentage(.2)
+// 20%
+// >> percentage(2px / 10px)
+// 20%
+
+// round($value)：将数值四舍五入，转换成一个最接近的整数；
+// >> round(15.8px)
+// 16px
+
+// ceil($value)：将大于自己的小数转换成下一位整数；
+// >> ceil(18.1px)
+// 19px
+
+// floor($value)：将一个数去除他的小数部分；
+// >> floor(13.5px)
+// 13px
+
+// abs($value)：返回一个数的绝对值；
+// >> abs(-8.9px)
+// 8.9px
+
+// min($numbers…)：找出几个数值之间的最小值；
+// >> min(1,2px,3%,4em,300%)
+// 1
+
+// max($numbers…)：找出几个数值之间的最大值；
+// >> max(1px,5px)
+// 5px
+
+// random(): 获取随机数

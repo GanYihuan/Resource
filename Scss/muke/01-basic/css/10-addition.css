@@ -1,0 +1,15 @@
+.content {
+  width: 960px;
+  height: 60px;
+  color: #050709;
+  background-color: #020406; }
+
+.box:before {
+  content: " Hello Sass! "; }
+
+p:before {
+  content: "Foo Bar";
+  font-family: sans-serif;
+  cursor: e-resize; }
+
+/*# sourceMappingURL=10-addition.css.map */

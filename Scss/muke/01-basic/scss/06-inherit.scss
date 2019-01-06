@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.btn {
+	border: 1px solid #ccc;
+}
+
+.btn-danger {
+	color: #f00;
+	// @extend: .btn-danger 继承 .btn 样式
+	@extend .btn;
+}

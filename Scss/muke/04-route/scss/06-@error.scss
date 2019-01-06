@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// @error 和 @warn、@debug 功能是如出一辙。
+@mixin error($x) {
+	@if $x < 10 {
+		width: $x px;
+	} @else {
+		@error "你需要将#{$x}值设置在10以内的数";
+	}
+}
+
+.test {
+	@include error(15);
+}

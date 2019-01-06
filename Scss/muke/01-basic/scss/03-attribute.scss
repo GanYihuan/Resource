@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+// border-top, border-right
+.box {
+	border: {
+		top: 1px solid #f00;
+		bottom: 1px solid #0ff;
+	}
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAGA,IAAK;EACJ,UAAU,EAAE,GAAG;;AAGhB,IAAK;EACJ,aAAa;EAEb,KAAK,EAAE,IAAI",
+"sources": ["../scss/07-placeholder.scss"],
+"names": [],
+"file": "07-placeholder.css"
+}

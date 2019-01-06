@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// 1
+// @import 根据文件名引入。 默认情况下，它会寻找 Sass 文件并直接引入，
+// 但是，在少数几种情况下，它会被编译成 CSS 的 @import 规则：
+// 如果文件的扩展名是 .css。
+// 如果文件名以 http:// 开头。
+// 如果文件名是 url()。
+// 如果 @import 包含了任何媒体查询（media queries）。
+// 如果上述情况都没有出现，并且扩展名是 .scss 或 .sass，
+// 该名称的 Sass 或 SCSS 文件就会被引入。
+// 如果没有扩展名，Sass 将试着找出具有 .scss 或 .sass 扩展名的同名文件并将其引入。
+
+// 2
+// @import "foo.scss"; 将被编译为：@import "foo";
+// @import "foo.css"; 将被编译为： @import "foo.css";
+// @import "foo" screen; 将被编译为：@import "foo" screen;
+// @import "http://foo.com/bar"; 将被编译为：@import "http://foo.com/bar";
+// @import url(foo); 将被编译为：@import url(foo);
+// 也可以通过一个 @import 引入多个文件。例如：
+// @import "rounded-corners", "text-shadow";
+// 将引入 rounded-corners 和 text-shadow 两个文件。
+
+// 3
+// 如果你有一个 SCSS 或 Sass 文件需要引入， 但是你又不希望它被编译为一个 CSS 文件，
+// 在文件名前面加一个下划线，就能避免被编译。 这将告诉 Sass 不要把它编译成 CSS 文件。
+// @import "colors"; 不用加下划线来引入 _colors.scss 文件。
+// 在同一个目录不能同时存在带下划线和不带下划线的同名文件。
+
+// 4
+// 假设要引入的样式文件`example.scss`文件中包含这样的代码：
+// .example {
+//   color: red;
+// }
+// 然后这样引用：
+// #main {
+//   @import "example";
+// }

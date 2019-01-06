@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,IAAK;EAEH,UAAG,EAAE,cAAc;EACnB,aAAM,EAAE,cAAc",
+"sources": ["../scss/03-attribute.scss"],
+"names": [],
+"file": "03-attribute.css"
+}
