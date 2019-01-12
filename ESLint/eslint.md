@@ -13,6 +13,8 @@ cnpm i eslint eslint-friendly-formatter eslint-loader eslint-plugin-html -D
 
 ## vscode 中添加 eslint 和 vetur 插件：
 
+eslint --init 命令在用户目录中生成一个配置文件
+
 ## vscode setting.json
 
 /* eslint-disable vue/no-side-effects-in-computed-properties */
