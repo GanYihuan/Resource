@@ -11,6 +11,18 @@ cnpm i eslint eslint-friendly-formatter eslint-loader eslint-plugin-html -D
 "eslint-loader": "^2.0.0",
 "eslint-plugin-html": "^4.0.3",
 
+## 根目录里面添加 .prettierrc 文件
+
+```json
+{
+  "eslintIntegration": true,
+  "stylelintIntegration": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "semi": false
+}
+```
+
 ## vscode 中添加 eslint 和 vetur 插件：
 
 eslint --init 命令在用户目录中生成一个配置文件
