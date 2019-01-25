@@ -25,10 +25,12 @@
 
 > window
 
-`npm install -g cnpm --registry=https://registry.npm.taobao.org`
-`cd targetFile`
-`npm init`
-`cnpm install node-sass --save-dev`
+```console
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+cd targetFile
+npm init
+cnpm install node-sass sass-loader --save-dev
+```
 
 ## 编译
 
