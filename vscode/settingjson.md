@@ -1,6 +1,5 @@
 ﻿{
   "terminal.integrated.fontFamily": "Roboto Mono Medium for PowerLine",
-  // "terminal.integrated.fontFamily": "Hack",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1,
   "terminal.integrated.cursorStyle": "line",
@@ -14,9 +13,7 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  // 控制是否显示 minimap
   "editor.minimap.enabled": false,
-  // 以像素为单位控制字号。
   "editor.fontSize": 12,
   "editor.lineHeight": 20,
   // the last line of your file will be at the bottom of the editor pane when you scroll down to the maximum.
@@ -24,18 +21,19 @@
   // 控制光标样式，接受的值为 "block"、"block-outline"、"line"、"line-thin" 、"underline" 和 "underline-thin"
   "editor.cursorStyle": "line",
   // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
-  "editor.cursorBlinking": "blink",
+  "editor.cursorBlinking": "smooth",
   // 控制换行方式。可以选择:
   // - "off" (禁用换行)，
   // - "on" (视区换行)，
   // - "wordWrapColumn" (在 "editor.wordWrapColumn" 处换行)或
   // - "bounded" (在最小视区和 "editor.wordWrapColumn" 处换行)。
   "editor.wordWrap": "off",
-  // 保存时取消自动格式化 12067c
-  "editor.formatOnSave": false,
   // 在 "editor.wordWrap" 为 "wordWrapColumn" 或 "bounded" 时控制编辑器列的换行。
-  // "editor.wordWrapColumn": 80,
+  // "editor.wordWrapColumn": 120,
+  // 保存时取消自动格式化
+  "editor.formatOnSave": false,
   "editor.autoSurround": "quotes",
+  "editor.cursorWidth": 2,
   "window.zoomLevel": -2,
   "window.titleBarStyle": "native",
   // 控制是否应在新窗口中打开文件。
@@ -50,10 +48,8 @@
   // 指定在工作台中使用的图标主题
   "workbench.iconTheme": "vscode-icons",
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
   // 默认行尾字符。
   "workbench.colorCustomizations": {
-    // "editorCursor.foreground": "#4677c8",
     "editorGutter.deletedBackground": "#f00",
     "editorGutter.modifiedBackground": "#f2995f",
     "editorGutter.addedBackground": "#91d08f",
@@ -63,7 +59,6 @@
     "sideBar.background": "#333",
     "input.foreground": "#33e90a",
     "sideBar.foreground": "#8a898f",
-    // "input.background": "#fffafa",
     "list.hoverBackground": "#656b7b",
     "list.focusBackground": "#000",
     "list.activeSelectionBackground": "#000",
@@ -73,32 +68,37 @@
     "tab.activeForeground": "#fff",
     "tab.inactiveForeground": "#ccc",
     "tab.hoverBackground": "#333",
-    "editor.selectionBackground": "#9a97993b",
-    "editor.background": "#222",
+    "editor.selectionBackground": "#383830",
+    // "editor.selectionBackground": "#00f",
+    // "editor.inactiveSelectionBackground": "#383830",
+    // "editor.selectionHighlightBackground": "#f00",
     "editor.selectionHighlightBorder": "#fff",
+    // "editorCursor.background": "#00f",
+    // "editorCursor.foreground": "#f00",
+    "editor.background": "#222",
     "terminal.background": "#333",
     "foreground": "#f1f0eb",
     "focusBorder": "#a6ff00",
     "scrollbarSlider.hoverBackground": "#AB47BC50",
-    "scrollbarSlider.activeBackground": "#AB47BC50",
-    "activityBarBadge.background": "#AB47BC",
-    "list.activeSelectionForeground": "#AB47BC",
-    "list.inactiveSelectionForeground": "#AB47BC",
-    "list.highlightForeground": "#AB47BC",
-    "editorSuggestWidget.highlightForeground": "#AB47BC",
-    "textLink.foreground": "#AB47BC",
-    "progressBar.background": "#AB47BC",
-    "pickerGroup.foreground": "#AB47BC",
-    "tab.activeBorder": "#AB47BC",
-    "notificationLink.foreground": "#AB47BC",
-    "editorWidget.resizeBorder": "#AB47BC",
-    "editorWidget.border": "#AB47BC",
-    "settings.modifiedItemIndicator": "#AB47BC",
-    "settings.headerForeground": "#AB47BC",
-    "panelTitle.activeBorder": "#AB47BC",
-    "breadcrumb.activeSelectionForeground": "#AB47BC",
-    "menu.selectionForeground": "#AB47BC",
-    "menubar.selectionForeground": "#AB47BC"
+    "scrollbarSlider.activeBackground": "#2979FF50",
+    "activityBarBadge.background": "#2979FF",
+    "list.activeSelectionForeground": "#2979FF",
+    "list.inactiveSelectionForeground": "#2979FF",
+    "list.highlightForeground": "#2979FF",
+    "editorSuggestWidget.highlightForeground": "#2979FF",
+    "textLink.foreground": "#2979FF",
+    "progressBar.background": "#2979FF",
+    "pickerGroup.foreground": "#2979FF",
+    "tab.activeBorder": "#2979FF",
+    "notificationLink.foreground": "#2979FF",
+    "editorWidget.resizeBorder": "#2979FF",
+    "editorWidget.border": "#2979FF",
+    "settings.modifiedItemIndicator": "#2979FF",
+    "settings.headerForeground": "#2979FF",
+    "panelTitle.activeBorder": "#2979FF",
+    "breadcrumb.activeSelectionForeground": "#2979FF",
+    "menu.selectionForeground": "#2979FF",
+    "menubar.selectionForeground": "#2979FF"
   },
   // 这里主要是设置 emmet 对于 vue 的支持
   "emmet.syntaxProfiles": {
@@ -139,7 +139,7 @@
   // 解决卡顿
   "search.followSymlinks": false,
   "minapp-vscode.disableAutoConfig": true,
-  "html.format.extraLiners": "",
+  // "html.format.extraLiners": "",
   // Error warning message: "Experimental support for decorators is a feature that is subject to change in a future release"
   // "javascript.implicitProjectConfig.experimentalDecorators": true,
   // "javascript.updateImportsOnFileMove.enabled": "always",
@@ -161,14 +161,16 @@
     "param": "",
     "return": ""
   },
-  "materialTheme.accent": "Purple",
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
   /* 根据 ESLint的配置 来格式代码 */
-  "prettier.eslintIntegration": true,
+  // "prettier.eslintIntegration": true,
   "eslint.autoFixOnSave": true,
   "eslint.options": {
-    "extensions": [".js", ".vue"]
+    "extensions": [".js", ".vue"],
+    "configFile": ".eslintrc.json"
   },
   "eslint.validate": [
     "javascript",
@@ -177,18 +179,46 @@
       "autoFix": true
     },
     "html",
-    "vue"
+    "vue",
+    "javascriptreact"
   ],
   "git.confirmSync": false,
-  // "window.zoomLevel": 0,
   "editor.renderWhitespace": "boundary",
-  // "editor.cursorBlinking": "smooth",
-  // "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
-  // "editor.fontFamily": "'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
   "editor.codeLens": true,
   "editor.snippetSuggestions": "top",
   "breadcrumbs.enabled": true,
-  // "color-highlight.markerType": "dot-before"
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  // 配置
+  "git.ignoreMissingGitWarning": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "javascript.validate.enable": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
+  // 基于编辑器设置的颜色主题，自定义语法着色
+  // "editor.tokenColorCustomizations": {
+  //   "[One Monokai]": {
+  //     "comments": "#6e7a70ea",
+  //     "keywords": "#EB404EF7",
+  //     "variables": "#FD971F",
+  //     "strings": "#e2d75dbd",
+  //     "functions": "#5b99fcc9",
+  //     "numbers": "#AE81FF",
+  //     "textMateRules": [
+  // {
+  //     "scope": "log,
+  //     "settings": {
+  //         "foreground": "#FF0000"
+  //     },
+  // }
+  //     ]
+  //   }
+  // }
 }
