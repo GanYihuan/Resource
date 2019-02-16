@@ -303,3 +303,357 @@
 ## Hello
 
 ## Here We Are Again (《喜剧之王》插曲)
+
+## Here With You
+
+## Hoaprox - Ngẫu Hứng (MonBet Remix)
+
+## How Do You Do _
+
+## Hurricane 2000
+
+## Hymn For The Weekend [Remix]
+
+## I Hate Myself For Loving You
+
+## I Just Want To (Chuck Lepley Remix)
+
+## I Knew You Were Trouble (The Voice Performance)
+
+## I Love You Baby
+
+## I'm Folle de Toi - In-Grid, Banks, C
+
+## I'm Just a Little Bit Shy
+
+## Ievan Polkka
+
+## If I Die Young
+
+## Intro
+
+## It's Amazing
+
+## It's Ok
+
+## It's only the fairy tale
+
+## Judas
+
+## Just About Enough
+
+## Just Blue
+
+## Koko Soko
+
+## L-Holidays (Radio Edit)
+
+## L.L.L
+
+## L'amour Toujours (I'll Fly With You)
+
+## La La Love On My Mind
+
+## Lambada
+
+## Let Me Show You The Way
+
+## LetTalk About A Man
+
+## Levan Polkka (Leva's Polka)
+
+## Little Apple
+
+## Lost in Life
+
+## Lost In Paradise
+
+## Love In December 2
+
+## Love In December
+
+## Love Story 2
+
+## Love Story
+
+## Lucky（原版）
+
+## Mãe Bruxa
+
+## Magia
+
+## Magic  Melody
+
+## Man At Arms
+
+## Mapouka
+
+## Mermaid girl (Extended RRver.)
+
+## Mi Mi Mi
+
+## moment
+
+## My Heart Beats Like a Drum (Dum Dum Dum) (International Radio Edit)
+
+## My Lullaby
+
+## Neige
+
+## Nekozilla
+
+## Never Surrender
+
+## New Soul
+
+## NEXT TO YOU
+
+## No Limit - 2 Unlimited
+
+## Nova
+
+## Nyan Cat
+
+## Oh
+
+## Old Memory
+
+## OMG
+
+## On the Radio
+
+## One Love
+
+## Only Love
+
+## only my railgun 2
+
+## only my railgun
+
+## Out of Darkness (プロローグ)
+
+## Over My Head (Better Off Dead)
+
+## PONPONPON
+
+## Purple Passion
+
+## Ra3 Theme - Soviet March
+
+## Rage your dream
+
+## Rather Be (Feat. Jess Glynne)
+
+## Rebound
+
+## Red Like Roses (Red Trailer)
+
+## REINCARNATION
+
+## Resident Evil Main Title Theme (film score)
+
+## Ringtone (MetroGnome Remix)
+
+## Rolling In The Deep
+
+## Room Of Angel
+
+## S&M
+
+## Sacramentum_Unaccompanied Hymn for Torino
+
+## Sakura Tears
+
+## Scarborough Fair
+
+## SCARSONG
+
+## Schlaflied
+
+## Seven Nation Army (Remix)
+
+## Sex Apeal [Max Farenthide Edit]
+
+## Sexual Healing
+
+## Sexy Music
+
+## Shape of You
+
+## She Is My Sin
+
+## SHIVA (Sunburn 2017 Anthem)
+
+## Sing La La La [2013]
+
+## Sing Me To Sleep (OveRcurrent Remix)
+
+## Sis puella magica
+
+## Sky High
+
+## Sleepyhead
+
+## SMS
+
+## Snow (Hey Oh)
+
+## Solo Tu
+
+## Sound Of My Dream
+
+## Stay tuned
+
+## Stop! Stop! Stop
+
+## Strength Of A Thousand Men Dubstep (Remix) - remix
+
+## String Tek
+
+## Stronger
+
+## STYX HELIX
+
+## Summer Vibe (Pegato Remix)
+
+## Super Star
+
+## Superhero
+
+## Sweets Time
+
+## Take me hand
+
+## Take My Hand (Freddy@Disco Mix)
+
+## Tales of the Electric Romeo
+
+## Tanz mit mir
+
+## Tapez 1
+
+## Tassel
+
+## Taylor Swift-Love Story
+
+## Thank You For Everything
+
+## The Garden
+
+## THE NEXT DOOR -INDESTRUCTIBLE
+
+## The Next Episode (Explicit)
+
+## The Party Troll
+
+## The Riddle 2
+
+## The Riddle
+
+## The Spook
+
+## The Warrior Song
+
+## Time after time〜花舞う街で〜
+
+## Time Back
+
+## Time To Rock (FM Edit)
+
+## Time
+
+## TOKYO BON
+
+## Tonight, I Feel Close To You 2
+
+## Tonight, I Feel Close To You
+
+## Too Far
+
+## Tremor (Original Mix)
+
+## Trouble Maker
+
+## Turn Loose the Mermaids
+
+## Under A Violet Moon
+
+## Unity
+
+## Untitled Track
+
+## Uptown Funk
+
+## Valder Fields
+
+## Veni, Vidi, Vici - New Version
+
+## Vibing
+
+## Vivi nell' aria(Manian Video Mix) - remix
+
+## VOLEVO UN GATTO NERO
+
+## Watch The Pacific (feat. RAq & Othello)
+
+## We Are Never Ever Getting Back Together
+
+## We Just Laugh About It
+
+## We No Speak Americano
+
+## What Child Is This
+
+## When You Know
+
+## Wicked Wonderland
+
+## Wild Wild Web
+
+## Wonderful Love (DJ Raf Remix)
+
+## You and Me
+
+## You belong with me
+
+## Капелькою
+
+## คู่กัด (Ku Gad)
+
+## 그 남자의 거짓말
+
+## 나는 나
+
+## 불꽃
+
+## 애원(Feat. Kai)
+
+## 지금 이대로
+
+## 캉캉
+
+## あいぞめ
+
+## アリアリ(韩国语)
+
+## オトシモノ
+
+## カサネテク
+
+## カランドリエ
+
+## コミュニケーション
+
+## それが大事
+
+## ツキアカリのミチシルベ (TV size)
+
+## トルコ行進曲 - オワタ＼(^o^)
+
+## マインドブランド
+
+## ユー&アイ
+
+## レクイエム(inst.) - instrumental
+
+## レプリカの恋
