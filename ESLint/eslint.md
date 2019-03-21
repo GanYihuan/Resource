@@ -11,6 +11,20 @@ cnpm i eslint eslint-friendly-formatter eslint-loader eslint-plugin-html -D
 "eslint-loader": "^2.0.0",
 "eslint-plugin-html": "^4.0.3",
 
+## .editorconfig
+
+```txt
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+```
+
 ## 根目录里面添加 .prettierrc 文件
 
 ```json

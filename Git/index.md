@@ -83,7 +83,7 @@ git push -u origin master
 
 - git log
 
-## 看分支合并图。
+## 看分支合并图
 
 - git log --graph
 
@@ -115,13 +115,13 @@ git push -u origin master
 - git tag v1.0 <!-- 打一个新标签 -->
 - git tag <!-- 查看所有标签 -->
 - git show TagName
-- git tag -d TagName <!-- delete tag -->
+- git tag -d TagName <!-- 删除标签 -->
 
 ## 查看所有分支
 
 - git branch -a
 
-## 查看标签信息：
+## 查看标签信息
 
 - git show v0.9
 
@@ -155,10 +155,12 @@ git push -u origin master
 
 ## iterm
 
-- ssh-keygen -t rsa -C "583520052@qq.com"
-- .ssh
-- ls
-- cat id_rsa.pub
+```iterm
+ssh-keygen -t rsa -C "583520052@qq.com"
+.ssh
+ls
+cat id_rsa.pub
+```
 
 ## [github](https://github.com/settings/keys): 网站里操作
 
