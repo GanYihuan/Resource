@@ -24,6 +24,20 @@ kill PID
 pkill -9 node
 ```
 
+## taobao, 如果想下载 express 的话，只需要使用–registry 参数指定镜像服务器地址
+
+> [node官网](https://nodejs.org/en/)
+
+```console
+npm install express --registry=http://registry.npm.taobao.org
+```
+
+> 可以使用如下命令进行永久设置
+
+```console
+npm config set registry http://registry.npm.taobao.org
+```
+
 ## 管理 node 版本
 
 ```console
