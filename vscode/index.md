@@ -76,3 +76,5 @@ qddanot6eyeuxy2smijvx64e2jwjfklkydvhszoguzbe2ye3s3ua
 ## keybinding
 
 extension.translateReplace ↑ + cmd + r 修改了默认键位(↑ + cmd + a)
+头部注释 fileheader (cmd + option + h)
+函数注释 cursortip (cmd + option + j)
