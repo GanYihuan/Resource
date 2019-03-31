@@ -35,3 +35,20 @@
 - 移动端 App UI 设计入门与实战
 - 专为初学者打造的软件测试入门的首选课堂
 - Nginx 入门到实践 不管是运维还是开发 Nginx 都是你的必备技能
+
+## IMOOC 慕课网920G视频分享下载
+
+上传大盘谷歌网盘了
+
+1. PART1 下载地址 [230G]
+[单文件压缩包](https://drive.google.com/file/d/1gP2tBYXK-iIjWo50YNr_r8BmC1sz17nk)
+[分p压缩包](https://drive.google.com/drive/folders/1PBhDFAvI-Sm9mBcA3FVkohHUU3RpyKox)
+[未压缩](https://drive.google.com/drive/folders/1MmcAv0RTfzrSosfQgY0fWOE0x2u7WOe)
+
+2. PART2 下载地址 [346G]
+[分p压缩包](https://drive.google.com/drive/folders/1gzhVs52OCh4E-viN8qy5_HBUcN8TFOrG)
+[未压缩](https://drive.google.com/drive/folders/1kC0NHUPdZvTZ5JXPVWa0QAQDNoMLWVjm)
+
+3. PART3 下载地址 [344G]
+[分p压缩包](https://drive.google.com/drive/folders/1rEs3fPUMNw9_TBmzOVAmY9Ig9Xv-ETGa)
+[未压缩](https://drive.google.com/drive/folders/1MYqVZBOZpBBZynXlIkT5HrOtPTJKYsqM)
