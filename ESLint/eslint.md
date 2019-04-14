@@ -4,7 +4,7 @@
 
 ## 安装插件
 
-cnpm i eslint eslint-friendly-formatter eslint-loader eslint-plugin-html -D
+cnpm i eslint eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-vue -D
 
 "eslint": "^4.19.1",
 "eslint-friendly-formatter": "^4.0.1",
