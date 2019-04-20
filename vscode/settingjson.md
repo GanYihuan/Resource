@@ -46,59 +46,66 @@
   "workbench.sideBar.location": "left",
   "workbench.statusBar.visible": false,
   // 指定在工作台中使用的图标主题
-  "workbench.iconTheme": "vscode-icons",
   "workbench.activityBar.visible": true,
   // 默认行尾字符。
   "workbench.colorCustomizations": {
+    "panel.background": "#f00",
+    "statusBar.background": "#f00",
+    "sideBar.background": "#21252c",
+    "activityBar.background": "#282c35",
+    "activityBar.inactiveForeground": "#514f53",
+    "activityBar.foreground": "#fff",
+    "activityBarBadge.background": "#b52e31",
+    "activityBarBadge.foreground": "#fff",
+    "sideBar.foreground": "#8a898f",
+    // "sideBarTitle.foreground": "#f00",
+    // "sideBarSectionHeader.background": "#ff0",
+    // "sideBarSectionHeader.foreground": "#00f",
+    // "sideBar.foreground": "#000000",
     "editorGutter.deletedBackground": "#f00",
     "editorGutter.modifiedBackground": "#f2995f",
     "editorGutter.addedBackground": "#91d08f",
     "gitDecoration.addedResourceForeground": "#91d08f",
     "gitDecoration.modifiedResourceForeground": "#f2995f",
     "gitDecoration.deletedResourceForeground": "#f00",
-    "sideBar.background": "#333",
     "input.foreground": "#33e90a",
-    "sideBar.foreground": "#8a898f",
     "list.hoverBackground": "#656b7b",
     "list.focusBackground": "#000",
-    "list.activeSelectionBackground": "#000",
+    // "list.activeSelectionBackground": "#f00",
+    // "list.activeSelectionForeground": "#f00",
     "list.inactiveSelectionBackground": "#000",
     "list.warningForeground": "#656b7b",
     "tab.activeBackground": "#666",
     "tab.activeForeground": "#fff",
     "tab.inactiveForeground": "#ccc",
     "tab.hoverBackground": "#333",
-    "editor.selectionBackground": "#383830",
-    // "editor.selectionBackground": "#00f",
-    // "editor.inactiveSelectionBackground": "#383830",
-    // "editor.selectionHighlightBackground": "#f00",
+    "editor.selectionBackground": "#0000ff6c",
     "editor.selectionHighlightBorder": "#fff",
-    // "editorCursor.background": "#00f",
-    // "editorCursor.foreground": "#f00",
-    "editor.background": "#222",
+    "editorCursor.background": "#00f",
+    "editorCursor.foreground": "#ff0",
+    "editor.background": "#0f111b",
     "terminal.background": "#333",
     "foreground": "#f1f0eb",
     "focusBorder": "#a6ff00",
+    "scrollbarSlider.background": "#8c8c8c31",
     "scrollbarSlider.hoverBackground": "#AB47BC50",
-    "scrollbarSlider.activeBackground": "#2979FF50",
-    "activityBarBadge.background": "#2979FF",
-    "list.activeSelectionForeground": "#2979FF",
-    "list.inactiveSelectionForeground": "#2979FF",
-    "list.highlightForeground": "#2979FF",
-    "editorSuggestWidget.highlightForeground": "#2979FF",
-    "textLink.foreground": "#2979FF",
-    "progressBar.background": "#2979FF",
-    "pickerGroup.foreground": "#2979FF",
-    "tab.activeBorder": "#2979FF",
-    "notificationLink.foreground": "#2979FF",
-    "editorWidget.resizeBorder": "#2979FF",
-    "editorWidget.border": "#2979FF",
-    "settings.modifiedItemIndicator": "#2979FF",
-    "settings.headerForeground": "#2979FF",
-    "panelTitle.activeBorder": "#2979FF",
-    "breadcrumb.activeSelectionForeground": "#2979FF",
-    "menu.selectionForeground": "#2979FF",
-    "menubar.selectionForeground": "#2979FF"
+    "scrollbarSlider.activeBackground": "#AB47BC50",
+    "list.inactiveSelectionForeground": "#AB47BC",
+    "list.highlightForeground": "#AB47BC",
+    "editorSuggestWidget.highlightForeground": "#AB47BC",
+    "textLink.foreground": "#AB47BC",
+    "progressBar.background": "#AB47BC",
+    "pickerGroup.foreground": "#AB47BC",
+    "tab.activeBorder": "#AB47BC",
+    "notificationLink.foreground": "#AB47BC",
+    "editorWidget.resizeBorder": "#AB47BC",
+    "editorWidget.border": "#AB47BC",
+    "settings.modifiedItemIndicator": "#AB47BC",
+    "settings.headerForeground": "#AB47BC",
+    "panelTitle.activeBorder": "#AB47BC",
+    "breadcrumb.activeSelectionForeground": "#AB47BC",
+    "menu.selectionForeground": "#AB47BC",
+    "menubar.selectionForeground": "#AB47BC"
   },
   // 这里主要是设置 emmet 对于 vue 的支持
   "emmet.syntaxProfiles": {
@@ -145,9 +152,8 @@
   // "javascript.updateImportsOnFileMove.enabled": "always",
   // "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
   "extensions.autoUpdate": false,
-  "vsicons.dontShowNewVersionMessage": true,
   // 插件
-  "materialTheme.autoApplyIcons": false,
+  // "materialTheme.autoApplyIcons": false,
   "gitlens.mode.active": "zen",
   "fileheader.customMade": {
     "Description": "",
@@ -161,6 +167,8 @@
     "param": "",
     "return": ""
   },
+  // fileheader.customMade	头部注释,默认设置：{'Author':'your name','Date':'Do not edit','LastEditors':'your name','LastEditTime':'Do not edit','Description':'file content'}	[object Object]
+  // fileheader.cursorMode	在光标处插入函数注释,默认配置:{'description':'','param':'','return':''}
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
   "prettier.singleQuote": true,
@@ -169,8 +177,7 @@
   // "prettier.eslintIntegration": true,
   "eslint.autoFixOnSave": true,
   "eslint.options": {
-    "extensions": [".js", ".vue"],
-    "configFile": ".eslintrc.json"
+    "extensions": [".js", ".vue"]
   },
   "eslint.validate": [
     "javascript",
@@ -189,7 +196,6 @@
   "editor.codeLens": true,
   "editor.snippetSuggestions": "top",
   "breadcrumbs.enabled": true,
-  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
   // 配置
   "git.ignoreMissingGitWarning": true,
   "workbench.startupEditor": "newUntitledFile",
@@ -202,23 +208,140 @@
     "**/.DS_Store": true,
     "**/node_modules": true
   },
+  "workbench.colorTheme": "One Monokai",
+  "materialTheme.accent": "Purple",
+  "workbench.iconTheme": "vscode-icons",
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#b52e31"
+    },
+    {
+      "name": "Auth0 Orange",
+      "value": "#eb5424"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "Gatsby Purple",
+      "value": "#639"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#00b3e6"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ],
   // 基于编辑器设置的颜色主题，自定义语法着色
-  // "editor.tokenColorCustomizations": {
-  //   "[One Monokai]": {
-  //     "comments": "#6e7a70ea",
-  //     "keywords": "#EB404EF7",
-  //     "variables": "#FD971F",
-  //     "strings": "#e2d75dbd",
-  //     "functions": "#5b99fcc9",
-  //     "numbers": "#AE81FF",
-  //     "textMateRules": [
-  // {
-  //     "scope": "log,
-  //     "settings": {
-  //         "foreground": "#FF0000"
-  //     },
-  // }
-  //     ]
-  //   }
-  // }
+  "editor.tokenColorCustomizations": {
+    "[Monokai Pro (Filter Spectrum)]": {
+      "comments": "#7e838b",
+      // "keywords": "#EB404EF7",
+      // "variables": "#FD971F",
+      // "strings": "#42b883",
+      // "functions": "#5b99fcc9",
+      // "numbers": "#AE81FF",
+      // "types": "#f00",
+      // "textMateRules": [
+      //   {
+      //     "scope": "log",
+      //     "settings": {
+      //         "foreground": "#FF0000"
+      //     },
+      //   }
+      // ]
+    },
+    "[One Monokai]": {
+      "comments": "#7e838b",
+      "keywords": "#cf5cd9",
+      "variables": "#e5c076",
+      "strings": "#78bb6e",
+      "functions": "#4eace8",
+      "numbers": "#78bb6e",
+      // "types": "#f00",
+      "textMateRules": [
+        {
+          "scope": "constant.language.boolean.true.js",
+          "settings": {
+              "foreground": "#AE81FF"
+          },
+        },
+        {
+          "scope": "variable.other.object.js",
+          "settings": {
+              "foreground": "#e5c076"
+          },
+        },
+        {
+          "scope": "meta.object-literal.key.js",
+          "settings": {
+              "foreground": "#fff"
+          },
+        },
+        {
+          "scope": "support.type.object.module.js",
+          "settings": {
+              "foreground": "#4eace8"
+          },
+        },
+        {
+          "scope": "support.variable.object.node.js",
+          "settings": {
+              "foreground": "#e5c076"
+          },
+        },
+        {
+          "scope": "punctuation.separator.comma.js",
+          "settings": {
+              "foreground": "#6a767d"
+          },
+        },
+        {
+          "scope": "punctuation.separator.key-value.js",
+          "settings": {
+              "foreground": "#6a767d"
+          },
+        },
+        {
+          "scope": "punctuation.definition.string.end.js",
+          "settings": {
+              "foreground": "#6a767d"
+          },
+        },
+        {
+          "scope": "punctuation.definition.string.begin.js",
+          "settings": {
+              "foreground": "#6a767d"
+          },
+        },
+        {
+          "scope": "variable.other.property.js",
+          "settings": {
+              "foreground": "#fff"
+          },
+        }
+      ]
+    }
+  }
 }
