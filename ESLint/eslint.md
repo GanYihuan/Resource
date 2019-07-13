@@ -37,7 +37,7 @@ trim_trailing_whitespace = true
 }
 ```
 
-## vscode 中添加 eslint 和 vetur 插件：
+## vscode 中添加 eslint 和 vetur 插件
 
 eslint --init 命令在用户目录中生成一个配置文件
 
