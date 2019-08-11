@@ -1,5 +1,10 @@
 # message
 
+## 微信号
+
+ganyihuan123
+Ganyiuan123
+
 ## Mockjs
 
 [Mockjs](http://rapapi.org/org/index.do)
@@ -178,7 +183,7 @@ pass: Okyizhixiaoniao123
 ## 网络
 
 user: TP-Ling_2FE4
-pass: Ganyihuan123
+pass: ganyihuan123
 
 ## 哔哩哔哩
 
