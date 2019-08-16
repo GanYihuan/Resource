@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IE hack</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            background-color: blue/9;
+            *background-color: green;
+            _background-color: yellow;
+        }
+    </style>
+    <!--
+        hack专用于IE各种版本浏览器的设置
+        /9 为IE10和IE10以下
+        * 为IE7和IE7以下
+        _ 为IE6和IE6以下
+    -->
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>

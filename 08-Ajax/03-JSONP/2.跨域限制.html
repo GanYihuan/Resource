@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script>
+      window.onload = function() {
+        // ajax跨域请求限制
+        var oBtn = document.getElementById("btn");
+        oBtn.onclick = function() {
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+              if (xhr.status == 200) {
+                alert(xhr.responseText);
+              }
+            }
+          };
+          xhr.open("get", "http://api.douban.com/book/subjects?q=javascript&alt=json&max-results=1", true);
+          xhr.send();
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <input type="button" value="按钮" id="btn" />
+    XMLHttpRequest cannot load http://api.douban.com/book/subjects?q=javascript&alt=json&max-results=1. No 'Access-Control-Allow-Origin' header is present
+    on the requested resource. Origin 'http://localhost' is therefore not allowed access.
+    <p>跨域：跨域名 一个域名下的文件去请求了和他不一样的域名下的资源文件，那么就会产生跨域请求</p>
+  </body>
+</html>

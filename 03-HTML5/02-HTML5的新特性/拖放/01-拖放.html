@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+        width: 100px;
+        height: 30px;
+        background: yellow;
+        margin: 10px;
+      }
+      #div1 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 200px;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        let aLi = document.getElementsByTagName('li')
+        let oDiv = document.getElementById('div1')
+        let i = 0
+
+        for (let i = 0; i < aLi.length; i++) {
+          aLi[i].ondragstart = function() {
+            this.style.background = 'green'
+          }
+          aLi[i].ondrag = function() {
+            // 开始与结束连续触发
+            document.title = i++
+          }
+          aLi[i].ondragend = function() {
+            this.style.background = 'yellow'
+          }
+        }
+
+        oDiv.ondragenter = function() {
+          this.style.background = 'blue'
+        }
+        oDiv.ondragover = function(ev) {
+          // enter 和 leave 之间连续触发
+          // 要想触发 drop 事件，就 必须在 dragover 当中阻止默认事件
+          ev.preventDefault()
+        }
+        oDiv.ondragleave = function() {
+          this.style.background = 'red'
+        }
+        oDiv.ondrop = function() {
+          alert(123)
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li draggable="true">a</li>
+      <li draggable="true">b</li>
+      <li draggable="true">c</li>
+    </ul>
+    <div id="div1"></div>
+  </body>
+</html>

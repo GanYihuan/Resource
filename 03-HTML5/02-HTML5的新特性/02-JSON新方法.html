@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>json</title>
+    <script>
+      // eval() string 转换成 js
+      var str = 'funtion show(){alert(123)}'
+      eval(str)
+      show()
+
+      // parse() 只能解析 json 字符串 安全性高 严格的 json 形式
+      var str1 = '{"name" : "ganyihuan"}'
+      var jname = JSON.parse(str1)
+      alert(jname)
+
+      // stringify() json 转成字符串
+      var json = { name: 'ganyihuan' }
+      var str2 = JSON.stringify(json)
+      alert(str2)
+    </script>
+  </head>
+  <body></body>
+</html>

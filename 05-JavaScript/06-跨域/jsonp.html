@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <script>
+    // a.com
+    // jsonp: json + padding(内填充)
+
+    // box({name:'miaov'})
+    // 函数名称和 jsonp 里面的保持一致
+    function box(json) {
+      alert(json.name) // miaov
+    }
+
+    // 动态创建 script 放置最后面来执行
+    // function createJs(sUrl) {
+    //   var oScript = document.createElement('script');
+    //   oScript.type = 'text/javascript';
+    //   oScript.src = sUrl;
+    //   document.getElementsByTagName('head')[0].appendChild(oScript);
+    // }
+    // createJs('jsonp.js?callback=box');
+  </script>
+  <!-- <script src="xxx.php?key=value"></script> -->
+  <!-- 放置底部放置产生执行顺序问题, 要知道返回的函数名称 -->
+  <script type="text/javascript" src="jsonp.js"></script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        /* 字体大小 / 行高 */
+        font: 40px/100px '宋体';
+        background: url('pic_8.jpg') no-repeat center left;
+        /* Red Green Blue Alpha */
+        color: rgba(255, 0, 0, 0.7);
+        border: 10px solid rgba(255, 0, 0, 0.5);
+      }
+      h1 {
+        font: 100px/200px '微软雅黑';
+        text-align: center;
+        /* 横向偏移 纵向偏移 模糊距离 阴影颜色 */
+        text-shadow: 2px 2px 4px #000;
+        /* text-shadow: 10px 3px 10px #f00, 13px 5px 10px #00f; */
+        color: #fff;
+      }
+      h2 {
+        /* 字体大小 / 行高 */
+        font: 100px/200px '微软雅黑';
+        text-align: center;
+        color: #000;
+        text-shadow: none;
+        border: 1px solid #000;
+        transition: 1s;
+        /* 文字描边 宽度 颜色 */
+        -webkit-text-stroke: 3px #f00;
+        /* 文字排列方式 rtl 右到左 ltr 左到右 */
+        direction: ltr;
+        /* 模糊 */
+        unicode-bidi: bidi-override;
+      }
+      h2:hover {
+        color: rgba(0, 0, 0, 0);
+        text-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+      }
+      p {
+        width: 200px;
+        border: 1px solid #000;
+        font: 14px/30px '微软雅黑';
+        /* 一行显示 two */
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">box</div>
+    <h1>甘益焕</h1>
+    <h2>ganyihuan</h2>
+    <p>都说了发酵饲料的附加爱上对方就俺俩的房间啊阿萨德路附近啊</p>
+  </body>
+</html>

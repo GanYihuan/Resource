@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>childNodes</title>
+  </head>
+  <body>
+    <ul id="ul1" style="border: 1px solid red;">
+      <li>11111 <span>span</span></li>
+      <li>22222</li>
+      <li>33333</li>
+      <li>44444</li>
+      <p>pppppppp</p>
+    </ul>
+    <script>
+      window.onload = function() {
+        /*
+        DOM: Document Object Model 文档对象模型
+        文档: html 页面
+        文档对象: 页面中元素
+        文档对象模型: 定义为了能够让程序(js)去操作页面中的元素
+        DOM 会把文档看作是一棵树，同时定义了很多方法来操作这棵数中的每一个元素（节点）
+        DOM 节点
+
+        element.childNodes: 只读属性, 子节点列表集合, 包含一级子节点
+        标准下：包含文本, 元素, 非法嵌套的子节点
+        非标准下：元素节点，ie7 以下不包含非法嵌套子节点
+
+        element.nodeType: 只读属性, 当前元素的节点类型
+        元素节点: 1
+        属性节点: 2
+        文本节点: 3
+        */
+        var oUl = document.getElementById('ul1')
+        alert(oUl.childNodes.length) // 11 (包含了6个空白节点, 5个元素节点)
+        alert(oUl.nodeType) // 1
+        alert(oUl.childNodes[0].nodeType) // 3
+        // element.attributes: 只读属性, 属性列表集合
+        alert(oUl.attributes.length) // 2
+        alert(oUl.attributes[0].nodeType) // 2
+        for (let i = 0; i < oUl.childNodes.length; i++) {
+          if (oUl.childNodes[i].nodeType === 1) {
+            oUl.childNodes[i].style.background = 'red'
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定</title>
+</head>
+<body ng-app>
+    <!--value = ng-model = name-->
+    <!--@type {String}-->
+
+    <!--value对应ng-model-->
+    <input type="text" ng-model="name" value="">
+
+    <!--angularJS表达式-->
+    {{100 + 100 + 'name'}}
+    {{name}}
+
+    <script type="text/javascript" src="../vendor/angular/angular.min.js"></script>
+    <script>
+//        js表达式
+        var str = 'alert(1+2)';
+//解析str,弹出3
+        eval(str);
+    </script>
+
+</body>
+</html>

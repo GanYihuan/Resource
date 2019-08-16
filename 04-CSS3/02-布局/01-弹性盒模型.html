@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>弹性盒模型</title>
+    <style>
+      .box {
+        height: 100px;
+        border: 10px solid #000;
+        padding: 10px;
+        /* 定义盒模型 box & inline-box */
+        display: -webkit-box;
+
+        /* 定义盒模型的布局方向 */
+        /* horizontal 水平显示 */
+        /* vertical 垂直方向 */
+        -webkit-box-orient: horizontal;
+
+        /* 元素排列顺序 */
+        /* Normal 正序 */
+        /* Reverse 反序 */
+        -webkit-box-direction: reverse;
+
+        /* 对盒子富裕的空间进行管理 */
+        /* Start 所有子元素在盒子左侧显示，富裕空间在右侧 */
+        /* End 所有子元素在盒子右侧显示，富裕空间在左侧 */
+        /* Center 所有子元素居中 */
+        /* Justify 富余空间在子元素之间平均分布 */
+        -webkit-box-pack: end;
+
+        /* 在垂直方向上对元素的位置进行管理 */
+        /* Star 所有子元素在据顶 */
+        /* End 所有子元素在据底 */
+        /* Center 所有子元素居中 */
+        -webkit-box-align: end;
+
+        /* 投影方式 inset：内投影 不给：外投影 */
+        /* x、y：阴影偏移 */
+        /* blur：模糊半径 */
+        /* spread：扩展阴影半径 先扩展原有形状，再开始画阴影 */
+        /* box-shadow:[inset] x y blur [spread] color */
+        box-shadow: inset 2px 2px 10px 5px #f00;
+
+        /* Non-standard! */
+        /* box-reflect 倒影 */
+        /* direction  方向     above|below|left|right */
+        /* 距离 */
+        /* 渐变（可选） */
+        /* box-reflect: left; */
+
+        /* resize 自由缩放 */
+        /* Both 水平垂直都可以缩放 */
+        /* Horizontal 只有水平方向可以缩放 */
+        /* Vertical 只有垂直方向可以缩放 */
+        /* 一定要配合 overflow:auto 一块使用只有水平方向可以缩放 */
+        overflow: auto;
+        resize: horizontal;
+
+        /* box-sizing 盒模型解析模式 */
+        /* Content-box  标准盒模型 width/height=border+padding+content */
+        /* Border-box 怪异盒模型 width/height=content */
+        box-sizing: border-box;
+      }
+
+      .box div {
+        width: 100px;
+        height: 50px;
+        background: #f00;
+        border: 1px solid #fff;
+      }
+
+      .box div:nth-of-type(1) {
+        /* 设置元素的具体位置 */
+        -webkit-box-ordinal-group: 2;
+
+        /* 定义盒子的弹性空间 */
+        /*-webkit-box-flex: 1;*/
+
+        /* column-width 栏目宽度 */
+        /* column-count 栏目列数 */
+        /* column-gap   栏目距离 */
+        /* column-rule  栏目间隔线 */
+      }
+
+      .box div:nth-of-type(2) {
+        -webkit-box-ordinal-group: 1;
+        /*-webkit-box-flex: 2;*/
+      }
+
+      .box div:nth-of-type(3) {
+        -webkit-box-ordinal-group: 4;
+        /*-webkit-box-flex: 3;*/
+      }
+
+      .box div:nth-of-type(4) {
+        -webkit-box-ordinal-group: 3;
+        /*-webkit-box-flex: 4;*/
+      }
+
+      .box div:nth-of-type(5) {
+        -webkit-box-ordinal-group: 5;
+        /*-webkit-box-flex: 5;*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

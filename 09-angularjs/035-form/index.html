@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+</head>
+<body>
+
+<div ng-app="myApp" style="margin-top: 100px;">
+    <form ng-controller="myCtrl" name="myForm" class="container form-horizontal" action="index.html">
+        <div class="form-group" ng-class="{'has-error':myForm.username.$invalid && myForm.username.$dirty}">
+            <label class="col-sm-2 control-label">name:</label>
+            <div class="col-sm-10">
+                <!--ng-required=是否填写 -->
+                <input name="username" autocomplete="off" type="text" ng-pattern="/^[a-zA-Z]{1}/" class="form-control"
+                       placeholder="name" ng-model="data.username" ng-required="true" ng-minlength="5"
+                       ng-maxlength="10">
+                <!--{{myForm.username.$error}}-->
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.username.$error.maxlength">
+                    name <= 10
+                </div>
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.username.$error.minlength">
+                    name >= 5
+                </div>
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.username.$error.pattern">
+                    name 以英文字母开始
+                </div>
+            </div>
+            <!--{{myForm.username.$error}}-->
+        </div>
+
+        <div class="form-group" ng-class="{'has-error':myForm.password.$invalid && myForm.password.$dirty}">
+            <label class="col-sm-2 control-label">password:</label>
+            <div class="col-sm-10">
+                <!--ng-required=是否填写 -->
+                <input name="password" autocomplete="off" type="password" class="form-control"
+                       placeholder="password" ng-model="data.password" ng-required="true" ng-minlength="5"
+                       ng-maxlength="10">
+                <!--{{myForm.username.$error}}-->
+                <div class="alert alert-danger help-block" ng-show="myForm.password.$error.maxlength">
+                    password <= 10
+                </div>
+                <div class="alert alert-danger help-block" ng-show="myForm.password.$error.minlength">
+                    password >= 5
+                </div>
+            </div>
+            <!--{{myForm.username.$error}}-->
+        </div>
+
+        <div class="form-group"
+             ng-class="{'has-error':myForm.passwordConfirm.$invalid && myForm.passwordConfirm.$dirty}">
+            <label class="col-sm-2 control-label">passwordConfirm:</label>
+            <div class="col-sm-10">
+                <!--ng-required=是否填写 -->
+                <input name="passwordConfirm" autocomplete="off" type="password" class="form-control"
+                       placeholder="passwordConfirm" ng-model="data.passwordConfirm" ng-required="true">
+                <!--{{myForm.username.$error}}-->
+                <div class="alert alert-danger help-block"
+                     ng-show="myForm.password.$dirty && myForm.passwordConfirm.$dirty && data.password !== data.passwordConfirm">
+                    password no same
+                </div>
+            </div>
+            <!--{{myForm.username.$error}}-->
+        </div>
+
+        <div class="form-group" ng-class="{'has-error':myForm.email.$invalid && myForm.email.$dirty}">
+            <label class="col-sm-2 control-label">email:</label>
+            <div class="col-sm-10">
+                <!--ng-required=是否填写 -->
+                <input name="email" autocomplete="off" type="email" class="form-control"
+                       placeholder="email" ng-model="data.email" ng-required="true" ng-minlength="5" ng-maxlength="30">
+                <!--{{myForm.username.$error}}-->
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.email.$error.maxlength">
+                    email <= 30
+                </div>
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.email.$error.minlength">
+                    email >= 5
+                </div>
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.email.$error.email">
+                    email wrong
+                </div>
+            </div>
+            <!--{{myForm.username.$error}}-->
+        </div>
+
+        <div class="form-group" ng-class="{'has-error':myForm.blog.$invalid && myForm.blog.$dirty}">
+            <label class="col-sm-2 control-label">blog:</label>
+            <div class="col-sm-10">
+                <!--ng-required=是否填写 -->
+                <input name="blog" autocomplete="off" type="url" class="form-control"
+                       placeholder="blog" ng-model="data.blog" ng-required="true" ng-minlength="5" ng-maxlength="30">
+                <!--{{myForm.username.$error}}-->
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.blog.$error.maxlength">
+                    blog <= 30
+                </div>
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.blog.$error.minlength">
+                    blog >= 5
+                </div>
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.blog.$error.url">
+                    blog wrong
+                </div>
+            </div>
+            <!--{{myForm.username.$error}}-->
+        </div>
+
+        <div class="form-group" ng-class="{'has-error':myForm.age.$invalid && myForm.age.$dirty}">
+            <label class="col-sm-2 control-label">age:</label>
+            <div class="col-sm-10">
+                <!--ng-required=是否填写 -->
+                <input name="age" autocomplete="off" type="number" class="form-control"
+                       placeholder="age" ng-model="data.age" ng-required="true" min="0" max="999">
+                <!--{{myForm.username.$error}}-->
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.age.$error.max">
+                    age <= 999
+                </div>
+                <div class="alert alert-danger help-block" ng-show="myForm.username.$dirty && myForm.age.$error.min">
+                    age >= 0
+                </div>
+            </div>
+            <!--{{myForm.username.$error}}-->
+        </div>
+
+        <div class="form-group container">
+            <label class="col-sm-2 control-label">sex:</label>
+            <div class="col-sm-10">
+                <label class="radio-inline">
+                    <input type="radio" ng-required="true" name="sex" ng-model="data.sex" value="1">man
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="sex" ng-required="true" ng-model="data.sex" value="0">woman
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group container">
+            <label class="col-sm-2 control-label">like:</label>
+            <div class="col-sm-10">
+                <label class="checkbox-inline" ng-repeat="hobby in hobbies">
+                    <input type="checkbox" name="hobby[]"
+                           ng-checked="data.hobbies === undefined ? false : data.hobbies.indexOf(hobby.id) !== -1"
+                           ng-click="toggleHobbySelection(hobby.id)"> {{hobby.name}}
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group container">
+            <label class="col-sm-2 control-label">even:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-group" placeholder="even" ng-model="even" name="even">
+                <div ng-show="myForm.even.$error.even" class="alert alert-danger help-block">
+                    number must even
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">birthplace:</label>
+            <div class="col-sm-3">
+                <select ng-class="form-control" ng-change="data.area = false" ng-model="data.province"
+                        ng-options="x.id as x.name for x in cities | cityFilter:0"></select>
+            </div>
+            <div class="col-sm-3">
+                <select ng-class="form-control" ng-show="data.province" ng-model="data.area"
+                        ng-options="x.id as x.name for x in cities | cityFilter:data.province"></select>
+            </div>
+            <div class="col-sm-3">
+                <select ng-class="form-control" ng-required="true" ng-show="data.province && data.area"
+                        ng-model="data.city"
+                        ng-options="x.id as x.name for x in cities | cityFilter:data.area"></select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default"
+                        ng-disabled="myForm.$invalid || data.hobbies === undefined || data.hobbies.length === 0">submit</button>
+                <button type="reset" class="btn btn-default" ng-click="reset()">reset</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<script type="text/javascript" src="../vendor/angular/angular.min.js"></script>
+<script type="text/javascript" src="app/index.js"></script>
+
+</body>
+</html>

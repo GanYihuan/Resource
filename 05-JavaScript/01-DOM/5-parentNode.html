@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>parentNode</title>
+  </head>
+  <body>
+    <ul id="ul1">
+      <li>11111 <a href="javascript:;">隐藏</a></li>
+      <li>22222 <a href="javascript:;">隐藏</a></li>
+      <li>33333 <a href="javascript:;">隐藏</a></li>
+      <li>44444 <a href="javascript:;">隐藏</a></li>
+    </ul>
+    <script>
+      window.onload = function() {
+        let aA = document.getElementsByTagName('a')
+        for (let i = 0; i < aA.length; i++) {
+          aA[i].onclick = function() {
+            // 元素.parentNode: 只读属性当前节点的父级节点
+            this.parentNode.style.display = 'none'
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

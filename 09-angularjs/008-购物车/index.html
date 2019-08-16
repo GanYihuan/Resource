@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器</title>
+    <link type="text/css" rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+</head>
+<body>
+    <div class="container" ng-app="myApp" ng-controller="myCtrl">
+        <table class="table" ng-show="cart.length">
+            <thead>
+            <tr>
+                <th>产品编号</th>
+                <th>产品名称</th>
+                <th>产品数量</th>
+                <th>产品单价</th>
+                <th>产品总价</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in cart">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" ng-click="reduce(item.id)">-</button>
+                        <input type="text" value="{{item.quantity}}" model="ng-quantity">
+                        <button type="button" class="btn btn-primary" ng-click="add(item.id)">+</button>
+                    </td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.price * item.quantity}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger" ng-click="remove(item.id)">remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>购买总价</td>
+                    <td>{{totalPrice()}}</td>
+                    <td>购买数量</td>
+                    <td>{{totalQuantity()}}</td>
+                    <td colspan="2">
+                        <button type="button" class="btn btn-danger" ng-click="cart = {}">clear</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p ng-show="!cart.length">null</p>
+    </div>
+
+    <script type="text/javascript" src="../vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app/index.js"></script>
+</body>
+</html>

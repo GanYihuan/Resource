@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+  </head>
+  <body>
+    <div id="div1" class="box">div</div>
+    <ul>
+      <li>1</li>
+      <li title="hello">2</li>
+      <li class="box">3</li>
+      <li class="box">4</li>
+      <li title="hello">5</li>
+    </ul>
+    <script>
+      // document.getElementById('div1');
+      // document.getElementsByTagName('div');
+      // getByClass(document,'box');
+      $('#div1').css('background','red');
+      $('div').css('background','red');
+      $(".box").css("background", "red");
+      $('li:eq(2)').css('background','red'); // 下标
+      $('li:even').css('background','red'); // 奇数行
+      $('li:odd').css('background','red'); // 偶数行
+      $('li').filter('.box').css('background','red');
+      $('li').filter('[title=hello]').css('background', 'red');
+    </script>
+  </body>
+</html>

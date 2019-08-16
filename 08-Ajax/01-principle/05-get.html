@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>对比06-test</title>
+    <script>
+      window.onload = function() {
+        var oInp = document.getElementsByTagName("input")[0];
+        oInp.onclick = function() {
+          var xhr = null;
+          if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+          } else {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          // get()
+          // 缓存问题:?后面加随机数
+          // 乱码: encodeURL();
+          xhr.open("get", "05-test.php?username=" + encodeURI("甘益焕") + "&password=123&" + new Date().getTime(), true);
+          xhr.send();
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                alert(xhr.responseText);
+              } else {
+                alert("wrong", +xhr.status);
+              }
+            }
+          };
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <input type="button" value="button" />
+  </body>
+</html>

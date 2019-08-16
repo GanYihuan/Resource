@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>属性选择器</title>
+    <style>
+      .box {
+        /* 浏览器前缀 */
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+      }
+      p[class='leo'] {
+        background: red;
+      }
+      /* 词列表 以空格隔开 */
+      p[class~='old'] {
+        background: red;
+      }
+      /* 以开头 */
+      p[class^='l'] {
+        background: red;
+      }
+      /* 以结尾 */
+      p[class$='d'] {
+        background: red;
+      }
+      /* 包含 */
+      p[class*='old'] {
+        background: red;
+      }
+      /* p或带p-  */
+      p[class|='p'] {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <p class="leo old"></p>
+  </body>
+</html>

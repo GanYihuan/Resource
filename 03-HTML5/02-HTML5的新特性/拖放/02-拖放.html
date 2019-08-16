@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+        width: 100px;
+        height: 30px;
+        background: yellow;
+        margin: 10px;
+      }
+      #div1 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 200px;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        let oUl = document.getElementsByTagName('ul')[0]
+        let aLi = oUl.getElementsByTagName('li')
+        let oDiv = document.getElementById('div1')
+        let i = 0
+
+        for (let i = 0; i < aLi.length; i++) {
+          aLi[i].index = i
+          aLi[i].ondragstart = function(ev) {
+            let ev = ev || window.event
+            ev.dataTransfer.setData('name', this.index) // 解决火狐下的问题 必须设置 dataTransfer 对象才可以拖拽除图片外的其他标签
+            ev.dataTransfer.effectAllowed = 'link' // 设置光标样式
+            this.style.background = 'green'
+          }
+          aLi[i].ondrag = function() {
+            document.title = i++
+          }
+          aLi[i].ondragend = function() {
+            this.style.background = 'yellow'
+          }
+        }
+        oDiv.ondragenter = function() {
+          this.style.background = 'blue'
+        }
+        oDiv.ondragover = function(ev) {
+          ev.preventDefault() // 要想触发 drop 事件，就 必须在 dragover 当中阻止默认事件
+        }
+        oDiv.ondragleave = function() {
+          this.style.background = 'red'
+        }
+        oDiv.ondrop = function(ev) {
+          oUl.removeChild(aLi[ev.dataTransfer.getData('name')])
+          for (let i = 0; i < aLi.length; i++) {
+            aLi[i].index = i
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li draggable="true">a</li>
+      <li draggable="true">b</li>
+      <li draggable="true">c</li>
+    </ul>
+    <div id="div1"></div>
+  </body>
+</html>

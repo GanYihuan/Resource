@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 低版本兼容: -->
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.js"></script>
+  <!-- 低版本兼容: html5shiv.js 里面做的事情 -->
+  <script>
+    document.createElement("header")
+  </script>
+</head>
+<body>
+  <header>页面头部</header>
+  <footer>页面脚部</footer>
+  <em>斜体表强调</em> <i>图标</i> <strong>强调粗体</strong>
+  <nav>导航</nav>
+  <hgroup>
+    <h1>标题组合1</h1>
+    <h1>标题组合2</h1>
+  </hgroup>
+  <section>板块 划分区域</section>
+  <article>完整内容部分 帖子,文章</article>
+  <aside>和主体 article 相关附属信息</aside>
+  <figure>
+    标签规定独立的流内容（图像、图表、照片、代码等等） <img />
+    <figcaption>figure的子元素 用于对figure的内容 进行说明</figcaption>
+  </figure>
+  <p>我们在每天早上 <time>9:00</time> 开始营业。</p>
+  <input type="text" list="valList" />
+  <datalist id="valList">
+    <option value="html">html</option>
+    <option value="css">css</option>
+    <option value="javascript">javascript</option>
+  </datalist>
+  <details>
+    <summary>妙味课堂</summary>
+    下拉内容
+  </details>
+  <dialog open>
+    <dt>定义一段对话</dt>
+    <dd>2+2 等于？</dd>
+  </dialog>
+  <address>定义文章 或页面作者的详细联系信息</address>
+  <mark>需要标记的词或句子</mark>
+  <form action="http://www.baidu.com" method="get">
+    公钥: <keygen name="security" />给表单添加一个公钥
+  </form>
+  <progress max="100" value="80"> 定义进度条 <span>76</span>% </progress>
+</body>
+</html>

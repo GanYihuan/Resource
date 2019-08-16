@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script>
+      window.onload = function() {
+        var oInput = document.getElementById('input1')
+        var oDiv = document.getElementById('div1')
+        var json = {}
+
+        oInput.onclick = function() {
+          var num = Math.random()
+          var arr = randomNum(35, 7)
+          json[num] = arr
+          oDiv.innerHTML = arr
+          //                刷新hash值,地址栏
+          window.location.hash = num
+        }
+
+        //            刷新页面
+        window.onhashchange = function() {
+          oDiv.innerHTML = json[window.location.hash.substring(1)]
+        }
+
+        function randomNum(iAll, iNow) {
+          var arr = []
+          var newArr = []
+
+          for (var i = 1; i <= iAll; i++) {
+            arr.push(i)
+          }
+
+          for (var i = 0; i < iNow; i++) {
+            newArr.push(arr.splice(Math.floor(Math.random() * arr.length), 1))
+          }
+
+          return newArr
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input id="input1" type="button" value="random select" />
+    <div id="div1">a</div>
+  </body>
+</html>

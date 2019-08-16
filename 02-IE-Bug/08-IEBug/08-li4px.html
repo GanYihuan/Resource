@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>如果li元素浮动,li下方会产生4px间隔</title>
+    <style>
+        .list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 300px;
+        }
+
+        .list li {
+            height: 30px;
+            border: 1px solid #000;
+            line-height: 30px;
+
+            /*IE7-6 start*/
+            *vertical-align: top;
+            /*end*/
+        }
+
+        .list li a {
+            float: left;
+        }
+
+        .list li span {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="list">
+    <li>
+        <a href="#">left</a>
+        <span>right</span>
+    </li>
+    <li>
+        <a href="#">left</a>
+        <span>right</span>
+    </li>
+    <li>
+        <a href="#">left</a>
+        <span>right</span>
+    </li>
+    <li>
+        <a href="#">left</a>
+        <span>right</span>
+    </li>
+</ul>
+
+</body>
+</html>

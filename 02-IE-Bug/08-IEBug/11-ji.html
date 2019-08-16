@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父级absolute且宽高为奇数,有定位.子级absolute定位,right,bottom会有1px偏差</title>
+    <style>
+        .box{
+            width: 307px;
+            height: 307px;
+            background-color: red;
+            position: absolute;
+        }
+        .item{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+    <!--
+        父级absolute且宽高为奇数,有定位.子级absolute定位,right,bottom会有1px偏差
+            1:避父级宽高奇数
+    -->
+</head>
+<body>
+
+<div class="box">
+    <div class="item">
+
+    </div>
+</div>
+
+</body>
+</html>

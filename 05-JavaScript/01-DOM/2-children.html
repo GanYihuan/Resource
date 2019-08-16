@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="ul1" style="border: 1px solid red;">
+      <li>11111 <span>span</span></li>
+      <li>22222</li>
+      <li>33333</li>
+      <li>44444</li>
+      <p>pppppppp</p>
+    </ul>
+    <script>
+      window.onload = function() {
+        let oUl = document.getElementById('ul1')
+        /*
+      	element.children: 只读属性, 子节点列表集合
+        标准下：元素类型的节点
+        非标准下：元素类型的节点
+        */
+        // alert( oUl.children.length );
+        for (let i = 0; i < oUl.children.length; i++) {
+          oUl.children[i].style.background = 'red'
+        }
+      }
+    </script>
+  </body>
+</html>

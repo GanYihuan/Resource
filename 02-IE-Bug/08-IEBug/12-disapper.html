@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>absolute元素与float元素并列时,float元素消失</title>
+    <style>
+
+        /*'绝对的'absolute  与  '轻浮的'float  不能并列*/
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            position: relative;
+        }
+
+        .item {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+
+            /*double margin IE bug*/
+            float: left;
+            margin-left: 50px;
+            *display: inline;
+        }
+
+        .box span {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="item"></div>
+
+    <!--外加一个p标签使其不同级 start-->
+    <p>
+        <span></span>
+    </p>
+    <!--end-->
+
+    <span></span>
+</div>
+
+</body>
+</html>

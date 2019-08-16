@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    div {
+      width: 300px;
+      height: 300px;
+    }
+
+    .box {
+      /* 子元素 position: absolute */
+      position: relative;
+      margin: 100px auto;
+    }
+
+    .content {
+      z-index: 2;
+      position: absolute;
+      left: -6px;
+      top: -6px;
+      background-color: blue;
+    }
+
+    .mark {
+      z-index: 1;
+      position: relative;
+      right: -6px;
+      bottom: -6px;
+      background-color: black;
+      opacity: 0.5;
+      /* IE7~6 opacity setting */
+      filter: alpha(opacity=50);
+      /* filter: alpha(opacity = 0-100); */
+    }
+  </style>
+  <!--
+  position:relative       相对定位
+  1:不影响元素的特效
+  2:不使元素脱离文档流
+  3:没有定位偏移量,对元素没影响
+  4:提升层级
+
+  position:absolute
+  1:使元素脱离文档流
+  2:使内联支持宽高
+  3:块属性标签撑开宽高
+  4:有定位父级,相对定位父级偏移,没有相对document
+  5:相对定位配合绝对定位使用
+  6:提升层级
+
+  position:fixed
+  与绝对定位相似,差别,始终相对整个文档定位
+  -->
+</head>
+<body id="body1">
+  <div class="box clearfix">
+    <div class="item"></div>
+  </div>
+</body>
+</html>

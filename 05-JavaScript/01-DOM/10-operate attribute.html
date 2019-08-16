@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body id="body1">
+    <input type="text" id="text1" value="1111" _name_="妙味" />
+    <img src="bdlogo.gif" id="img1" style="width:100px;" />
+    <script>
+      window.onload = function() {
+        let oText = document.getElementById('text1')
+        oText.value = '222'
+        alert(oText.value) // 222
+        oText['value'] = '222'
+        alert(oText['value']) // 222
+
+        // let name = 'value';
+        // oText.name; // 有问题
+        // oText[name]; // OK
+
+        /*
+        元素.getAttribute(属性名称); 方法 获取指定元素的指定属性的值
+        */
+        alert(oText.getAttribute('value')) // 1111
+        /*
+        元素.setAttribute(属性名称，属性值); 方法 给指定元素指定的属性设置值
+        */
+        oText.setAttribute('value', 'hello')
+        /*
+        元素.removeAttribute(属性名称); 方法 移除指定的元素的指定的属性
+        */
+        oText.removeAttribute('value')
+
+        /*
+        1. 用.和[]的形式无法操作元素的自定义属性
+          getAttribute可以操作元素的自定义属性
+        */
+        alert(oText._name_) // undefined
+        alert(oText['_name_']) // undefined
+        alert(oText.getAttribute('_name_'))
+
+        let oImg = document.getElementById('img1')
+        /*
+        2.可以获取元素属性实际的值
+          ie7下还是会返回资源的绝对路径
+        */
+        alert(oImg.src) // 妙味
+        alert(oImg['src']) // file:///Users/ganyihuan/Desktop/Miaowei/bdlogo.gif
+        alert(oImg.getAttribute('src'))
+        alert(oImg.style.getAttribute('width'))
+      }
+    </script>
+  </body>
+</html>

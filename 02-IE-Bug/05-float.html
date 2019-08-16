@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 清除浮动最佳方法 */
+
+    /* IE6 start */
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .clearfix:after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+
+    /* IE6 end */
+
+    /* 
+    .clearfix::after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+      content: ' ';
+    }
+    */
+
+    .box {
+      border: 1px solid red;
+    }
+
+    .item {
+      width: 300px;
+      height: 400px;
+      background: blue;
+      float: left;
+    }
+  </style>
+  <!--
+  文档流:
+  是文档中可显示对象在排列时所占用的位置
+    float:
+    使元素脱离文档流,按照指定方向移动,遇到父级元素或者相邻的浮动元素停下来
+
+  float会脱离文档流,所以要清除
+    clear:
+    元素的某个方向上不能有浮动元素
+
+    清除浮动方法:
+    1:加高度
+    2:父级加float
+    3:inline-block(margin左右auto消失)
+    4:空标签(ie6问题)
+    5:br        <br clear='all'/>
+    6: :after伪类(主流)
+  -->
+</head>
+<body id="body1">
+  <div class="box clearfix">
+    <div class="item"></div>
+  </div>
+</body>
+</html>

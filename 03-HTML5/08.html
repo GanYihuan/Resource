@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>网址与历史记录</title>
+    <script>
+      window.onload = function() {
+        var oInput = document.getElementById('input1')
+        var oDiv = document.getElementById('div1')
+
+        oInput.onclick = function() {
+          var arr = randomNum(35, 7)
+          //                存数据       arr数据,  ''标题,  arr网址
+          history.pushState(arr, '', arr)
+          oDiv.innerHTML = arr
+        }
+
+        //            取数据
+        window.onpopstate = function(ev) {
+          oDiv.innerHTML = ev.state
+        }
+
+        function randomNum(iAll, iNow) {
+          var arr = []
+          var newArr = []
+
+          for (var i = 1; i <= iAll; i++) {
+            arr.push(i)
+          }
+
+          for (var i = 0; i < iNow; i++) {
+            newArr.push(arr.splice(Math.floor(Math.random() * arr.length), 1))
+          }
+
+          return newArr
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input id="input1" type="button" value="random select" />
+    <div id="div1">a</div>
+  </body>
+</html>

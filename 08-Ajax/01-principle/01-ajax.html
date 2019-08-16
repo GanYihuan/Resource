@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ajax</title>
+    <script>
+      window.onload = function() {
+        var oInp = document.getElementsByTagName("input")[0];
+        oInp.onclick = function() {
+          var xhr = null;
+          // ie6 以下要用 ActiveXObject
+          // try {
+          //   xhr = new XMLHttpRequest();
+          // } catch(e) {
+          //   xhr = new ActiveXObject("Microsoft.XMLHTTP");
+          // }
+          // if (window.XMLHttpRequest) {
+          //   xhr = new XMLHttpRequest();
+          // } else {
+          //   xhr = new ActiveXObject("Microsoft.XMLHTTP");
+          // }
+          try {
+            // 打开浏览器
+            // 创建一个 ajax 对象, 兼容
+            xhr = new XMLHttpRequest();
+          } catch (error) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          // 在地址栏输入地址
+          /**
+           * @param {type} 打开方式
+           * @param {type} 地址
+           * @param {type} 是否异步(阻塞->同步, 非阻塞->异步)
+           */
+          xhr.open("get", "02-test.php", true);
+          // 提交, 发送请求
+          xhr.send();
+
+          // 等待服务器返回内容
+          // 状态改变时调用 onreadystatechange
+          // status:   服务器状态, http 状态码
+          /**
+           * @param {type} readyState 请求状态
+           *  0	（初始化）还没有调用open()方法
+              1	（载入）已调用send()方法，正在发送请求
+              2	（载入完成）send()方法完成，已收到全部响应内容
+              3	（解析）正在解析响应内容
+              4	（完成）响应内容解析完成，可以在客户端调用了
+           * @param {type} status 服务器(请求资源)的状态
+           * @param {type} responseText 返回以文本形式存放的内容, 字符串
+           * @param {type} responseXML 返回 XML 形式的内容
+           */
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                alert(xhr.responseText);
+              } else {
+                alert("wrong", +xhr.status);
+              }
+            }
+          };
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <input type="button" value="button" />
+  </body>
+</html>

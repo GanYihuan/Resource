@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script>
+      // function.call(thisArg, arg1, arg2, ...)
+      // call 一参数改变内部 this 指向，二参数原函数的参数列表
+      function fn1(a, b) {
+        alert(this) // 1
+        alert(a + b) // 30
+      }
+      fn1.call(1, 10, 20) // 调用函数	fn1() == fn1.call()
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      p {
+        width: 300px;
+        border: 1px solid #000;
+        font: 12px/30px '宋体';
+        padding: 10px;
+      }
+      /* 表示E元素中的第一行 */
+      p::first-line {
+        background: #f00;
+      }
+      /* 表示E元素中的第一个字符 */
+      p::first-letter {
+        font-size: 30px;
+      }
+      /* 表示E元素在用户选中文字时 */
+      p::selection {
+        color: green;
+        background: orange;
+      }
+      /* 生成内容在E元素前 */
+      p::before {
+        display: block;
+        border: 1px solid #000;
+        content: 'ganyihuan';
+      }
+      /* 生成内容在E元素后 */
+      p::after {
+        content: 'nihao ';
+      }
+      /* 表示E元素不被匹配 */
+      h1:not(.h2) {
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      新京报快讯(记者刘夏)工信部主管媒体《人民邮电报》官方微信今晚发文称，工信部近日下发通知，
+      要求各基础电信企业确保在2016年12月31日前本企业全部电话用户实名率达到95%以上，
+      2017年6月30日前全部电话用户实现实名登记。此为“史上最严电话实名制”。
+    </p>
+    <h1>h1</h1>
+    <h1 class="h2">h1</h1>
+    <h1>h1</h1>
+  </body>
+</html>

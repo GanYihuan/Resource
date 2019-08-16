@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <!-- 兼容 ie7 -->
+    <script src="json2.js"></script>
+    <script>
+      var arr = [1, 2, 3];
+      // stringify() 对象转成字符串
+      alert(JSON.stringify(arr));
+      // parse() 字符串转成对象
+      var s1 = "[100,200]";
+      var a1 = JSON.parse(s1);
+      alert(a1);
+      var s2 = '{"left":100}';
+      var a2 = JSON.parse(s2);
+      alert(a2);
+    </script>
+    <script>
+      window.onload = function() {
+        var oInp = document.getElementsByTagName("input")[0];
+        oInp.onclick = function() {
+          var xhr = null;
+          if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+          } else {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xhr.open("get", "03-test.php", true);
+          xhr.send();
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+              if (xhr.status == 200) {
+                // parse:  字符串转成对象
+                var data = JSON.parse(xhr.responseText);
+                var oUl = document.getElementById("ul1");
+                var html = "";
+                for (var i = 0; i < data.length; i++) {
+                  html += '<li><a href="#">' + data[i].title + "</a> [<span>" + data[i].content + "</span>]</li>";
+                }
+                oUl.innerHTML = html;
+              } else {
+                alert("error", +xhr.status);
+              }
+            }
+          };
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <input type="button" value="button" id="btn" />
+    <ul id="ul1"></ul>
+  </body>
+</html>

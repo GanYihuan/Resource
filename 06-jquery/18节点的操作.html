@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>无标题文档</title>
+  <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+  <script>
+    // appendTo : appendChild
+    $(function () {
+      // $('div').insertBefore($('span')); // div 添加到 span 的前面
+      // $('div').insertAfter($('span')); // div 添加到 span 的后面
+      // $('div').before($('span')) // div 的前面必须是 span
+      // $('div').after($('span')) // div 的后面必须是 span
+
+      $('div').prependTo($('span')); // div 添加到 span 里面的前面
+      // $('div').appendTo($('span')); // div 添加到 span 里面的后面
+      // $('div').prepend($('span')); // div 的里面前面必须是 span
+      // $('div').append($('span')); // div 的里面后面必须是 span
+    });
+  </script>
+</head>
+<body>
+  <div>div</div>
+  <span>span</span>
+</body>
+</html>

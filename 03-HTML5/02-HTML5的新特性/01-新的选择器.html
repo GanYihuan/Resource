@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>html5选择器</title>
+    <script>
+      window.onload = function() {
+        // 选择一组中的第一个元素
+        var oDiv = document.querySelector('#div1')
+        // 获取一组元素
+        var aDiv = document.querySelectorAll('#div1')
+        // 一组 class
+        var oDiv1 = document.getElementsByClassName('div1')
+
+        console.log(oDiv, '--oDiv')
+
+        alert(oDiv.classList) // 类似数组的对象
+        alert(oDiv1.classList.length)
+        oDiv1.classList.add('divfour')
+        oDiv1.classList.remove('divone')
+        oDiv.classList.toggle('box2') // 出现了添加，没出现删除
+      }
+    </script>
+  </head>
+  <body>
+    <div id="div1">a</div>
+    <div id="div1">b</div>
+    <div id="div2" class="divone divtwo divthree"></div>
+  </body>
+</html>

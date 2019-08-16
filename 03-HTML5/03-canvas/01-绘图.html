@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        background: black;
+      }
+      #c1 {
+        background: white;
+      }
+      span {
+        color: white;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        var oC = document.getElementById('c1')
+        var oGC = oC.getContext('2d') // webgl: 3D绘图
+
+        // 画笔设置
+        oGC.fillStyle = 'red'
+        oGC.strokeStyle = 'blue'
+        oGC.lineWidth = 10
+        // 切边角
+        oGC.lineJoin = 'bevel'
+        // 绘制线条端点的形状 "butt" || "round" || "square";
+        oGC.lineCap = 'round'
+
+        // 画方形
+        oGC.fillRect(50, 50, 100, 100)
+        oGC.strokeRect(50.5, 50.5, 100, 100)
+
+        // 画三角
+        oGC.beginPath()
+        oGC.moveTo(100, 200)
+        oGC.lineTo(200, 300)
+        oGC.lineTo(300, 300)
+        oGC.closePath()
+        oGC.stroke()
+        oGC.fill() // 画实心
+
+        // 删除画布内容
+        // oGC.clearRect(0, 0, oC.width, oC.height)
+
+        // 恢复最近保存的画布状态
+        oGC.restore()
+
+        // 画线条
+        oGC.moveTo(200, 100)
+        oGC.lineTo(300, 200)
+        oGC.stroke()
+
+        // 圆
+        oGC.moveTo(800, 200)
+        // 弧度 = 角度*Math.PI/180
+        // arc(x, y, radius, startAngle, endAngle [, anticlockwise]);
+        oGC.arc(800, 200, 150, 0, (90 * Math.PI) / 180, true)
+        oGC.stroke()
+
+        // 弧
+        oGC.moveTo(100, 200)
+        // arcTo(x1, y1, x2, y2, radius);
+        oGC.arcTo(100, 100, 200, 100, 50)
+        oGC.stroke()
+
+        // 弧
+        oGC.moveTo(100, 200)
+        // bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+        oGC.bezierCurveTo(100, 100, 200, 200, 200, 100)
+        oGC.stroke()
+
+        // 旋转
+        oGC.translate(400, 300)
+        oGC.rotate((45 * Math.PI) / 180)
+        oGC.scale(2, 2)
+        oGC.fillRect(0, 0, 100, 100)
+
+        // 图片
+        oGC.rotate((-45 * Math.PI) / 180)
+        oGC.scale(0.2, 0.2)
+        var yImg = new Image()
+        yImg.onload = function() {
+          draw(this)
+        }
+        yImg.src = '2.png'
+        function draw(obj) {
+          oGC.drawImage(obj, 0, 0)
+        }
+
+        // 彩图
+        var obj = oGC.createLinearGradient(150, 100, 250, 200)
+        obj.addColorStop(0, 'red')
+        obj.addColorStop(0.5, 'yellow')
+        obj.addColorStop(1, 'blue')
+        oGC.fillStyle = obj
+        oGC.fillRect(150, 100, 100, 100)
+
+        // 彩图
+        var obj2 = oGC.createRadialGradient(200, 200, 100, 200, 200, 150)
+        obj2.addColorStop(0, 'red')
+        obj2.addColorStop(0.5, 'yellow')
+        obj2.addColorStop(1, 'blue')
+        oGC.fillStyle = obj
+        oGC.fillRect(0, 0, oC.width, oC.height)
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="c1" width="1200" height="600">
+      <span>不支持canvas浏览器</span>
+    </canvas>
+    <!-- 默认：宽300 高150 -->
+  </body>
+</html>

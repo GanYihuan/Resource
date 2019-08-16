@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script>
+      window.onload = function() {
+        // offsetHeight
+        // alert( document.body.offsetHeight );
+        // ie : 如果内容没有可视区高，那么文档高就是可视区
+        // alert( document.documentElement.offsetHeight );
+        alert(document.body.offsetHeight) // 122px
+      }
+    </script>
+  </head>
+  <!-- <body style="height:2000px;"> -->
+  <body>
+    <div
+      id="div1"
+      style="width:100px; height:100px; border: 1px solid red; padding: 10px; margin: 10px;"
+    >
+      <div style="height: 200px; width: 90px; background: #00f;"></div>
+    </div>
+  </body>
+</html>

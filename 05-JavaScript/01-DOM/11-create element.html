@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>元素创建操作</title>
+  </head>
+  <body id="body1">
+    <input type="text" id="text1" />
+    <input type="button" value="留言" id="btn" />
+    <ul id="ul1"></ul>
+    <script>
+      window.onload = function() {
+        let oText = document.getElementById('text1')
+        let oBtn = document.getElementById('btn')
+        let oUl = document.getElementById('ul1')
+
+        oBtn.onclick = function() {
+          /*
+          document.createElement(标签名称); 创建元素
+          */
+          let oLi = document.createElement('li')
+          oLi.innerHTML = oText.value
+          let oA = document.createElement('a')
+          oA.innerHTML = '删除'
+          oA.href = 'javascript:;'
+          oA.onclick = function() {
+            /*
+            父级.removeChild(要删除的元素): 删除元素
+            */
+            oUl.removeChild(this.parentNode)
+          }
+
+          // 添加到页面中
+          /*
+          父级.appendChild(要添加的元素) 方法 追加子元素
+          */
+          oLi.appendChild(oA)
+          oUl.appendChild(oLi)
+          /*
+          父级.insertBefore(新的元素，被插入的元素) 方法 在指定元素前面插入一个新元素
+          在ie下如果第二个参数的节点不存在，会报错
+          在其他标准浏览器下如果第二个参数的节点不存在，则会以appendChild的形式进行添加
+          */
+          oUl.insertBefore(oLi, oUl.children[0])
+          if (oUl.children[0]) {
+            oUl.insertBefore(oLi, oUl.children[0])
+          } else {
+            oUl.appendChild(oLi)
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

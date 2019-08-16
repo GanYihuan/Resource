@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>依赖与注入</title>
+    <script>
+
+        var A = new function () {
+            this.getName = function () {
+                return 'ganyihuan';
+            }
+        };
+
+        var a = new A;
+
+        //        B依赖于a
+        var B = new function (aobj) {
+            document.write(aobj.getName());
+        };
+
+        //        a注入B
+        var b = new B(a);
+
+        //        全局找出
+        var C = new function () {
+            document.write(a.getName());
+        };
+
+        //        1:a传入b
+        //        2:a是全局
+    </script>
+</head>
+<body>
+
+</body>
+</html>

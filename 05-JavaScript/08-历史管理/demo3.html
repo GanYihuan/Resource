@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script>
+      //onhashchange : 事件：当hash值有变化的时候，就会触发
+      window.onload = function() {
+        var oInput = document.getElementById("input1");
+        var oDiv = document.getElementById("div1");
+        var iNow = 1;
+
+        oInput.onclick = function() {
+          var number = randomNum(35, 7);
+          oDiv.innerHTML = number;
+          history.pushState(number, "", iNow++);
+        };
+
+        window.onpopstate = function(ev) {
+          var number = ev.state || "";
+          oDiv.innerHTML = number;
+        };
+
+        function randomNum(alls, now) {
+          var arr = [];
+          var newArr = [];
+
+          for (var i = 1; i <= alls; i++) {
+            arr.push(i);
+          }
+
+          for (var i = 0; i < now; i++) {
+            newArr.push(arr.splice(Math.floor(Math.random() * arr.length), 1));
+          }
+
+          return newArr;
+        }
+      };
+    </script>
+  </head>
+
+  <body>
+    <input type="button" value="35选7" id="input1" />
+    <div id="div1"></div>
+  </body>
+</html>

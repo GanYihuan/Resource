@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字溢出</title>
+    <style>
+        .wrap{
+            width: 400px;
+        }
+
+        .left{
+            float: left;
+        }
+
+        .right{
+            float: right;
+            width: 400px;
+        }
+    </style>
+    <!--
+        两个浮动元素有注释或者内联元素且和父级差不过3px会触发bug
+            1:避免出现上述文本或注释
+            2:或者改小父级元素,差3px以上
+    -->
+</head>
+<body>
+
+<div class="wrap">
+    <div class="left"></div>
+    <span></span>
+    <div class="right">aaaa</div>
+</div>
+
+</body>
+</html>

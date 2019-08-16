@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        background: black;
+      }
+
+      #c1 {
+        background: white;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        var oC = document.getElementById('c1')
+        var oGC = oC.getContext('2d')
+        var obj = oGC.createRadialGradient(200, 200, 100, 200, 200, 150)
+
+        obj.addColorStop(0, 'red')
+        obj.addColorStop(0.5, 'yellow')
+        obj.addColorStop(1, 'gray')
+        oGC.fillStyle = obj
+        oGC.fillRect(0, 0, oC.width, oC.height)
+
+        var obj2 = oGC.createLinearGradient(150, 100, 250, 200)
+        obj2.addColorStop(0, 'red')
+        obj2.addColorStop(0.5, 'green')
+        obj2.addColorStop(1, 'blue')
+        oGC.fillStyle = obj2
+        oGC.fillRect(150, 100, 100, 100)
+
+        oGC.font = '60px impact'
+        oGC.textBaseline = 'top' // middle bottom
+        oGC.fillText('妙味课堂', 0, 0)
+        oGC.strokeText('妙味课堂', 0, 200)
+
+        oGC.font = '60px impact'
+        oGC.textBaseline = 'top' // middle bottom
+        oGC.shadowOffsetX = 10
+        oGC.shadowOffsetY = 10
+        oGC.shadowBlur = 3
+        // alert(oGC.shadowColor);  // 默认颜色：黑色透明
+        oGC.shadowColor = 'yellow'
+        var w = oGC.measureText('妙味课堂').width
+        oGC.fillText('妙味课堂', (oC.width - w) / 2, (oC.height - 60) / 2)
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="c1" width="1200" height="800"></canvas>
+  </body>
+</html>

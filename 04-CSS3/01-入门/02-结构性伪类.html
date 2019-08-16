@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>结构性伪类</title>
+    <style>
+      /* 找p标签父级下的第二个子元素,并且这个元素还是p标签 (非数组下标) */
+      p:nth-child(2) {
+        background: red;
+      }
+      /* 找p标签父级下的第二个p元素 */
+      p:nth-of-type(2) {
+        background: red;
+      }
+      /* 匹配奇数行 */
+      p:nth-child(odd) {
+        background: red;
+      }
+      /* 奇数行 */
+      p:nth-child(2n-1) {
+        background: red;
+      }
+      /* 匹配偶数行 */
+      p:nth-child(even) {
+        background: blue;
+      }
+      /* 偶数行 */
+      p:nth-child(2n) {
+        background: blue;
+      }
+      /* 每隔三行 */
+      p:nth-child(3n) {
+        background: red;
+      }
+      /* :nth-child(1) */
+      p:first-child {
+        background: red;
+      }
+      /* :nth-last-child(1) */
+      p:last-child {
+        background: red;
+      }
+      /* p元素的父级只有一个子节点 注意：子节点不包含文本节点 */
+      p:only-child {
+        background: red;
+      }
+      /* p元素的父级只有一个子节点,且这个唯一的子节点的类型必须是p 注意：子节点不包含文本节点 */
+      p:only-of-type {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>a</p>
+    <h1>1</h1>
+    <p>b</p>
+    <p>c</p>
+  </body>
+</html>

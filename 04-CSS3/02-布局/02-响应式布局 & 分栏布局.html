@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- user-scalable 是否允许缩放 -->
+    <!-- initial-scale 初始比例 -->
+    <!-- minimum-scale 允许缩放的最小比例 -->
+    <!-- maximum-scale 允许缩放的最大比例 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>分栏布局/响应式布局</title>
+    <!-- 800px以上 -->
+    <link
+      rel="stylesheet"
+      href=""
+      type="text/css"
+      media="screen and (min-width: 800px)"
+    />
+    <!-- 400px - 800px -->
+    <link
+      rel="stylesheet"
+      href=""
+      type="text/css"
+      media="screen (min-width: 400px) and (max-width: 800px)"
+    />
+    <!-- 400px以下 -->
+    <link
+      rel="stylesheet"
+      href=""
+      type="text/css"
+      media="screen and (max-width: 400px)"
+    />
+    <!-- 竖屏 -->
+    <link
+      rel="stylesheet"
+      href=""
+      type="text/css"
+      media="all and(orientation: portrait)"
+    />
+    <!-- 横屏 -->
+    <link
+      rel="stylesheet"
+      href=""
+      type="text/css"
+      media="all and(orientation: landscale)"
+    />
+    <!-- 像素比 -->
+    <!-- window.devicePixelRatio(设备像素比) = 物理像素 / dips -->
+    <link
+      rel="stylesheet"
+      href=""
+      type="text/css"
+      media="all and (-webkit-min-device-pixel-ratio: 2)"
+    />
+    <style>
+      .wrap {
+        width: 900px;
+        border: 1px solid #000;
+        font: 14px/28px '宋体';
+        color: #f00;
+        /*首行缩进2em*/
+        text-indent: 2em;
+
+        /* 分栏布局 */
+        /*一栏250px*/
+        column-width: 250px;
+
+        /*栏目数*/
+        column-count: 3;
+
+        /*栏目间的间隔*/
+        column-gap: 20px;
+
+        /*栏目分割线*/
+        column-rule: 1px solid #000;
+      }
+
+      /* 800px以上运用此样式 */
+      /* 媒体类型 */
+      /* screen 彩屏设备 */
+      @media screen and (min-width: 800px) {
+      }
+
+      /* 引入外部的样式 */
+      @import url('1.css') screen and (min-width: 400px) and (max-width: 800px);
+
+      /* 400px以下运用此样式 */
+      @media screen and (max-width: 400px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p>
+        凡是符合《中华人民共和国公务员法》第十一条规定的报考条件即可参加公务员考试，报考职位分两大类，
+        报考者只能选择一个类别中的一个部门或单位进行报考。以中央党群机关、中央国家行政机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第一类。以中央垂直管理机构地（市）级以下所有机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第二类。
+      </p>
+      <p>
+        凡是符合《中华人民共和国公务员法》第十一条规定的报考条件即可参加公务员考试，报考职位分两大类，
+        报考者只能选择一个类别中的一个部门或单位进行报考。以中央党群机关、中央国家行政机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第一类。以中央垂直管理机构地（市）级以下所有机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第二类。
+      </p>
+      <p>
+        凡是符合《中华人民共和国公务员法》第十一条规定的报考条件即可参加公务员考试，报考职位分两大类，
+        报考者只能选择一个类别中的一个部门或单位进行报考。以中央党群机关、中央国家行政机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第一类。以中央垂直管理机构地（市）级以下所有机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第二类。
+      </p>
+      <p>
+        凡是符合《中华人民共和国公务员法》第十一条规定的报考条件即可参加公务员考试，报考职位分两大类，
+        报考者只能选择一个类别中的一个部门或单位进行报考。以中央党群机关、中央国家行政机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第一类。以中央垂直管理机构地（市）级以下所有机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第二类。
+      </p>
+      <p>
+        凡是符合《中华人民共和国公务员法》第十一条规定的报考条件即可参加公务员考试，报考职位分两大类，
+        报考者只能选择一个类别中的一个部门或单位进行报考。以中央党群机关、中央国家行政机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第一类。以中央垂直管理机构地（市）级以下所有机关及部分中央垂直管理机构中的省级机关和直属机构，
+        部分依照公务员制度管理的国务院直属事业单位为第二类。
+      </p>
+    </div>
+  </body>
+</html>

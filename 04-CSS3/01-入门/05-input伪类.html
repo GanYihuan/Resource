@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      input {
+        width: 100px;
+        height: 30px;
+        color: #000;
+      }
+      /* 表示可点击的表单控件 */
+      input:enabled {
+        color: red;
+      }
+      /* 表示不可点击的表单控件 */
+      input:disabled {
+        color: blue;
+      }
+      /* 表示已选中的 checkbox 或 radio */
+      input:checked {
+        width: 500px;
+      }
+      /* 后面的 h1 */
+      p ~ h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" value="input" disabled /> <input type="checkbox" />
+    <h1>h1</h1>
+    <h1>h1</h1>
+    <p>p1</p>
+    <h1>h1</h1>
+    <h1>h1</h1>
+  </body>
+</html>

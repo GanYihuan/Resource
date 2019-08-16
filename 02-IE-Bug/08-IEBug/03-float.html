@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一块元素浮动,第二块加margin值等于第一块,之间会有空隙</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 500px;
+        }
+
+        .left {
+            width: 200px;
+            height: 200px;
+            /**/
+            float: left;
+            background-color: red;
+        }
+
+        .right {
+            width: 200px;
+            height: 200px;
+            /*$*/
+            /*第一个元素浮动,第二个元素不能使用margin,要用float修改,因为float会提升层级,第一元素float动则层级提升,第二个也要跟着提升*/
+            /*error*/
+            /*margin-left: 200px;*/
+            /*ok*/
+            float: left;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="box">
+    <div class="left">
+        <div>left</div>
+    </div>
+    <div class="right">
+        <div>right</div>
+    </div>
+</div>
+
+</body>
+</html>

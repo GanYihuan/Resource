@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form action="www.baidu.com">
+      <input type="text" id="mingan">
+      <input type="email" />
+      <input type="tel" />
+      <input type="url" />
+      <input type="search" />
+      <input type="range" step="2" min="0" value="10" />
+      <input type="number" />
+      <input type="color" />
+      <input type="time" />
+      <input type="datetime" />
+      <input type="datetime-local" />
+      <input type="date" />
+      <input type="week" />
+      <input type="mounth" />
+      <input
+        id="text"
+        type="text"
+        name="user"
+        placeholder=""
+        value="hello"
+        maxlength="5"
+        pattern="\d{1,5}"
+        autocomplete="off"
+        autofocus
+        required
+        formnovalidate
+      />
+      <!-- formnovalidate 属性: 关闭验证 -->
+      <!-- 不通过校验就提交,一般用于提交到草稿箱 -->
+      <input type="submit" formaction="http://www.miaov.com" />
+    </form>
+    <script>
+      var oTxt = document.getElementById('text')
+      var oMin = document.getElementById('mingan')
+      oTxt.value = '123456789'
+      oTxt.addEventListener('invalid', fn, false)
+
+      function fn(ev) {
+        alert(this.validity.customError)
+        //  this.validity.valueMissing  值不存在时返回 true
+        //  this.validity.typeMissing  值不匹配时返回 true
+        //  this.validity.pattemMissing  值不匹配正则表达式时返回 true
+        //  this.validity.tooLong  值超过 maxLength
+        //  this.validity.rangeUnderflow  验证 range 最小值
+        //  this.validity.rangeOverflow  验证 range 最大值
+        //  this.validity.stepMismatch  验证 range 当前值是否符合 min, max step 规则
+        //  this.validity.customError  不符合自定义验证返回 true
+        ev.preventDefault()
+      }
+
+      oMin.oninput = function() {
+        if (this.value === 'a') {
+          // setCustomValidity()  自定义验证
+          this.setCustomValidity('敏感词')
+        } else {
+          setCustomValidity('')
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>获取自定义属性</title>
+    <!-- defer: 延迟加载，会按顺序执行，在 onload 执行前被触发 -->
+    <script src="a" defer="defer"></script>
+    <script src="b"></script>
+    <script src="c"></script>
+    <!-- async: 异步加载，加载完就触发，有顺序问题 -->
+    <script src="a" async="async"></script>
+    <script src="b" async="async"></script>
+    <script src="c" async="async"></script>
+  </head>
+  <body>
+    <div id="div1" data-miaov="妙味" data-miaov-all="妙味课堂">div</div>
+    <script>
+      window.onload = function() {
+        var oDiv = document.getElementById('div1')
+        alert(oDiv.dataset.miaovAll)
+      }
+    </script>
+  </body>
+</html>

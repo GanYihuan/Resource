@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器</title>
+</head>
+<body>
+
+    <div ng-app="myApp">
+        <div ng-controller="myCtrl1">
+            <p>
+                1&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--123,456,789-->
+                {{123456789 | number}}
+            </p>
+            <p>
+                2&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--123,456,789.000-->
+                {{123456789 | number:3}}
+            </p>
+            <p>
+                3&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--$999,999.00-->
+                {{999999 | currency}}
+            </p>
+            <p>
+                4&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--%999,999.00-->
+                {{999999 | currency:'%'}}
+            </p>
+            <p>
+                5&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--Jun 2, 2016 2:57:21 PM-->
+                {{today | date:'medium'}}
+            </p>
+            <p>
+                6&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--Jun 2, 2016-->
+                {{today | date:'mediumDate'}}
+            </p>
+            <p>
+                7&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--Thursday, June 2, 2016-->
+                {{today | date:'fullDate'}}
+            </p>
+            <p>
+                8&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--June 2, 2016-->
+                {{today | date:'longDate'}}
+            </p>
+            <p>
+                9&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--6/2/16 3:00 PM-->
+                {{today | date:'short'}}
+            </p>
+            <p>
+                10&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--6/2/16-->
+                {{today | date:'shortDate'}}
+            </p>
+            <p>
+                11&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--3:00:15 PM-->
+                {{today | date:'mediumTime'}}
+            </p>
+            <p>
+                12&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--3:00 PM-->
+                {{today | date:'shortTime'}}
+            </p>
+            <p>
+                13&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--2016-->
+                {{today | date:'y'}}
+                <!--16-->
+                {{today | date:'yy'}}
+                <!--2016-->
+                {{today | date:'yyyy'}}
+            </p>
+            <p>
+                14&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--2-->
+                {{today | date:'m'}}
+                <!--02-->
+                {{today | date:'mm'}}
+            </p>
+            <p>
+                15&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--2-->
+                {{today | date:'d'}}
+                <!--02-->
+                {{today | date:'dd'}}
+            </p>
+            <p>
+                16&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--[1,2,3]-->
+                {{[1,2,3,4,5,6,7] | limitTo:3}}
+            </p>
+            <p>
+                17&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--[3,4,5,6,7]-->
+                {{[1,2,3,4,5,6,7] | limitTo:-5}}
+            </p>
+            <p>
+                18&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--gongxiangshuju-->
+                {{data.message | lowercase}}
+            </p>
+            <p>
+                19&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--GONGXIANGSHUJU-->
+                {{data.message | uppercase}}
+            </p>
+            <p>
+                20&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--[{"name":"上海","py":"shanghai"}]-->
+                {{data.city | filter: '上海'}}
+            </p>
+            <p>
+                21&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--[{"name":"上海","py":"shanghai"},{"name":"广州","py":"guanzhou"}]-->
+                {{data.city | filter: checkName}}
+            </p>
+            <p>
+                22&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--[{"name":"北京","py":"beijing"},{"name":"广州","py":"guanzhou"},{"name":"上海","py":"shanghai"}]-->
+                {{data.city | orderBy: 'py'}}
+            </p>
+            <p>
+                23&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--[{"name":"上海","py":"shanghai"},{"name":"广州","py":"guanzhou"},{"name":"北京","py":"beijing"}]-->
+                {{data.city | orderBy: '-py'}}
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app/index.js"></script>
+
+</body>
+</html>
