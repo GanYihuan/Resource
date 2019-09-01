@@ -1,3 +1,10 @@
+<!--
+ * @Description:
+ * @Author: GanEhank
+ * @Date: 2018-11-20 09:54:32
+ * @LastEditors: GanEhank
+ * @LastEditTime: 2019-09-02 02:49:23
+ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,15 +14,15 @@
   <script>
     // appendTo : appendChild
     $(function () {
-      // $('div').insertBefore($('span')); // div 添加到 span 的前面
-      // $('div').insertAfter($('span')); // div 添加到 span 的后面
-      // $('div').before($('span')) // div 的前面必须是 span
-      // $('div').after($('span')) // div 的后面必须是 span
+      $('div').insertBefore($('span')); // div 添加到 span 的前面
+      $('div').insertAfter($('span')); // div 添加到 span 的后面
+      $('div').before($('span')) // div 的前面必须是 span
+      $('div').after($('span')) // div 的后面必须是 span
 
       $('div').prependTo($('span')); // div 添加到 span 里面的前面
-      // $('div').appendTo($('span')); // div 添加到 span 里面的后面
-      // $('div').prepend($('span')); // div 的里面前面必须是 span
-      // $('div').append($('span')); // div 的里面后面必须是 span
+      $('div').appendTo($('span')); // div 添加到 span 里面的后面
+      $('div').prepend($('span')); // div 的里面前面必须是 span
+      $('div').append($('span')); // div 的里面后面必须是 span
     });
   </script>
 </head>
