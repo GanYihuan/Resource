@@ -9,6 +9,8 @@
 
 # vuecli3vw
 
+[vw布局实现移动端适配](https://gitee.com/wswww/vue3.x_vw_layout/tree/master)
+
 ## 基础
 
 vw : 1vw 等于视口宽度的1%
@@ -17,7 +19,7 @@ vmin : 选取 vw 和 vh 中最小的那个
 vmax : 选取 vw 和 vh 中最大的那个
 ![vw](https://i.loli.net/2019/09/02/H2i7krnuTEZSJ3R.png)
 
-### 一: 设置 html & css
+<!-- ### 一: 设置 html & css
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=2.0, maximum-scale=2.0, minimum-scale=2.0, user-scalable=no">
@@ -27,7 +29,7 @@ vmax : 选取 vw 和 vh 中最大的那个
 html {
   font-size: 13.3333333333333vw // 100px
 }
-```
+``` -->
 
 ### 二: 在项目根目录的`.postcss.config.js`文件中增加配置项
 
@@ -64,7 +66,7 @@ module.exports = {
 }
 ```
 
-### 三: 使用`npm`下载相关包
+### 三: 使用`npm`下载相关包 2
 
 ```node
 npm i cssnano postcss-aspect-ratio-mini postcss-cssnext postcss-px-to-viewport postcss-viewport-units postcss-write-svg -S
